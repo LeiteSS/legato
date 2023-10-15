@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "dev": "npx nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.4.0",
+    "@fastify/multipart": "^8.0.0",
+    "@fastify/static": "^6.11.2",
+    "@fastify/swagger": "^8.11.0",
+    "@fastify/swagger-ui": "^1.10.1",
+    "@hapi/boom": "^10.0.1",
+    "@typegoose/typegoose": "^11.6.0",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.24.2",
+    "fastify-healthcheck": "^4.4.0",
+    "fastify-plugin": "^4.5.1",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mongoose": "^7.6.2",
+    "nodemon": "^3.0.1",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.8.6",
+    "@types/pino": "^7.0.5",
+    "typescript": "^5.2.2"
+  }
+}
