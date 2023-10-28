@@ -17,7 +17,7 @@ async function ensureAuthenticated(
 
     const authenticatedUser = await GetUserService.execute([
       { $project: { email: 1 } },
-      { $match: { email: user.email.getEmail() } },
+      { $match: { email: user.email } },
     ]);
 
     if (!authenticatedUser) {

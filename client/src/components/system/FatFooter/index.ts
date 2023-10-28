@@ -14,9 +14,7 @@ import {
   FooterMCMXCVIII,
 } from './styles'
 
-interface FooterProps {}
-
-const Footer: React.FC<FooterProps> = () => {
+const Footer = () => {
   return (
     <FooterContainer>
       <FooterLinks>

@@ -23,7 +23,7 @@ const jwt = {
 };
 
 const log = {
-  unix: process.env.UNIX_DIR_LOG || '/home/leite/playground/fastify/server/logs',
+  unix: process.env.UNIX_DIR_LOG || 'C:/Users/sonic/Downloads/Silas/legato/server/logs/',
 };
 
 const mailer = {
