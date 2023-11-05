@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import DeleteCommentService from '../../../../../domain/modules/Comment/services/delete/DeleteCommentService';
+import DeleteCommentService from '../../../../../domain/modules/comment/services/delete/DeleteCommentService';
 
 export default class DeleteCommentController {
   private service: DeleteCommentService;

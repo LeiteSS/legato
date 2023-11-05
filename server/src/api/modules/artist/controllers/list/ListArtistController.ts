@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListArtistService from '../../../../../domain/modules/Artist/services/list/ListArtistService';
+import ListArtistService from '../../../../../domain/modules/artist/services/list/ListArtistService';
 
 export default class ListArtistController {
   private service: ListArtistService;
@@ -16,11 +16,7 @@ export default class ListArtistController {
       pageSize,
     );
 
-    if (foundedArtists) {
-      return reply.code(200).send(foundedArtists);
-    }
-
-    return reply.badRequest('Invalid _id');
+    return reply.code(200).send(foundedArtists);
   }
 }
 

@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { jwtAuthenticate, JwtError } from '../config/jwt';
-import GetUserService  from '../domain/modules/user/services/get/GetUserService';
+import getUserService from '../domain/modules/user/services/get';
 
 async function ensureAuthenticated(
   request: FastifyRequest,
@@ -15,7 +15,7 @@ async function ensureAuthenticated(
   try {
     const { user } = jwtAuthenticate(authToken!);
 
-    const authenticatedUser = await GetUserService.execute([
+    const authenticatedUser = await getUserService.execute([
       { $project: { email: 1 } },
       { $match: { email: user.email } },
     ]);

@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import CreateArtistService from '../../../../../domain/modules/Artist/services/create/CreateArtistService';
+import CreateArtistService from '../../../../../domain/modules/artist/services/create/CreateArtistService';
 import Artist from '../../../../../domain/modules/Artist/Artist';
 
 export default class CreateArtistController {
@@ -13,11 +13,7 @@ export default class CreateArtistController {
     const Artist = request.body as Artist;
     const createdArtist = await this.service.execute(Artist);
 
-    if (createdArtist) {
-      return reply.code(202).send(createdArtist);
-    }
-
-    return reply.badRequest('Invalid _id!');
+    return reply.code(202).send(createdArtist);
   }
 }
 

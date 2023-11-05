@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
-import Repository from '../../repository/Repository';
-import Community from '../Community';
-import { Service } from '../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Community from '../../Community';
+import Repository from '../../../../shared/repository/repository';
 
 export default class UpdateCommunityService implements Service<Community | null> {
   private repository: Repository<Community>;
@@ -16,9 +16,9 @@ export default class UpdateCommunityService implements Service<Community | null>
   ): Promise<Community | null> {
     const objectId = new Types.ObjectId(id);
     const requestCommunity = requestedCommunity;
-    delete Community._id;
+    delete requestCommunity._id;
 
-    const updatedCommunity = await this.repository.update(objectId, requestCommunity);
+    const updatedCommunity = await this.repository.updateOne(objectId, requestCommunity);
 
     if (updatedCommunity) {
       return updatedCommunity;

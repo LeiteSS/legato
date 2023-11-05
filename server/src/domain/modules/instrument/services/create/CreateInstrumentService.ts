@@ -2,7 +2,7 @@ import Service from '../../../../shared/interfaces/Service';
 import Repository from '../../../../shared/repository/repository';
 import Instrument from '../../Instrument';
 
-export default class CreateInstrumentService implements Service<,Instrument> {
+export default class CreateInstrumentService implements Service<Instrument> {
     private repository: Repository<Instrument>;
 
     constructor(repository: Repository<Instrument>) {

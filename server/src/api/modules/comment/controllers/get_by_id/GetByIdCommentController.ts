@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import GetByIdCommentService from '../../../../../domain/modules/Comment/services/get_by_id/GetByIdCommentService';
+import GetByIdCommentService from '../../../../../domain/modules/comment/services/get_by_id/GetByIdCommentService';
 
 export default class GetByIdCommentController {
   private service: GetByIdCommentService;

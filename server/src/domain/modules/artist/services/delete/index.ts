@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import { artistRepository } from "../..";
+import DeleteArtistService from "./DeleteArtistService";
 
-const DeleteArtistService = new %Service%(%domain%Repository);
 
-export default DeleteArtistService;
+const deleteArtistService = new DeleteArtistService(artistRepository);
+
+export default deleteArtistService;

@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { communityRepository } from "../..";
+import UpdateCommunityService from "./UpdateCommunityService";
 
-const UpdateCommunityService = new %Service%(%domain%Repository);
+const updateCommunityService = new UpdateCommunityService(communityRepository);
 
-export default UpdateCommunityService;
+export default updateCommunityService;

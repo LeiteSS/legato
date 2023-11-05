@@ -1,5 +1,5 @@
 import { RouteShorthandOptions } from 'fastify';
-import baseSchema from '../../base';
+import baseSchema from '../../../../../shared/base/baseSchema';
 
 const getByIdArtistSchema: RouteShorthandOptions = {
   schema: {

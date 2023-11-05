@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import { instrumentRepository } from "../..";
+import UpdateInstrumentService from "./UpdateInstrumentService";
 
-const UpdateInstrumentService = new %Service%(%domain%Repository);
 
-export default UpdateInstrumentService;
+const updateInstrumentService = new UpdateInstrumentService(instrumentRepository);
+
+export default updateInstrumentService;

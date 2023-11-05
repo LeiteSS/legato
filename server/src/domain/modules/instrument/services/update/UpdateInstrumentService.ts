@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
-import Repository from '../../repository/Repository';
-import Instrument from '../Instrument';
-import { Service } from '../../../shared/interfaces/Service';
+import Repository from '../../../../shared/repository/repository';
+import Instrument from '../../Instrument';
+import Service from '../../../../shared/interfaces/Service';
 
 export default class UpdateInstrumentService implements Service<Instrument | null> {
   private repository: Repository<Instrument>;
@@ -16,9 +16,9 @@ export default class UpdateInstrumentService implements Service<Instrument | nul
   ): Promise<Instrument | null> {
     const objectId = new Types.ObjectId(id);
     const requestInstrument = requestedInstrument;
-    delete Instrument._id;
+    delete requestInstrument._id;
 
-    const updatedInstrument = await this.repository.update(objectId, requestInstrument);
+    const updatedInstrument = await this.repository.updateOne(objectId, requestInstrument);
 
     if (updatedInstrument) {
       return updatedInstrument;

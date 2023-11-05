@@ -1,6 +1,9 @@
-const CommentSchema = {
+import Joi from "joi";
 
-	content: string,
+const commentSchema = {
+	user: Joi.string(),
+	content: Joi.string(),
+	replies: Joi.array().items(Joi.string())
 }
 
-export default CommentSchema;
+export default commentSchema;

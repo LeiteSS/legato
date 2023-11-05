@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListCommentService from '../../../../../domain/modules/Comment/services/list/ListCommentService';
+import ListCommentService from '../../../../../domain/modules/comment/services/list/ListCommentService';
 
 export default class ListCommentController {
   private service: ListCommentService;
@@ -16,11 +16,7 @@ export default class ListCommentController {
       pageSize,
     );
 
-    if (foundedComments) {
-      return reply.code(200).send(foundedComments);
-    }
-
-    return reply.badRequest('Invalid _id');
+    return reply.code(200).send(foundedComments);
   }
 }
 

@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import deleteCommentService from "../../../../../domain/modules/comment/services/delete";
+import DeleteCommentController from "./DeleteCommentController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const deleteCommentController = new DeleteCommentController(deleteCommentService);
 
-export default %controllerName%;
+export default deleteCommentController;

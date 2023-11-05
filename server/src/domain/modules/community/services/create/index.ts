@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import { commentRepository } from "../../../comment";
+import CreateCommunityService from "./CreateCommunityService";
 
-const CreateCommunityService = new %Service%(%domain%Repository);
 
-export default CreateCommunityService;
+const createCommunityService = new CreateCommunityService(commentRepository);
+
+export default createCommunityService;

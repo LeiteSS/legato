@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import createArtistService from "../../../../../domain/modules/artist/services/create";
+import CreateArtistController from "./CreateArtistController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const createArtistController = new CreateArtistController(createArtistService);
 
-export default %controllerName%;
+export default createArtistController;

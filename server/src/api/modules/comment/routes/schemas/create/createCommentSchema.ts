@@ -1,8 +1,10 @@
 import { RouteShorthandOptions } from 'fastify';
+import Joi from 'joi';
+import commentSchema from '../commentSchema';
 
 const createCommentSchema: RouteShorthandOptions = {
   schema: {
-    body: CommentSchema,
+    body: Joi.object(commentSchema),
   }
 }
 

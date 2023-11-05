@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import CreateCommentService from '../../../../../domain/modules/Comment/services/create/CreateCommentService';
 import Comment from '../../../../../domain/modules/Comment/Comment';
+import CreateCommentService from '../../../../../domain/modules/comment/services/create/CreateCommentService';
 
 export default class CreateCommentController {
   private service: CreateCommentService;
@@ -13,11 +13,7 @@ export default class CreateCommentController {
     const Comment = request.body as Comment;
     const createdComment = await this.service.execute(Comment);
 
-    if (createdComment) {
-      return reply.code(202).send(createdComment);
-    }
-
-    return reply.badRequest('Invalid _id!');
+    return reply.code(202).send(createdComment);
   }
 }
 

@@ -1,7 +1,7 @@
 import { PipelineStage } from 'mongoose';
-import Repository from '../../../../shared/repository/repository/repositiory';
 import Instrument from '../../Instrument';
-import { Service } from '../../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Repository from '../../../../shared/repository/repository';
 
 export default class ListInstrumentService implements Service<Instrument[]> {
   private repository: Repository<Instrument>;

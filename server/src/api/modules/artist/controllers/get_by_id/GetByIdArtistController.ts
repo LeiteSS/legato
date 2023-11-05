@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import GetByIdArtistService from '../../../../../domain/modules/Artist/services/get_by_id/GetByIdArtistService';
+import GetByIdArtistService from '../../../../../domain/modules/artist/services/get_by_id/GetByIdArtistService';
 
 export default class GetByIdArtistController {
   private service: GetByIdArtistService;

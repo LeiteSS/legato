@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import { communityRepository } from "../..";
+import Repository from "../../../../shared/repository/repository";
+import DeleteCommunityService from "./DeleteCommunityService";
 
-const DeleteCommunityService = new %Service%(%domain%Repository);
+const deleteCommunityService = new DeleteCommunityService(communityRepository);
 
-export default DeleteCommunityService;
+export default deleteCommunityService;

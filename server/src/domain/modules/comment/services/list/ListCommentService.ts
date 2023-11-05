@@ -1,7 +1,7 @@
 import { PipelineStage } from 'mongoose';
-import Repository from '../../../../shared/repository/repository/repositiory';
 import Comment from '../../Comment';
-import { Service } from '../../../../shared/interfaces/Service';
+import Repository from '../../../../shared/repository/repository';
+import Service from '../../../../shared/interfaces/Service';
 
 export default class ListCommentService implements Service<Comment[]> {
   private repository: Repository<Comment>;

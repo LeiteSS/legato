@@ -1,8 +1,8 @@
 import { getModelForClass } from '@typegoose/typegoose';
-import Repository from '../shared/repository/Repository';
 import Artist from './Artist';
+import Repository from '../../shared/repository/repository';
 
-export const ArtistModel = getModelForClass(Artist);
+export const artistModel = getModelForClass(Artist);
 
-export const ArtistRepository = new Repository<Artist>(ArtistModel);
+export const artistRepository = new Repository<Artist>(artistModel);
 

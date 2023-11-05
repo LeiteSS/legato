@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import deleteArtistService from "../../../../../domain/modules/artist/services/delete";
+import DeleteArtistController from "./DeleteArtistController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const deleteArtistController = new DeleteArtistController(deleteArtistService);
 
-export default %controllerName%;
+export default deleteArtistController;

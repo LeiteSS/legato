@@ -1,6 +1,11 @@
-const ArtistSchema = {
+import Joi from "joi";
 
-	name: string,
+const artistSchema = {
+
+	name: Joi.string(),
+	genre: Joi.string(),
+	followers: Joi.array().items(Joi.string()),
+	biography: Joi.string(),
 }
 
-export default ArtistSchema;
+export default artistSchema;

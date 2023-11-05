@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import DeleteArtistService from '../../../../../domain/modules/Artist/services/delete/DeleteArtistService';
+import DeleteArtistService from '../../../../../domain/modules/artist/services/delete/DeleteArtistService';
 
 export default class DeleteArtistController {
   private service: DeleteArtistService;

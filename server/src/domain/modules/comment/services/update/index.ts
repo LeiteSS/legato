@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { commentRepository } from "../..";
+import UpdateCommentService from "./UpdateCommentService";
 
-const UpdateCommentService = new %Service%(%domain%Repository);
+const updateCommentService = new UpdateCommentService(commentRepository);
 
-export default UpdateCommentService;
+export default updateCommentService;

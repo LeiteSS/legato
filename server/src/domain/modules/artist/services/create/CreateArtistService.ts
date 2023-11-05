@@ -9,8 +9,8 @@ export default class CreateArtistService implements Service<,Artist> {
         this.repository = repository;
     }
 
-    public async execute(ArtistToCreate: Artist): Promise<Artist> {
-        const createdArtist = await this.repository.save(ArtistToCreate);
+    public async execute(artistToCreate: Artist): Promise<Artist> {
+        const createdArtist = await this.repository.save(artistToCreate);
         return createdArtist;
     }
 }

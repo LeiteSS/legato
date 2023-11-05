@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { communityRepository } from "../..";
+import ListCommunityService from "./ListCommunityService";
 
-const ListCommunityService = new %Service%(%domain%Repository);
+const listCommunityService = new ListCommunityService(communityRepository);
 
-export default ListCommunityService;
+export default listCommunityService;

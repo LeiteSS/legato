@@ -1,8 +1,8 @@
 import { getModelForClass } from '@typegoose/typegoose';
-import Repository from '../shared/repository/Repository';
 import Instrument from './Instrument';
+import Repository from '../../shared/repository/repository';
 
 export const InstrumentModel = getModelForClass(Instrument);
 
-export const InstrumentRepository = new Repository<Instrument>(InstrumentModel);
+export const instrumentRepository = new Repository<Instrument>(InstrumentModel);
 

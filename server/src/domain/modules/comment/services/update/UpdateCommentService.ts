@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
-import Repository from '../../repository/Repository';
-import Comment from '../Comment';
-import { Service } from '../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Repository from '../../../../shared/repository/repository';
+import Comment from '../../Comment';
 
 export default class UpdateCommentService implements Service<Comment | null> {
   private repository: Repository<Comment>;
@@ -16,9 +16,9 @@ export default class UpdateCommentService implements Service<Comment | null> {
   ): Promise<Comment | null> {
     const objectId = new Types.ObjectId(id);
     const requestComment = requestedComment;
-    delete Comment._id;
+    delete requestComment._id;
 
-    const updatedComment = await this.repository.update(objectId, requestComment);
+    const updatedComment = await this.repository.updateOne(objectId, requestComment);
 
     if (updatedComment) {
       return updatedComment;

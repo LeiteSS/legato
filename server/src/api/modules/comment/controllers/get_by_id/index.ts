@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import getByIdCommentService from "../../../../../domain/modules/comment/services/get_by_id";
+import GetByIdCommentController from "./GetByIdCommentController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const getByIdCommentController = new GetByIdCommentController(getByIdCommentService);
 
-export default %controllerName%;
+export default getByIdCommentController;

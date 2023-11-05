@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import updateCommentService from "../../../../../domain/modules/comment/services/update";
+import UpdateCommentController from "./UpdateCommentController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const updateCommentController = new UpdateCommentController(updateCommentService);
 
-export default %controllerName%;
+export default updateCommentController;
