@@ -18,9 +18,12 @@ import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 import UserSchema from "../../../../hooks/modules/user/schemas/userSchema";
 
 import { User } from "../../../../models/modules/user/User";
+import getByIdUser from "../../../../hooks/modules/user/get_by_id/getByIdUserHook";
+import createUser from "../../../../hooks/modules/user/create/createUserHook";
+import updateUser from "../../../../hooks/modules/user/update/updateUserHook";
 
 const Form = () => {
-  const [users, setUsers] = useLocalStorage<User[]>("user", [])
+  const [user, setUser] = useState<User>();
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -35,29 +38,36 @@ const Form = () => {
     resolver: yupResolver(UserSchema),
   })
 
-  //const [zipCodeFounded, setZipCodeFounded] = useState<boolean>()
+	const findUser = async () => {
+		const user = await getByIdUser(id!);
+		setUser(user);
+	}
 
-  // useEffect(() => {
-  //   if (!id) return
+	const newUser = async (data: User) => {
+		const user = await createUser(data);
+		console.log(user);
+		setUser(user!);
+	}
 
-  //   const User = %domai%s.find((User) => User.id === id)
+	const editUser = async (id: string, data: User) => {
+		const user = await updateUser(id, data);
+		console.log(user);
+		setUser(user!);
+	}
 
-  //   if (!User) return
+  useEffect(() => {
+    if (!id) return
 
-  //   setValue("%attribute%", User.%attribute%)
+    findUser();
 
-  // }, [id, setValue, Users])
+  });
 
   const onSubmit = (data: User) => {
     if (!id) {
-      setUsers([...users, { ...data, id: `${users.length + 1}` }]);
+			newUser(data);
     } else {
-      const newUsers = [...users]
-      const userIndex = users.findIndex((user) => user.id === id);
-      newUsers[userIndex] = { ...data, id }
-
-      setUsers(newUsers);
-    }
+			editUser(id, data);
+		}
 
     navigate("/Users/")
   }
@@ -202,13 +212,14 @@ const Form = () => {
 							</FormControl>
 						)}
 					/>
-					</Stack>      <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-        <Button type="submit" variant="contained" size="large">
-          Salvar User
-        </Button>
-        <Button component={RouterLink} to="/user">
-          Cancelar
-        </Button>
+					</Stack>      
+					<Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+						<Button type="submit" variant="contained" size="large">
+							Salvar User
+						</Button>
+						<Button component={RouterLink} to="/user">
+							Cancelar
+						</Button>
       </Stack>
     </Box>
   )

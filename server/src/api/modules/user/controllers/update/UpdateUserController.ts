@@ -12,7 +12,6 @@ export default class UpdateUserController {
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
     const user  = request.body as User;
-    console.log(user);
     const updatedUser = await this.service.execute(id, user);
 
     if (updatedUser) {

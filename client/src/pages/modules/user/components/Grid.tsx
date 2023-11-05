@@ -6,15 +6,25 @@ import {
   GridRenderCellParams,
 } from "@mui/x-data-grid"
 import { useNavigate } from "react-router-dom"
-import { useLocalStorage } from "usehooks-ts"
 
 import DataTable from "../../../../components/advanced/DataTable/DataTable"
 
 import { User } from "../../../../models/modules/user/User";
+import { useEffect, useState } from "react"
+import listUser from "../../../../hooks/modules/user/list/listUserHook"
 
 const Grid = () => {
-  const [users, setUsers] = useLocalStorage<User[]>("user", [])
+  const [users, setUsers] = useState<User[]>()
   const navigate = useNavigate()
+
+  const allUsers = async () => {
+    const usersFound = await listUser(0, 10);
+    setUsers(usersFound);
+  }
+
+  useEffect(() => {
+    allUsers();
+  }, [users])
 
   const onEdit = (params: GridRenderCellParams) => {
     if (!params.row.id) return
@@ -23,7 +33,7 @@ const Grid = () => {
 
   const onDelete = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    setUsers(users.filter((user) => user.id !== params.row.id));
+    setUsers(users!.filter((user) => user.id !== params.row.id));
   }
 
   const columns: GridColDef<User>[] = [
