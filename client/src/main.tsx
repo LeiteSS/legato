@@ -7,6 +7,8 @@ import ptBR from "date-fns/locale/pt-BR"
 import React from "react"
 import ReactDOM from "react-dom/client"
 
+import Hotjar from '@hotjar/browser';
+
 import { theme } from "./theme.ts"
 
 import App from "./App.tsx"
@@ -17,6 +19,12 @@ import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 
 import "./index.css"
+
+const siteId = 3741512;
+const hotjarVersion = 6;
+
+
+Hotjar.init(siteId, hotjarVersion);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
