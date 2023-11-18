@@ -15,6 +15,7 @@ export default class ListUserService implements Service<User[]> {
     page: number = 0,
     pageSize: number = 10,
   ): Promise<User[]> {
+
     const foundedUsers = await this.repository.aggregate(
       pipeline,
       page,

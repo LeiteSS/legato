@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import Artist from '../../../../../domain/modules/Artist/Artist';
 import UpdateArtistService from '../../../../../domain/modules/artist/services/update/UpdateArtistService';
+import Artist from '../../../../../domain/modules/artist/Artist';
 
 export default class UpdateArtistController {
   private service: UpdateArtistService;

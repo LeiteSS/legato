@@ -45,7 +45,6 @@ const Form = () => {
 
 	const newUser = async (data: User) => {
 		const user = await createUser(data);
-		console.log(user);
 		setUser(user!);
 	}
 
@@ -69,7 +68,7 @@ const Form = () => {
 			editUser(id, data);
 		}
 
-    navigate("/Users/")
+    navigate("/users/")
   }
 
   return (

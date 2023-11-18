@@ -14,8 +14,8 @@ import { useEffect, useState } from "react"
 import listUser from "../../../../hooks/modules/user/list/listUserHook"
 
 const Grid = () => {
-  const [users, setUsers] = useState<User[]>()
-  const navigate = useNavigate()
+  const [users, setUsers] = useState<User[]>([]);
+  const navigate = useNavigate();
 
   const allUsers = async () => {
     const usersFound = await listUser(0, 10);
@@ -33,8 +33,26 @@ const Grid = () => {
 
   const onDelete = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    setUsers(users!.filter((user) => user.id !== params.row.id));
+    setUsers(users!.filter((user) => user._id !== params.row.id));
   }
+
+  const rows: any = [];
+  users.forEach((data) => {
+    const user = {
+      id: data._id,
+      name: data.name,
+      lastname: data.lastname,
+      email: data.email,
+      password: data.password,
+      accountType: data.password,
+      datebirth: data.datebirth,
+    }
+
+    rows.push(user);
+  });
+
+
+  console.log(rows);
 
   const columns: GridColDef<User>[] = [
     { field: "id", headerName: "ID", width: 70 },
@@ -62,7 +80,7 @@ const Grid = () => {
     },
   ]
 
-  return <DataTable columns={columns} rows={users as User[]} />
+  return <DataTable columns={columns} rows={rows} />
 }
 
 export default Grid;
