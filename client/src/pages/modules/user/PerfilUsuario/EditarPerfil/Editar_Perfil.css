@@ -1,0 +1,97 @@
+.EditarPerfil{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.EditarPerfil h2{
+    font-size: 2vw;
+    align-self: center;
+    color: #ffffff;
+    padding-top: 1.5rem;
+}
+
+.EditarPerfil .Cadastro{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../../../assets/Editar_Wallpaper.jpg);
+}
+
+.EditarPerfil .Cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+    background-color: #09857E;
+    margin: 3% 0;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+.EditarPerfil .Cadastro form .Corpo{
+    background-color: var(--background);
+    color: var(--text-primary);
+    padding: 10%;
+    border-radius: 0 0 40px 40px;
+}
+
+.EditarPerfil .Cadastro form .Two-input{
+    display: flex;
+    flex-direction: row;
+}
+
+.EditarPerfil .Cadastro form div .Two-input div{
+    display: flex;
+    flex-direction: column;
+}
+
+.EditarPerfil form div {
+    text-align: left;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.EditarPerfil input[type=password]{
+    width: 50%;
+}
+
+.EditarPerfil input[type=password]{
+    width: 50%;
+}
+
+.EditarPerfil input[type=submit] {
+    width: 20%;
+    align-self: center;
+    text-align: center;
+    background-color: #09857E;
+    border-radius: 5px;
+    height: 3vw;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    justify-self: center;
+}
+
+.EditarPerfil a {
+    color: #09857E;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .aside{
+        display: none;
+    }
+
+    .EditarPerfil .Cadastro{
+        width: 100%;
+    }
+
+    .EditarPerfil .Cadastro form .Two-input{
+        display: flex;
+    }
+
+}

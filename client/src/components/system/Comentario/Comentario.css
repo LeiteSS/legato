@@ -1,0 +1,63 @@
+.container-comentario{
+    display: flex;
+    padding: 8px 0 0 8px;
+    margin-top: 5px ;
+}
+
+.img-comment{
+    height:34px;
+    border-radius: 50%;
+}
+
+.comment-con{
+    margin-left:8px;
+
+}
+
+.header-comment{
+    display: flex;
+    align-items: center;
+}
+
+.user-name{
+   font-size: 1rem;
+}
+
+.data-publi{
+    color:#7c7c7c ;
+}
+
+
+.content-box{
+    margin-top: 3px ;
+}
+
+.comment-action{
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.like-box{
+    display: flex;
+    align-items: center;
+}
+
+.like-box:hover{
+    cursor: pointer;
+    color: #28A49C;
+}
+
+@media (max-width: 500px) {
+    .user-name{
+        font-size: 0.9rem;
+    }
+
+    .content-box{
+        font-size: 0.9rem;
+    }
+
+    .comment-action{
+        font-size: 0.9rem;
+    }
+}

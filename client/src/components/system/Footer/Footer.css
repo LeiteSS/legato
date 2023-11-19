@@ -1,0 +1,161 @@
+footer {
+    background-color: #212121;
+    color: #fff;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.footer-row {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.footer-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-list a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: 400ms;
+}
+
+.footer-list .footer-list-icons {
+    transition: 400ms;
+}
+
+.footer-list .footer-list-icons:hover {
+    cursor: pointer;
+    color: #28A49C;
+}
+
+.footer-list a:hover {
+    color: #28A49C;
+}
+
+.btn-box {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5rem;
+    gap: 5px;
+}
+
+.btn-seta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/*Responsividade*/
+
+@media only screen and (max-width: 852px) {
+
+    footer{
+        padding: 2rem;
+    }
+    
+    .footer-row {
+        font-size: 0.8rem;
+    }
+
+    .footer-list a {
+        font-size: 0.8rem; 
+    }
+
+    .btn-seta{
+        font-size: 0.8rem;
+    }
+
+    .footer-list .footer-list-icons{
+        font-size: 1rem; 
+    }
+
+}
+
+@media only screen and (max-width: 658px) {
+
+    footer{
+        padding: 1.7rem;
+    }
+    
+    .footer-row {
+        font-size: 0.6rem;
+    }
+
+    .footer-list a {
+        font-size: 0.6rem; 
+    }
+
+    .btn-seta{
+        font-size: 0.6rem;
+    }
+
+    .footer-list .footer-list-icons{
+        font-size: 0.9rem; 
+    }
+
+}
+
+@media only screen and (max-width: 556px) {
+
+    footer{
+        padding: 1.4rem;
+    }
+    
+    .footer-row {
+        font-size: 0.6rem;
+    }
+
+    .footer-list a {
+        font-size: 0.5rem; 
+        gap: 0.9rem;
+    }
+
+    .btn-seta{
+        font-size: 0.6rem;
+    }
+
+    .footer-list .footer-list-icons{
+        font-size: 0.9rem; 
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+    footer{
+        padding: 0.9rem;
+    }
+
+    .footer-row {
+        font-size: 0.4rem;
+        gap: 1.2rem;
+    }
+
+    .footer-list a {
+        font-size: 0.4rem; 
+        gap: 0.9rem;
+    }
+
+    .btn-seta{
+        font-size: 0.4rem;
+    }
+
+    .footer-list .footer-list-icons{
+        font-size: 0.6rem; 
+    }
+    
+   
+}

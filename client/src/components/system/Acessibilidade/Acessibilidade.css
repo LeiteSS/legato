@@ -1,0 +1,51 @@
+.Acessibilidade {
+    padding: 0.2% 0;
+    background-color: var(--background);
+}
+
+.Acessibilidade span ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    grid: 0%;
+    justify-content: space-evenly;
+}
+
+.Acessibilidade button, .Acessibilidade a {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    color:#09857E;
+    font-size: 16px;
+}
+
+.container-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    color:#09857E;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}

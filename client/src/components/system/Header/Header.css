@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.active-header{
+    display: block;
+}
+
+.none-header{
+    display: none;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5% 0 5%;
+    background-color: var(--background);
+}
+
+.menu-responsivo{
+    display: none;
+    padding: 0 0 10px 0;
+}
+
+.container-header input[type=text]{
+    height: auto;
+    border: transparent 1px;
+    padding: 0 10px;
+    border-radius: 15px;
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+/*Parte da logo e barra de pesquisa*/
+
+.logo {
+    width: 100px;
+}
+
+.menu-logo-pesquisa {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/*Parte do menu e perfil*/
+
+.menu-perfil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 5px;
+    height: 35px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.menu li a {
+    color: #09857E;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    cursor: pointer;
+    color: rgb(103, 103, 103);
+}
+
+.perfil-pessoal:hover{
+    cursor: pointer;
+}
+
+.perfil-pessoal img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    filter:var(--image-theme);
+}
+
+.barra-pesquisa-responsiva{
+    display: none;
+}
+
+/*Header responsividade*/
+
+
+@media only screen and  (max-width: 980px) {
+
+    .logo {
+        width: 90px;
+    }
+
+    .barra-pesquisa-box {
+        height: 34px;
+        width: 250px;
+    }
+
+    .perfil-pessoal img {
+        width: 33px;
+    }
+
+    .menu li {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 727px) {
+    .menu-perfil {
+        display: none;
+    }
+
+    .container-header .menu-logo-pesquisa{
+        width: 100%;
+    }
+
+    .menu-responsivo{
+        background-color: var(--background);
+        display: block;
+        color: #09857E;
+    }
+
+    .menu{
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        width: 77px;
+    }
+
+    .barra-pesquisa-box {
+        height: 34px;
+        width: 220px;
+    }
+
+    .perfil-pessoal img {
+        width: 28px;
+    }
+
+    .menu li {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 727px) {
+    .logo {
+        width: 60px;
+    }
+}
+
+@media only screen and  (max-width: 480px) {
+    .barra-pesquisa-responsiva{
+        display: block;
+        width: 100%;
+    }
+}

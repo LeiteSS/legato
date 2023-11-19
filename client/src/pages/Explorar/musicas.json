@@ -1,0 +1,95 @@
+[
+  {
+      "artista": "The Beatles",
+      "musica": "Let it be",
+      "tipo": "Cifras",
+      "avaliacao": "5 estrelas"
+  },
+
+  {
+      "artista": "Led Zeppelin",
+      "musica": "Stairway to Heaven",
+      "tipo": "Tablaturas",
+      "avaliacao": "3 estrelas"
+  },
+
+  {
+      "artista": "Guns N' Roses",
+      "musica": "Sweet Child O' Mine",
+      "tipo": "Tablaturas",
+      "avaliacao": "4 estrelas"
+  },
+
+  {
+      "artista": "The Eagles",
+      "musica": "Hotel California Solo",
+      "tipo": "Tablaturas",
+      "avaliacao": "5 estrelas"
+  },
+
+  {
+      "artista": "Foo Fighters",
+      "musica": "Everlong",
+      "tipo": "Cifras",
+      "avaliacao": "4.5 estrelas"
+  },
+
+  {
+      "artista": "Radiohead",
+      "musica": "Creep",
+      "tipo": "Cifras",
+      "avaliacao": "4.3 estrelas"
+  },
+
+  {
+      "artista": "Legião Urbana",
+      "musica": "Será",
+      "tipo": "Cifras",
+      "avaliacao": "4 estrelas"
+  },
+
+  {
+      "artista": "Weezer",
+      "musica": "Buddy Holy",
+      "tipo": "Tablaturas",
+      "avaliacao": "4 estrelas"
+  },
+
+  {
+      "artista": "Misfits",
+      "musica": "Last Caress",
+      "tipo": "Tablaturas",
+      "avaliacao": "2 estrelas"
+  },
+
+  {
+      "artista": "Metallica",
+      "musica": "Enter Sandman",
+      "tipo": "Tablaturas",
+      "avaliacao": "3 estrelas"
+  },
+
+  {
+      "artista": "Pink Floyd",
+      "musica": "Wish you are here",
+      "tipo": "Cifras",
+      "avaliacao": "4 estrelas"
+  },
+
+  {
+      "artista": "Nirvana",
+      "musica": "Come as you are",
+      "tipo": "Tablaturas",
+      "avaliacao": "4 estrelas"
+  }
+
+  ,
+
+  {
+      "artista": "Paulinho Nogueira",
+      "musica": "bachianinha",
+      "tipo": "Partituras",
+      "avaliacao": "3 estrelas"
+  }
+
+]

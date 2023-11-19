@@ -1,0 +1,25 @@
+.box-AvisoPerfil {
+    padding: 0 25px;
+}
+
+
+.container-titulo {
+    margin: 176px 0 45px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--text-primary);
+
+}
+
+.container-conteudo {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 380px 0;
+    font-weight: 600;
+    color: #929292;
+}
+
+.container-conteudo p {
+    width: 45vw;
+}

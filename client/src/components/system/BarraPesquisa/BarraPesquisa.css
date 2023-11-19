@@ -1,0 +1,30 @@
+.barra-pesquisa-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 34px !important;
+    width: 300px;
+    border: 1px solid #D9D9D9;
+    border-radius: 15px;
+}
+
+.barra-pesquisa {
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    text-align: left !important;
+    padding-left: 15px !important;
+    border-radius: 20% !important;
+}
+
+.search-icon {
+    width: 52px;
+    height: 32px;
+    background: #09857E;
+    border-radius: 15px;
+    border: none;
+}
+
+.barra-pesquisa-box svg{
+    filter: var(--image-theme);
+}

@@ -1,0 +1,78 @@
+.container-comunidade {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+
+
+.header-comunidade {
+  padding: 0 24px;
+  margin: 0 0 16px 0;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-box {
+  padding: 0 24px 0 16px;
+}
+
+.titulo-box h1 {
+  font-size: 2.3rem;
+}
+
+.img-comunidade {
+  position: relative;
+
+}
+
+.btn-comunidade{
+  width: 10vw;
+  color: #fff;
+  padding: 5px;
+  font-size: 1.3rem;
+  background-color: #28A49C;
+  border: 1px solid var(--text-primary);
+  border-radius: 6px;
+}
+
+.btn-comunidade:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.content-comununidade {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 24px;
+}
+
+
+@media only screen and (max-width: 900px) { 
+
+  .titulo-box h1 {
+      font-size: 2rem;
+  }
+
+  .sideMenu-comunidade {
+      display: none;
+
+  }
+
+  .btn-comunidade {
+      width: 30vw;
+
+  }
+  
+}
+
+@media only screen and (max-width: 350) { 
+  .btn-comunidade {
+      width: 25vw;
+
+  }
+  
+}

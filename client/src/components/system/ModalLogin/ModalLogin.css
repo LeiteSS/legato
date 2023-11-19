@@ -1,0 +1,128 @@
+.container-modal {
+    width: 100%;
+    height: 100vh;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 368px;
+    height: 518px;
+    border-radius: 40px;
+}
+
+.topo-modal {
+    height: 64px;
+    background: #09857E;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.topo-modal h2 {
+    margin: 0 auto;
+    width: 95px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFFFFF;
+    position: relative;
+    top: 12px;
+}
+
+.box-input {
+    padding: 6% 0;
+    text-align: center;
+}
+
+.box-input label {
+    display: flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    margin-left: 18px;
+}
+
+.box-input input {
+    width: 291px;
+    height: 27px;
+
+    border: 1px solid #D9D9D9;
+
+}
+
+.box-input span {
+    width: 128px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #218780;
+    text-align: center;
+}
+
+.box-input span:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.box-input .senha {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    gap: 15px;
+}
+
+.box-btn {
+    margin: 35px 0;
+    text-align: center;
+}
+
+.box-btn button {
+
+    background: #09857E;
+    border-radius: 5px;
+
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 8px;
+    margin: 0 auto;
+}
+
+.box-btn button {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.box-cadastra-se {
+    text-align: center;
+}
+
+.box-cadastra-se .nao-tem-conta {
+    width: 112px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 15px;
+    color: #929292;
+}
+
+.box-cadastra-se .cadastra-se {
+    width: 88px;
+    height: 18px;
+    font-size: 15px;
+    color: #09857E;
+    margin-left: 5px;
+}
+
+.box-cadastra-se .cadastra-se:hover {
+    cursor: pointer;
+    color: #09857E;
+    opacity: 0.8;
+}

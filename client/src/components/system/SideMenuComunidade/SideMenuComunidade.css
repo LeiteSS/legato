@@ -1,0 +1,73 @@
+.menu-comunidade-box{
+    width: 30vw;
+}
+
+.menu-card{
+    padding: 12px;
+}
+
+.menu-card h2{
+    text-align: left;
+    padding: 12px;
+}
+
+.card-content{
+    
+    text-align: left;
+    padding: 12px;
+}
+
+.regras-box{
+    padding: 12px;
+}
+
+.regra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+.regra-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.regra-numero{
+    font-size: 0.9rem;
+}
+
+.regra-title{
+    font-size: 0.9rem;
+}
+
+.box-setas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seta-baixo, .seta-cima{
+    display: block;
+    cursor: pointer;
+}
+
+.seta-baixo-none, .seta-cima-none{
+    display: none;
+}
+
+.regra-content{
+    color: #808080;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 8px 8px 0 16px;
+    display: none;
+}
+
+.actvite{
+    display: block;
+}

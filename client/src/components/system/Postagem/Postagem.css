@@ -1,0 +1,121 @@
+.container-postagem {
+    width: 600px;
+    height: 332px;
+    border: 1px solid #D9D9D9;
+    border-radius: 17px;
+    text-align: left;
+    margin: 0 0 34px 0;
+}
+
+.box-Postagem{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    padding: 25px;
+}
+
+.titulos-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulos-box h4 {
+    font-weight: 500;
+    color: #000000;
+}
+
+.subtitulo {
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+    color: #646566;
+}
+
+.subtitulo .comunidades {
+    color: #28A49C;
+}
+
+.subtitulo .autor {
+    color: #28A49C;
+}
+
+.subtitulo .comunidades:hover{
+    cursor: pointer;
+}
+
+.subtitulo .autor:hover {
+    cursor: pointer;
+}
+
+.acoes-box{
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.like-box{
+    display: flex;
+    align-items: center;
+}
+
+.like-box:hover{
+    cursor: pointer;
+    color: #28A49C;
+}
+
+.comentario-box{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.comentario-box i{
+    display: flex;
+    align-items: center;
+}
+
+.comentario-box:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.comentario-box i:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.compartilhar-box{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.compartilhar-box:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.link-comunidade{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 650px) { 
+
+    .container-postagem {
+        width: 470px;
+        height: 400px;
+
+    }
+    
+}
+
+@media only screen and (max-width: 650px) { 
+
+    .container-postagem {
+        width: 320px;
+        height: 600px;
+
+    }
+    
+}

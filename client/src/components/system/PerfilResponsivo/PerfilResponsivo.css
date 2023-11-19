@@ -1,0 +1,72 @@
+.perfil-filter {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+.perfil-filter-none {
+    display: none;
+}
+
+.fundo {
+    background-color: #09857E;
+    display: block;
+    position: absolute;
+    width: 300px;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    height: 100%;
+    border: 1px solid #D9D9D9;
+    transition: 500ms;
+    color: var(--text-primary);
+}
+
+.avatar-perfil{
+    height: 60px;
+    border-radius: 50%;
+}
+
+.imagem-perfil{
+     
+}
+
+.close-icon{
+    position: absolute;
+    right: 242px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+
+.nav-perfil {
+    display: inline-flex;
+    text-align: left;
+    gap: 0.5rem 0;
+    list-style: none;
+}
+
+.nav-perfil ul{
+    list-style: none;
+}
+
+.nav-perfil li a{
+    list-style: none;
+    padding: 3px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-perfil li a:hover{
+    cursor: pointer;
+    font-weight: bold; 
+}
+
+ 
+
+

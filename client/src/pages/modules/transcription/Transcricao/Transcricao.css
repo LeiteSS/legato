@@ -1,0 +1,26 @@
+.container-transcricao{
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.side-menu{
+    padding: 2%;
+}
+.container-transcricao .side-menu .element-li img{
+    filter: var(--image-theme);
+}
+
+.box-cifra{
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    gap: 6%;
+}
+
+.container-comentarios{
+    padding: 30px;
+}
+
+.title-comentarios{
+    padding: 20px 0;
+}

@@ -1,0 +1,23 @@
+
+.UploadTab-container #Arquivo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+    width: 100%;
+    border: solid 1px var(--text-primary);
+}
+
+.UploadTab-container #Arquivo img{
+        width: 5vw;
+        filter:var(--image-theme);
+}
+
+.UploadTab-container #Arquivo p{
+    font-size: 1rem;
+}
+
+.UploadTab-container input[type="file"] {
+    display: none;
+}

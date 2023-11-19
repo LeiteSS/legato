@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-avatar {
+    margin: 5px;
+}
+
+.perfil-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.perfil-box p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.perfil {
+    width: 94px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 105px;
+    width: 105px;
+} 
+
+@media (max-width: 990px) {
+    
+    .perfil{
+        width: 80px;
+        height: 82px;
+    }
+
+    .perfil-box p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 685px) {
+    
+    .perfil{
+        width: 66px;
+        height: 68px;
+    }
+
+    .perfil-box p{
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 440px) {
+    
+    .perfil{
+        width: 52px;
+        height: 54px;
+    }
+
+    .perfil-box p{
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 440px) {
+    
+    .perfil{
+        width: 46px;
+        height: 48px;
+    }
+
+    .perfil-box p{
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    
+    .perfil{
+        width: 42px;
+        height: 44px;
+    }
+
+    .perfil-box p{
+        font-size: 0.4rem;
+    }
+}

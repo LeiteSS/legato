@@ -1,0 +1,94 @@
+.UploadTab-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../../assets/Editar_Wallpaper.jpg);
+}
+
+.UploadTab-container h4 {
+    font-weight: normal;
+}
+
+.UploadTab-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #09857E;
+    margin: 5% 0;
+    border-radius: 40px;
+    width:50%;
+}
+
+.UploadTab-container form h2{
+    color: #ffffff;
+    font-size: 2vw;
+    padding-top: 1.5rem;
+    display: flex;
+    align-self: center;
+}
+
+.UploadTab-container form div {
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.UploadTab-container .NearbyElements {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.UploadTab-container form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.UploadTab-container form div label {
+    font-weight: bold;
+}
+
+.UploadTab-container .Corpo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--background);
+    color: var(--text-primary);
+    padding: 5% 10%;
+    border-radius: 0 0 40px 40px;
+}
+
+.UploadTab-container form select {
+    height: 3vw;
+    font-size: 1vw;
+}
+
+.UploadTab-container input[type=submit] {
+    width: 20%;
+    align-self: center;
+    background-color: #09857E;
+    border-radius: 5px;
+    height: 3vw;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    justify-self: center;
+}
+
+@media only screen and (max-width: 1023px) {
+    .UploadTab-container form{
+        width: 100%;
+    }
+  
+    .UploadTab-container form, 
+    .UploadTab-container form .Corpo{
+        border-radius: 0px;
+    }
+  
+    .UploadTab-container form .Corpo{
+        flex-direction: column;
+    }
+  }

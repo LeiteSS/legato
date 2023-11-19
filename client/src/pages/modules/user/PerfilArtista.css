@@ -1,0 +1,147 @@
+.Perfil_Artista{
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.artist-name-box{
+  position: absolute;
+  top: 278px;
+  margin-left: 20px;
+}
+
+.artist-name{
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.seguidores-artista{
+  display: flex;
+  gap: 8px;
+}
+
+.artist-name-box span{
+  color: #fff;
+  font-size: 1rem;
+}
+
+.container-artista{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  gap: 5vw;
+}
+
+
+.content-artist{
+  width: 90%;
+}
+
+.box-artist{
+  width: 90%;
+}
+
+.title-artist{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2% 0;
+}
+
+.box-title{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.icons-artist{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  list-style: none;
+}
+
+.icons-artist li{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 16px;
+  transition: 400ms;
+}
+
+
+.favoritar-borda:hover{
+  cursor: pointer;
+  color: red ;
+}
+
+
+.favoritar:hover{
+  cursor: pointer;
+}
+
+.mais-acessadas li{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  list-style: none;
+}
+
+.mais-acessadas li span{
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+  .content-artist{
+      width: 100%;
+      padding: 10px;
+  }
+
+  .box-artist{
+      width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+  .box-title h1{
+      font-size: 1.3rem;
+  }
+
+  .icons-artist li{
+      font-size: 0.8rem;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .artist-name{
+      font-size: 2.5rem;
+  }
+
+  .box-title h1{
+      font-size: 1rem;
+  }
+
+  .icons-artist li{
+      font-size: 0.7rem;
+  }
+
+  .mais-acessadas li{
+      font-size: 0.8rem;
+  }
+
+  .mais-acessadas li span{
+      font-size: 0.8rem;
+  }
+
+}
+
