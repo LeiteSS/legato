@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Perfil_Usuario.css';
 import { useUser } from '../../../../middlewares/UserContext';
-
+import MenuHamburger from '../../../../assets/Hamburger_menu.png';
 import Perfil from '../../../../components/system/Perfil/Perfil';
 import PerfilResponsivo from '../../../../components/system/PerfilResponsivo/PerfilResponsivo';
 
@@ -18,11 +18,11 @@ const Perfil_Usuario = () => {
 
     const closeFilter = () => { setShowFilter(false); }
 
-        const [selectedItem, setSelectedItem] = useState('Perfil');
+    const [selectedItem, setSelectedItem] = useState('Perfil');
 
-        const handleSelectItem = (item:any) => {
-            setSelectedItem(item);
-        };
+    const handleSelectItem = (item: any) => {
+        setSelectedItem(item);
+    };
 
 
 
@@ -30,6 +30,9 @@ const Perfil_Usuario = () => {
         <div className='Perfil_usuario'>
             <Perfil onSelectItem={handleSelectItem} />
             <PerfilResponsivo onSelectItem={handleSelectItem} showMenuFiltro={showFilter} closeMenuFiltro={closeFilter} />
+            <div className={"menu-hamburger-perfil"} onClick={openFilter}>
+                <img src={MenuHamburger} alt="" />
+            </div>
 
 
             {selectedItem === 'Perfil' && <Perfil_Bio />}

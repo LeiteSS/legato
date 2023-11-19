@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Wallpaper from '../../../assets/wallpaper.jpg';
 import './Perfil.css';
+import Avatar from '../Avatar/Avatar';
 import { useUser } from '../../../middlewares/UserContext';
 
 const Perfil = ({ onSelectItem }: { onSelectItem: any }) => {
@@ -17,14 +18,11 @@ const Perfil = ({ onSelectItem }: { onSelectItem: any }) => {
     return (
         <>
             <img className="background" src={Wallpaper} alt="" />
-
-            <div className='img-perfil-box'>
-                <img className='img-perfil' src={user ? user.urlIMG : "https://effigy.im/a/brantly.eth.svg"} alt="" />
-                <p>{user ? user.name : "Usuário"}</p>
-            </div>
-            <aside className='nav-perfil'>
-
-                <span>
+            <aside>
+                <div className='imagem-perfil imagem-perfil-position'>
+                    <Avatar avatarUrl={user ? user.urlIMG : "https://effigy.im/a/brantly.eth.svg"} name={user ? user.name : "Usuário"} />
+                </div>
+                <span> 
                     <ul>
                         <li>
                             <a
