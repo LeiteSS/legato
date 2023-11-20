@@ -18,11 +18,11 @@ import { useLocalStorage } from "usehooks-ts";
 import UserSchema from "../../hooks/modules/user/schemas/userSchema";
 
 import { User } from "../../models/modules/user/User";
-import React from "react";
+import React, { useState } from "react";
+import createUser from "../../hooks/modules/user/create/createUserHook";
 
-const Cadastro = ({ }) => {
-    const [users, setUsers] = useLocalStorage<User[]>("user", [])
-    const { id } = useParams()
+const Cadastro = () => {
+    const [user, setUser] = useState<User>();
     const navigate = useNavigate()
 
     const {
@@ -37,18 +37,16 @@ const Cadastro = ({ }) => {
     })
 
     const onSubmit = (data: User) => {
-        if (!id) {
-            setUsers([...users, { ...data, id: `${users.length + 1}` }]);
-        } else {
-            const newUsers = [...users]
-            const userIndex = users.findIndex((user) => user.id === id);
-            newUsers[userIndex] = { ...data, id }
+        console.log(data)
+        newUser(data);
 
-            setUsers(newUsers);
-        }
-
-        navigate("/Users/")
+        navigate("/users/")
     }
+
+    const newUser = async (data: User) => {
+		const user = await createUser(data);
+		setUser(user!);
+	}
 
     return (
         <Paper>
@@ -63,93 +61,150 @@ const Cadastro = ({ }) => {
 
                     <Box
                         component="form"
-                        autoComplete="off"
                         noValidate
                         onSubmit={handleSubmit(onSubmit)}
                         sx={{ p: 2 }}
-                    >{/* Box start */}
+                    >
                         <h2>Cadastre-se</h2>
-                        <Controller
-                            control={control}
-                            name="name"
-                            defaultValue=""
-                            render={({ field: { ...field } }) => (
-                                <FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
-                                    <label>Nome</label>
-                                    <TextField
-                                        className="textField"
-                                        error={!!errors.name}
-                                        helperText={errors.name?.message}
-                                        {...field}
-                                    />
-                                </FormControl>
-                            )}
-                        />
-
-                        <Controller
-                            control={control}
-                            name="email"
-                            defaultValue=""
-                            render={({ field: { ...field } }) => (
-                                <FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
-                                    <label>Email</label>
-                                    <TextField
-                                        className="textField"
-                                        error={!!errors.email}
-                                        helperText={errors.email?.message}
-                                        {...field}
-                                    />
-                                </FormControl>
-                            )}
-                        />
                         <Stack
-                            className="Senha"
-                            direction="row"
-                            alignItems="center"
-                            spacing={1}
-                            sx={{ marginBottom: 2 }}
-                        >
-                            <Controller
-                                control={control}
-                                name="password"
-                                defaultValue=""
-                                render={({ field: { ...field } }) => (
-                                    <FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
-                                        <label>Senha</label>
-                                        <TextField
-                                            className="textField"
-                                            error={!!errors.password}
-                                            helperText={errors.password?.message}
-                                            {...field}
-                                        />
-                                    </FormControl>
-                                )}
-                            />
-                            {/* <Controller
-                            control={control}
-                            name="password"
-                            defaultValue=""
-                            render={({ field: { ...field } }) => (
-                                <FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
-                                    <label>Repetir Senha</label>
-                                    <TextField
-                                        className="textField"
-                                        error={!!errors.password}
-                                        helperText={errors.password?.message}
-                                        {...field}
-                                    />
-                                </FormControl>
-                            )}
-                            />*/}
-                        </Stack>
-                        <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-                            <Button type="submit" variant="contained" size="large">
-                                Salvar User
-                            </Button>
-                        </Stack>
-                        <div className='redirecionamento'>
-                            <p>Já tem conta?</p> <a href="">Entre</a>
-                        </div>
+				direction="row"
+				alignItems="center"
+				spacing={1}
+				sx={{ marginBottom: 2, width: 250 }}
+			>
+					<Controller
+							control={control}
+							name="name"
+							defaultValue=""
+							render={({ field: { ...field } }) => (
+								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+									<TextField
+									label="name"
+									error={!!errors.name}
+									helperText={errors.name?.message}
+									{...field}
+								/>
+							</FormControl>
+						)}
+					/>
+					</Stack>
+					<Stack
+				direction="row"
+				alignItems="center"
+				spacing={1}
+				sx={{ marginBottom: 2, width: 250 }}
+			>
+					<Controller
+							control={control}
+							name="lastname"
+							defaultValue=""
+							render={({ field: { ...field } }) => (
+								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+									<TextField
+									label="lastname"
+									error={!!errors.lastname}
+									helperText={errors.lastname?.message}
+									{...field}
+								/>
+							</FormControl>
+						)}
+					/>
+					</Stack>
+					<Stack
+				direction="row"
+				alignItems="center"
+				spacing={1}
+				sx={{ marginBottom: 2, width: 250 }}
+			>
+					<Controller
+							control={control}
+							name="email"
+							defaultValue=""
+							render={({ field: { ...field } }) => (
+								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+									<TextField
+									label="email"
+									error={!!errors.email}
+									helperText={errors.email?.message}
+									{...field}
+								/>
+							</FormControl>
+						)}
+					/>
+					</Stack>
+					<Stack
+				direction="row"
+				alignItems="center"
+				spacing={1}
+				sx={{ marginBottom: 2, width: 250 }}
+			>
+					<Controller
+							control={control}
+							name="password"
+							defaultValue=""
+							render={({ field: { ...field } }) => (
+								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+									<TextField
+									label="password"
+									error={!!errors.password}
+									helperText={errors.password?.message}
+									{...field}
+								/>
+							</FormControl>
+						)}
+					/>
+					</Stack>
+					<Stack
+				direction="row"
+				alignItems="center"
+				spacing={1}
+				sx={{ marginBottom: 2, width: 250 }}
+			>
+					<Controller
+							control={control}
+							name="accountType"
+							defaultValue=""
+							render={({ field: { ...field } }) => (
+								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+									<TextField
+									label="accountType"
+									error={!!errors.accountType}
+									helperText={errors.accountType?.message}
+									{...field}
+								/>
+							</FormControl>
+						)}
+					/>
+					</Stack>
+					<Stack
+				direction="row"
+				alignItems="center"
+				spacing={1}
+				sx={{ marginBottom: 2, width: 250 }}
+			>
+					<Controller
+							control={control}
+							name="datebirth"
+							render={({ field: { ...field } }) => (
+								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+									<TextField
+									label="datebirth"
+									error={!!errors.datebirth}
+									helperText={errors.datebirth?.message}
+									{...field}
+								/>
+							</FormControl>
+						)}
+					/>
+					</Stack>      
+					<Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+						<Button type="submit" variant="contained" size="large">
+							Salvar User
+						</Button>
+						<Button component={RouterLink} to="/user">
+							Cancelar
+						</Button>
+      </Stack>
                     </Box>
                 </div>
             </main>
