@@ -1,7 +1,14 @@
+@import url('./assets/var.css');
+
 .MuiDataGrid-root,
 .MuiDataGrid-cell:focus,
 .MuiDataGrid-cell:focus-within,
 .MuiDataGrid-columnHeader:focus,
 .MuiDataGrid-columnHeader:focus-within {
   outline: none !important;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--text-primary);
 }
