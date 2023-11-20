@@ -3,7 +3,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-image: url(../../assets/Editar_Wallpaper.jpg);
+    background-image: url(../../../../assets/Editar_Wallpaper.jpg);
 }
 
 .UploadTab-container h4 {
@@ -92,3 +92,34 @@
         flex-direction: column;
     }
   }
+
+  @media only screen and (max-width: 720px) {
+    .UploadTab-container form h2 {
+        font-size: 5vw;
+    }
+    .UploadTab-container input[type=text],
+    input[type=password],
+    select {
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    .UploadTab-container form select {
+        font-size: 3vw;
+    }
+
+    .UploadTab-container form textarea{
+            font-size: 3vw;
+    }
+
+
+    .UploadTab-container #Arquivo p {
+        font-size: 0.7rem;
+    }
+
+    .UploadTab-container input[type=submit]{
+        font-size: 3vw;
+        width: 30%;
+        height: 8vw;
+    }
+}

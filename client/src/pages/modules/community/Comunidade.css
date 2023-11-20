@@ -3,8 +3,6 @@
   color: var(--text-primary);
 }
 
-
-
 .header-comunidade {
   padding: 0 24px;
   margin: 0 0 16px 0;
@@ -38,6 +36,10 @@
   border-radius: 6px;
 }
 
+.icon-drop{
+  display: none;
+}
+
 .btn-comunidade:hover{
   cursor: pointer;
   opacity: 0.9;
@@ -52,19 +54,19 @@
 
 
 @media only screen and (max-width: 900px) { 
-
+  .icon-drop{
+    display: flex;
+  }
   .titulo-box h1 {
       font-size: 2rem;
   }
 
   .sideMenu-comunidade {
       display: none;
-
   }
 
   .btn-comunidade {
       width: 30vw;
-
   }
   
 }

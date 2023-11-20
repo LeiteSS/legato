@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import './Comunidade.css';
 
@@ -6,10 +6,21 @@ import Wallpaper from '../../../assets/wallpaper.jpg';
 import Postar from '../../../components/system/Postar/Postar';
 import Postagem from '../../../components/system/Postagem/Postagem';
 import SideMenuComunidade from '../../../components/system/SideMenuComunidade/SideMenuComunidade';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 import ComunidadeTitulo from '../../../components/system/ImgsComunidade/ComunidadeTitulo/ComunidadeTitulo';
 
 const Comunidade = () => {
+    const [showMenu, setMenu] = useState(false);
+
+    const showDropdown = () => {
+        if(showMenu == false){
+            setMenu(true);
+        }else{
+            setMenu(false);
+        }
+        
+    }
 
     return (
         <>
@@ -27,14 +38,11 @@ const Comunidade = () => {
                         <div className='titulo-box'><h1>Titulo</h1></div>
 
                         <div className='btn-comunidade-box'><button className='btn-comunidade'>Unir-se</button></div>
+                        <div className='icon-drop'> <MoreHorizIcon onClick={showDropdown} /></div>
 
                     </div>
 
-
-
                 </div>
-
-
 
                 <section className='content-comununidade'>
 

@@ -6,7 +6,6 @@ import TableMusics from '../../../../../../components/system/TableMusics/TableMu
 import AvisoPerfil from '../../../../../../components/system/AvisoPerfil/AvisoPerfil';
 import React from 'react';
 
-
 const Perfil_Listas = ({ }) => {
 
     const tituloAviso = "Crie sua primeira lista";
@@ -16,7 +15,6 @@ const Perfil_Listas = ({ }) => {
 
         <div className='container-usuario'>
             <div className='header-perfil'>
-
 
                 <div className='titulo-perfil-usuario'>
                     <h2>Listas</h2>

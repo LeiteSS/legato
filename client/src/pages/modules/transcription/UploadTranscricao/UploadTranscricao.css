@@ -1,5 +1,4 @@
-
-.UploadTab-container #Arquivo{
+.UploadTab-container #Arquivo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,15 +8,49 @@
     border: solid 1px var(--text-primary);
 }
 
-.UploadTab-container #Arquivo img{
-        width: 5vw;
-        filter:var(--image-theme);
+.UploadTab-container #Arquivo img {
+    width: 5vw;
+    filter: var(--image-theme);
 }
 
-.UploadTab-container #Arquivo p{
+.UploadTab-container #Arquivo p {
     font-size: 1rem;
 }
 
 .UploadTab-container input[type="file"] {
     display: none;
+}
+
+@media only screen and (max-width: 720px) {
+    .UploadTab-container form h2 {
+        font-size: 5vw;
+    }
+    .UploadTab-container input[type=text],
+    input[type=password],
+    select {
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    .UploadTab-container form select {
+        font-size: 3vw;
+    }
+
+    .UploadTab-container form textarea{
+            font-size: 3vw;
+    }
+
+    .UploadTab-container #Arquivo img {
+        width: 8vw;
+    }
+
+    .UploadTab-container #Arquivo p {
+        font-size: 0.7rem;
+    }
+
+    .UploadTab-container input[type=submit]{
+        font-size: 3vw;
+        width: 30%;
+        height: 8vw;
+    }
 }
