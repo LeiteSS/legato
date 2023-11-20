@@ -26,7 +26,8 @@ const FiltersResponsivo = ({ showHeaderCommunity, showMenuFiltro, exibirGenero, 
                     <div className={showHeaderCommunity ? 'header-comunidades block' : 'header-none'}>
                         <li><div className="icons-communities"><GridViewIcon /></div><p>Todas as Comunidades</p></li>
                         <li><img src={UserIcon} className="icons-communities" /><p>Minhas Comunidades</p></li>
-                        <li onClick={openCriarComunidade}><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar discussão</button></span></li>
+                        <li onClick={openCriarComunidade}><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar Comunidade</button></span></li>
+                        <li><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar discussão</button></span></li>
                         <CriarComunidade showCriarComunidade={showCriarComunidade} closeCriarComunidade={closeCriarComunidade} />
                     </div>
 

@@ -3,7 +3,6 @@
     border-radius: 5px;
     display: block;
     padding: 0 2% 2%;
-    width: 230px;
     background-color: var(--background);
     color: var(--text-primary);
 }
@@ -29,6 +28,10 @@
     font-size: 0.9rem;
     gap: 8px;
     padding: 3px 0;
+}
+
+.select-comunidades{
+    color: #28A49C;
 }
 
 .header-none{
@@ -62,7 +65,11 @@
     border-radius: 6px;
 }
 
-.btn-comunidades:hover{
+.header-comunidades li:hover{
+    cursor: pointer;
+}
+ 
+.btn-comunidades button:hover{
     cursor: pointer;
 }
 

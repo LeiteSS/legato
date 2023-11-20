@@ -10,7 +10,6 @@
     flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
 .settings-icon{
     display: flex;
     align-items: center;
@@ -20,8 +19,6 @@
 .settings-icon:hover{
     color: #aeadad;
 }
-=======
->>>>>>> ec74cf343b366c6a3263b056f499fd4ce1e3a4ad
 
 .menu-hamburger-perfil{
     display: none;
