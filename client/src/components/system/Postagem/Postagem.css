@@ -100,11 +100,65 @@
     text-decoration: none;
 }
 
+.acoes-box{
+    padding-bottom: 10%;
+}
+
+
+.content-box{
+    margin-top: 3px ;
+    --max-lines: 3;
+    --line-height: 1.4;
+
+    max-height: calc(var(--max-lines)*1em*var(--line-height));
+    line-height: var(--line-height);
+
+    overflow: hidden;
+    position: relative;
+}
+
+.content-box:has(+ .expandir-texto:not(:checked))::before{
+    content: "";
+    position: absolute;
+    height: calc(1em*var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    background: linear-gradient(to bottom, transparent, white);
+}
+
+.expandir-texto{
+    appearance: none;
+    text-decoration: underline;
+    padding: .5em;
+    border-radius: .25em;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.expandir-texto::before{
+    cursor: pointer;
+}
+
+.expandir-texto::before{
+    content: "Ler Mais";
+}
+
+.expandir-texto:checked:before{
+    content: "Voltar";
+}
+
+.content-box:has(+ .expandir-texto:checked){
+    overflow: visible;
+    max-height: 100%;
+}
+
 @media only screen and (max-width: 650px) { 
 
     .container-postagem {
         width: 100%;
-        height: 100%;
+        overflow: auto;
     }
-    
+
 }

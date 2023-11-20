@@ -3,6 +3,7 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 
 import './Comentario.css'
+import React from 'react';
 
 const Comentario = ({ User, userImg, Content, dataPubli }: any) => {
     return (
@@ -15,8 +16,7 @@ const Comentario = ({ User, userImg, Content, dataPubli }: any) => {
 
                     <div className='header-comment'>
 
-                        <h3 className='user-name'>{User}</h3>
-
+                        <h3 className='user-name'>{User} </h3>
                         <span className='data-publi'>. {dataPubli}</span>
 
                     </div>
@@ -29,16 +29,10 @@ const Comentario = ({ User, userImg, Content, dataPubli }: any) => {
                         <span className='like-box'><ThumbUpOffAltIcon /></span>
 
                         <span className='comentario-box'><i><MessageOutlinedIcon /></i><span> Responder</span></span>
-
-
                     </div>
-
                 </div>
-
-
             </div>
         </>
-
     )
 }
 
