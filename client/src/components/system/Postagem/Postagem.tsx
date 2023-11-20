@@ -4,6 +4,7 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 
 const Postagem = () => {

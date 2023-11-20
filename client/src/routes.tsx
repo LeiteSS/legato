@@ -17,6 +17,7 @@ import Comunidades from "./pages/modules/community/Comunidades"
 import UploadTranscricao from "./pages/modules/transcription/UploadTranscricao/UploadTranscricao"
 import Comunidade from "./pages/modules/community/Comunidade"
 import Editar_Perfil from "./pages/modules/user/PerfilUsuario/EditarPerfil/Editar_Perfil"
+import Cadastro from "./pages/Cadastro/Cadastro"
 
 export function AppRoutes() {
   return (
@@ -31,6 +32,7 @@ export function AppRoutes() {
       <Route path="/Perfil/EditarPerfil" element={<Editar_Perfil/>} />
       <Route path="/PerfilArtista" element={<Perfil_Artista/>} />
       <Route path={`/Transcricao`} element={<Transcricao />} />
+      <Route path="/Cadastro" element={<Cadastro />} />
       <Route path="/UploadTab" element={<UploadTab />} />
       <Route path="/UploadTranscricao" element={<UploadTranscricao/>}/>
       <Route path="/Comunidades" element={<Comunidades />} />

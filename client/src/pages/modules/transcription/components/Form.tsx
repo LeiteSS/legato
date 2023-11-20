@@ -18,6 +18,7 @@ import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 import { TranscriptionSchema } from "../../../../hooks/modules/Transcription/schemas/userSchema";
 
 import { Transcription } from "../../../../models/modules/Transcription/Transcription";
+import React from "react";
 
 const Form = () => {
   const [Transcriptions, setTranscriptions] = useLocalStorage<Transcription[]>("Transcription", [])
@@ -85,7 +86,7 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="titleMusic
+									label="titleMusic"
 									 error={!!errors.titleMusic}
 									helperText={errors.titleMusic.message}
 									{...field}
@@ -107,7 +108,7 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="file
+									label="file"
 									 error={!!errors.file}
 									helperText={errors.file.message}
 									{...field}
@@ -129,7 +130,7 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="genre
+									label="genre"
 									 error={!!errors.genre}
 									helperText={errors.genre.message}
 									{...field}
@@ -151,7 +152,7 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="difficult
+									label="difficult"
 									 error={!!errors.difficult}
 									helperText={errors.difficult.message}
 									{...field}
@@ -173,7 +174,7 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="instrument
+									label="instrument"
 									 error={!!errors.instrument}
 									helperText={errors.instrument.message}
 									{...field}

@@ -1,0 +1,143 @@
+.PaginaCadastro {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.PaginaCadastro .Side-Background {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.PaginaCadastro .Side-Background img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(35%) saturate(1.5);
+}
+
+.PaginaCadastro .Side-Background p {
+    flex-shrink: 0;
+    position: absolute;
+    color: #ffffff;
+    align-self: center;
+    font-size: 3vw;
+    font-weight: 700;
+    padding: 0 2%
+}
+
+.PaginaCadastro .Side-Background h3 {
+    flex-shrink: 0;
+    position: absolute;
+    color: #ffffff;
+    align-self: center;
+    font-size: 1.5vw;
+    padding: 6% 0 0 2%;
+}
+
+.PaginaCadastro .Cadastro {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.PaginaCadastro .Cadastro .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+}
+
+.PaginaCadastro .Senha div,
+.PaginaCadastro .form div {
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.PaginaCadastro .Senha {
+    display: flex;
+    gap: 1rem;
+}
+
+.PaginaCadastro .redirecionamento {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.PaginaCadastro .redirecionamento:last-of-type {
+    justify-content: center;
+}
+
+.PaginaCadastro  .textField{
+    font-size: 1vw;
+}
+
+.PaginaCadastro input[type=checkbox] {
+    line-height: normal;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.PaginaCadastro input[type=submit] {
+    width: 20%;
+    align-self: center;
+    text-align: center;
+    background-color: #09857E;
+    border-radius: 5px;
+    height: 3vw;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.PaginaCadastro a {
+    color: #09857E;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+.PaginaCadastro .Cadastro input[type=text], .PaginaCadastro .Cadastro input[type=password]{
+    height: 30px;
+    width: 100%;
+    resize: vertical;
+}
+
+@media only screen and (max-width: 720px){
+    .PaginaCadastro .Side-Background{
+            display: none;     
+    }
+
+    .PaginaCadastro .Cadastro form {
+        width: 80%;
+    }
+
+    .PaginaCadastro .Cadastro{
+        width: 100%;
+    }
+
+    .PaginaCadastro .Cadastro .textField {
+        font-size: 1rem;
+    }
+
+    .PaginaCadastro .Cadastro input[type=submit] {
+        width: 50%;
+        font-size: 1rem;
+        height: 2rem;
+    }
+
+    .PaginaCadastro .redirecionamento p, .PaginaCadastro .redirecionamento a{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+}
