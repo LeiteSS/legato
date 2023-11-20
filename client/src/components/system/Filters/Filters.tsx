@@ -1,10 +1,22 @@
 import './Filters.css'
+import React, { useState } from 'react';
 import GridViewIcon from '@mui/icons-material/GridView';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import CriarComunidade from '../CriarComunidade/CriarComunidade';
 import UserIcon from '../../../assets/user.svg';
 import MenuHamburger from '../../../assets/Hamburger_menu.png';
 
-const Filters =  ({ showHeaderCommunity, exibirGenero}:{ showHeaderCommunity: boolean, exibirGenero: boolean }) => {
+const Filters = ({ showHeaderCommunity, exibirGenero }: { showHeaderCommunity: boolean, exibirGenero: boolean }) => {
+
+    const [showCriarComunidade, setshowCriarComunidade] = useState(false);
+
+    const openCriarComunidade = () => {
+        setshowCriarComunidade(true);
+    }
+
+    const closeCriarComunidade = () => {
+        setshowCriarComunidade(false);
+    }
 
     return (
         <aside className="container-filtro">
@@ -12,9 +24,10 @@ const Filters =  ({ showHeaderCommunity, exibirGenero}:{ showHeaderCommunity: bo
             <div className="box-filtro">
 
                 <div className={showHeaderCommunity ? 'header-comunidades block' : 'header-none'}>
-                    <li><div className="icons-communities"><GridViewIcon/></div><p>Todas as Comunidades</p></li>
-                    <li><img src={ UserIcon } className="icons-communities"/><p>Minhas Comunidades</p></li>
-                    <li><span className='btn-comunidades'><ChatBubbleOutlineIcon/><button>Criar discussão</button></span></li>
+                    <li><div className="icons-communities"><GridViewIcon /></div><p>Todas as Comunidades</p></li>
+                    <li><img src={UserIcon} className="icons-communities" /><p>Minhas Comunidades</p></li>
+                    <li onClick={openCriarComunidade}><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar discussão</button></span></li>
+                    <CriarComunidade showCriarComunidade={showCriarComunidade} closeCriarComunidade={closeCriarComunidade}/>
                 </div>
 
                 <h3 className="titulos">Filtros</h3>

@@ -22,7 +22,7 @@ const Perfil = ({ onSelectItem }: { onSelectItem: any }) => {
                 <div className='imagem-perfil imagem-perfil-position'>
                     <Avatar avatarUrl={user ? user.urlIMG : "https://effigy.im/a/brantly.eth.svg"} name={user ? user.name : "Usuário"} />
                 </div>
-                <span> 
+                <span className='span-perfil'> 
                     <ul>
                         <li>
                             <a

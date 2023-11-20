@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from 'react';
 import { FaStar } from "react-icons/fa";
 import "./StarRating.css";
 
@@ -13,7 +14,8 @@ const StarRating = () => {
 
                 return (
                     <label>
-                        <input
+                        <input 
+                            className="star-rating-input-radio"
                             type="radio"
                             name="rating"
                             value={ratingValue}
