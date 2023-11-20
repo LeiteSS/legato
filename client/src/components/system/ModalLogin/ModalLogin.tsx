@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import './ModalLogin.css'
 
 const ModalLogin = () => {

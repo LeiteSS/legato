@@ -17,7 +17,7 @@
     "@hotjar/browser": "^1.0.9",
     "@moreiraste/react-vlibras": "^2.4.5",
     "@mui/icons-material": "^5.14.13",
-    "@mui/material": "^5.14.13",
+    "@mui/material": "^5.14.18",
     "@mui/x-data-grid": "^6.16.2",
     "@mui/x-date-pickers": "^6.16.2",
     "axios": "^1.5.1",
