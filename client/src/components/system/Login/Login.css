@@ -84,6 +84,10 @@
     font-size: 0.9rem;
 }
 
+.esqueceu-senha:hover{
+    cursor: pointer;
+}
+
 .Login label {
     display: flex;
     flex-wrap: wrap;

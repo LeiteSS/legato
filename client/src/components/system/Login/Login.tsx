@@ -5,7 +5,7 @@ import usersData from './users.json';
 import './Login.css';
 import ClearIcon from "@mui/icons-material/Clear";
 
-const Login = ({ showLoginModal, closeLoginModal }: { showLoginModal: boolean, closeLoginModal: () => void }) => {
+const Login = ({ showLoginModal, closeLoginModal, openResetaSenha }: { showLoginModal: boolean, closeLoginModal: () => void, openResetaSenha: () => void}) => {
     const { userDispatch } = useUser();
 
     const [username, setUsername] = useState("");
@@ -47,7 +47,7 @@ const Login = ({ showLoginModal, closeLoginModal }: { showLoginModal: boolean, c
                             <label htmlFor="">Email ou nome de usuário:</label>
                             <input type="text" value={username} onChange={handleUsernameChange} />
                             <div className="redirecionamento">
-                                <label htmlFor="">Senha</label> <a href="">Esqueceu a senha?</a>
+                                <label>Senha</label> <a className='esqueceu-senha' onClick={openResetaSenha}>Esqueceu a senha?</a>
                             </div>
                             <input type="password" value={password} onChange={handlePasswordChange}/>
                             <input type="button" value="Entrar" onClick={handleLogin} />
