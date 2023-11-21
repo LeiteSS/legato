@@ -1,5 +1,7 @@
 import './Aside_Editar_Perfil.css';
 
+import React from 'react';
+
 import Usericon from '../../../../../../assets/user.svg'
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import LockIcon from '../../../../../../assets/LockIcon.png';

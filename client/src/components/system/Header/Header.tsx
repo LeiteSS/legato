@@ -35,7 +35,7 @@ const Header = ({ openLoginModal }: { openLoginModal: () => void }) => {
                     <ul className="menu">
                         <li><a href="/Explorar">Explorar</a></li>
                         <li><a href="/Comunidades">Comunidades</a></li>
-                        <li><a href="/UploadTab">Upload</a></li>
+                        <li><a href="/UploadTabExplorar">Upload</a></li>
                     </ul>
 
                     <div className="perfil-pessoal">

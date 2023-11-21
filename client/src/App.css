@@ -70,6 +70,7 @@ select {
   border-radius: 2px;
   color: var(--text-primary);
   height: 3vw;
+  max-width: 100%;
   resize: vertical;
   padding: 12px 5px;
 }

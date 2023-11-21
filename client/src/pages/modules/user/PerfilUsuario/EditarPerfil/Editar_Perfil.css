@@ -1,7 +1,7 @@
 .EditarPerfil{
     display: flex;
     flex-direction: row;
-    position: relative;
+ 
 }
 
 .EditarPerfil h2{
@@ -11,47 +11,66 @@
     padding-top: 1.5rem;
 }
 
+.background-editar-perfil{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../../../assets/Editar_Wallpaper.jpg);
+}
+
 .EditarPerfil .Cadastro{
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-image: url(../../../assets/Editar_Wallpaper.jpg);
+    min-height: 851px;
 }
 
 .EditarPerfil .Cadastro form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 50%;
+    width: 60%;
     background-color: #09857E;
     margin: 3% 0;
     justify-content: center;
     border-radius: 40px;
 }
 
+.EditarPerfil .Cadastro form h3{
+    font-size: 1.5rem;
+    margin: 3% 0;
+}
+
 .EditarPerfil .Cadastro form .Corpo{
     background-color: var(--background);
     color: var(--text-primary);
-    padding: 10%;
+    padding: 8%;
+    width: 100%;
     border-radius: 0 0 40px 40px;
 }
 
 .EditarPerfil .Cadastro form .Two-input{
-    display: flex;
+    /*display: flex;   NÃO TÁ SE AJUSTANDO A TELA*/
     flex-direction: row;
+    margin: 3% 0;
+    width: 100%;
 }
 
-.EditarPerfil .Cadastro form div .Two-input div{
-    display: flex;
-    flex-direction: column;
+ 
+
+.EditarPerfil .Cadastro form div .text-area-editar{
+    margin: 3% 0;
 }
 
 .EditarPerfil form div {
     text-align: left;
     display: grid;
     gap: 0.5rem;
+}
+
+.EditarPerfil label{
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .EditarPerfil input[type=password]{
@@ -74,6 +93,7 @@
     cursor: pointer;
     color: #ffffff;
     justify-self: center;
+    margin: 6% 0;
 }
 
 .EditarPerfil a {
