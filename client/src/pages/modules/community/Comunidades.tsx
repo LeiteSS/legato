@@ -9,6 +9,7 @@ import FiltersResponsivo from "../../../components/system/FiltersResponsivo/Filt
 import MenuHamburger from '../../../assets/Hamburger_menu.png';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useState } from "react";
 
 const Comunidades = () => {
@@ -22,6 +23,18 @@ const Comunidades = () => {
     const closeFilter = () => {
         setShowFilter(false);
     }
+
+    const [setas, setSetas] = useState(true);
+
+    const toggleSetas = () => {
+        if (setas === true) {
+            setSetas(false)
+        } else {
+            setSetas(true)
+        }
+    }
+
+    
 
     const communitiesUrls = [
         "https://clipart-library.com/images_k/transparent-bass-guitar/transparent-bass-guitar-23.png",
@@ -61,7 +74,25 @@ const Comunidades = () => {
                     <div className="comunidades-box">
                         <div className="title-header">
                             <h2>Discussões</h2>
-                            <span className="seta">Discussões relevantes<KeyboardArrowDownIcon /></span>
+                            <span onClick={toggleSetas} className="box-setas">
+
+                                <div className="setas">
+                                    Recomendado
+                                    {setas ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
+                                </div>
+
+                                <div className="dropdown-menu-comunidades-container">
+
+                                    <div className={setas ? "dropdown-menu-comunidades-none" : "dropdown-menu-comunidades"}>
+                                        <ul>
+                                            <li>Recomendado</li>
+                                            <li>Últimas publicações</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </span>
                         </div>
 
                         <Postagem />

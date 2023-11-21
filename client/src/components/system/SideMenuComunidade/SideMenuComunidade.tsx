@@ -2,9 +2,10 @@ import { useState } from 'react';
 import './SideMenuComunidade.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import React from 'react';
 
 const SideMenuComunidade = () => {
-    const [setas, setSetas] = useState([true, true]);
+    const [setas, setSetas] = useState([true, true, true]);
 
     const toggleSeta = (index:any) => {
         const newSetas = [...setas];
@@ -23,7 +24,7 @@ const SideMenuComunidade = () => {
                 <div className='menu-card'>
                     <h2>Regras</h2>
                     <div className='regras-box'>
-                        {['Respeito às regras da plataforma', 'Seja civilizado'].map((regra, index) => (
+                        {['Respeito às regras da plataforma', 'Seja civilizado', "outra regra"].map((regra, index) => (
                             <div className='regra' key={index}>
                                 <div className='regra-box'>
                                     <div>

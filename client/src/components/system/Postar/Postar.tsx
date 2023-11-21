@@ -1,5 +1,7 @@
 import './Postar.css'
 
+import React from 'react';
+
 import ComunidadeAvatar from '../ImgsComunidade/ComunidadeAvatar/ComunidadeAvatar';
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import AttachFileOutlinedIcon from '@mui/icons-material/AttachFileOutlined';

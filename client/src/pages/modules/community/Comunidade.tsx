@@ -14,12 +14,21 @@ const Comunidade = () => {
     const [showMenu, setMenu] = useState(false);
 
     const showDropdown = () => {
-        if(showMenu == false){
+        if (showMenu == false) {
             setMenu(true);
-        }else{
+        } else {
             setMenu(false);
         }
-        
+    }
+
+    const [btnMembro, setBtnMembro] = useState(true);
+
+    const toggleBtn = () => {
+        if (btnMembro === false) {
+            setBtnMembro(true)
+        } else (
+            setBtnMembro(false)
+        )
     }
 
     return (
@@ -37,7 +46,9 @@ const Comunidade = () => {
 
                         <div className='titulo-box'><h1>Titulo</h1></div>
 
-                        <div className='btn-comunidade-box'><button className='btn-comunidade'>Unir-se</button></div>
+                        <div onClick={toggleBtn} className='btn-comunidade-box'>
+                            <button className='btn-comunidade'>{btnMembro ? "Unir-se" : "Membro"}</button>
+                        </div>
                         <div className='icon-drop'> <MoreHorizIcon onClick={showDropdown} /></div>
 
                     </div>
@@ -59,7 +70,7 @@ const Comunidade = () => {
                     </div>
 
                     <div className='sideMenu-comunidade'>
-                        <SideMenuComunidade/>
+                        <SideMenuComunidade />
                     </div>
 
 
