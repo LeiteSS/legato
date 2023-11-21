@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import GridViewIcon from '@mui/icons-material/GridView';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import CriarComunidade from '../CriarComunidade/CriarComunidade';
+import CriarDiscussao from '../CriarDiscussao/CriarDiscussao';
 import UserIcon from '../../../assets/user.svg';
 import MenuHamburger from '../../../assets/Hamburger_menu.png';
 
@@ -16,6 +17,17 @@ const Filters = ({ showHeaderCommunity, exibirGenero }: { showHeaderCommunity: b
 
     const closeCriarComunidade = () => {
         setshowCriarComunidade(false);
+    }
+
+    const [showCriarDiscussao, setshowCriarDiscussao] = useState(false);
+
+
+    const openCriarDiscussao = () => {
+        setshowCriarDiscussao(true);
+    }
+
+    const closeCriarDiscussao = () => {
+        setshowCriarDiscussao(false);
     }
 
     const [selectedItem, setSelectedItemComunidade] = useState('todas');
@@ -40,8 +52,9 @@ const Filters = ({ showHeaderCommunity, exibirGenero }: { showHeaderCommunity: b
                         <p className={selectedItem === "minhas" ? "select-comunidades" : ""}>Minhas Comunidades</p>
                     </li>
                     <li onClick={openCriarComunidade}><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar Comunidade</button></span></li>
-                    <li><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar discussão</button></span></li>
+                    <li onClick={openCriarDiscussao}><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar discussão</button></span></li>
                     <CriarComunidade showCriarComunidade={showCriarComunidade} closeCriarComunidade={closeCriarComunidade} />
+                    <CriarDiscussao showCriarDiscussao={showCriarDiscussao} closeCriarDiscussao={closeCriarDiscussao}/>
                 </div>
 
                 <h3 className="titulos">Filtros</h3>
