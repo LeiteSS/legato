@@ -26,5 +26,5 @@
 }
 
 .barra-pesquisa-box svg{
-    filter: var(--image-theme);
+    filter: var(--reverse-filter);
 }

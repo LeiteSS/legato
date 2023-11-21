@@ -8,11 +8,14 @@
     --shadow: 7px 15px 13px -4px #00000056;
     --image-theme: invert(0%);
     --pagination-button: #D9D9D9;
+    --reverse-filter:invert(100%);
+    --title-color:#0f0f0f;
+    --title-color-form:#ffffff;
 }
 
 [data-theme='dark'] {
     --background: #05010a;
-    --text-primary: #dfb017;
+    --text-primary: #ffffff;
     --text-secondary: #a7a4a4;
     --accent: #6a5acd;
     --accent-hover: #5b4cbe; 
@@ -20,5 +23,8 @@
     --shadow: 7px 15px 13px -4px #ffffff1b;
     --image-theme: invert(100%);
     --pagination-button: trasnparent;
+    --reverse-filter:invert(0%);
+    --title-color:#dfb017;
+    --title-color-form:#dfb017;
 
 }

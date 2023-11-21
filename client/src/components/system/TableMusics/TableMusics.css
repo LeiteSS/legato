@@ -32,7 +32,7 @@
 }
 
 .table-filtros li:hover {
-    color: #FFF;
+    color: var(--title-color-form);
     cursor: pointer;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .selected{
-    color: #FFF;
+    color: var(--title-color-form);
 }
 
 @media (max-width: 768px) {
