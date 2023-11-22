@@ -7,9 +7,6 @@ export default class User extends Base {
 	public name!: string;
 
 	@prop({ required: true })
-	public lastname!: string;
-
-	@prop({ required: true })
 	public email!: string;
 
 	@prop({ required: true })
@@ -18,6 +15,6 @@ export default class User extends Base {
 	@prop({ required: true, type: String })
 	public accountType!: string;
 
-	@prop({ required: true })
+	@prop({ required: false })
 	public datebirth!: Date;
 }

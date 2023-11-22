@@ -41,7 +41,6 @@ const Grid = () => {
     const user = {
       id: data._id,
       name: data.name,
-      lastname: data.lastname,
       email: data.email,
       password: data.password,
       accountType: data.password,
@@ -56,7 +55,7 @@ const Grid = () => {
 
   const columns: GridColDef<User>[] = [
     { field: "id", headerName: "ID", width: 70 },
-{ field: "name", headerName: "name", width: 180 },{ field: "lastname", headerName: "lastname", width: 180 },{ field: "email", headerName: "email", width: 180 },{ field: "password", headerName: "password", width: 180 },{ field: "accountType", headerName: "accountType", width: 180 },{ field: "datebirth", headerName: "datebirth", width: 180 },    {// actions
+{ field: "name", headerName: "name", width: 180 },{ field: "email", headerName: "email", width: 180 },{ field: "password", headerName: "password", width: 180 },{ field: "accountType", headerName: "accountType", width: 180 },{ field: "datebirth", headerName: "datebirth", width: 180 },    {// actions
       field: "actions",
       headerName: "Ações",
       minWidth: 150,

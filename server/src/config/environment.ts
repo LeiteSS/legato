@@ -9,7 +9,7 @@ const api = {
 };
 
 const database = {
-  uri: process.env.DATABASE_URI || 'mongodb://localhost:27017/legato',
+  uri: process.env.DATABASE_URI || 'mongodb://127.0.0.1:27017/legato',
 };
 
 const encrypt = {
