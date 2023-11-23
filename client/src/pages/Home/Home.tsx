@@ -11,7 +11,8 @@ import MenuHamburger from '../../assets/Hamburger_menu.png';
 import { motion } from "framer-motion";
 
 import musicasData from './musicas.json';
-
+import artistasData from './artistas.json';
+import comunidadesData from './comunidades.json';
 
 const Home = () => {
 
@@ -55,36 +56,12 @@ const Home = () => {
         setFiltroTipo("Cifras")
     }
 
-    const artistsUrls = [{
-        url: "https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433",
-        name: "Beatles"
-    },
-    {
-        url: "https://s2.glbimg.com/dM9cq_LH67iIUqE6cRlTfz5sJ3g=/620x465/s2.glbimg.com/iPMxmXl_eZo8-q6IudQW_A4RGT4=/620x465/s.glbimg.com/jo/g1/f/original/2016/08/18/metallica_foto.jpg",
-        name: "Metallica"
-    },
-    {
-        url: "https://i.scdn.co/image/ab6761610000e5ebdd353edbce04267bff979de6",
-        name: "Polyphia"
-    },
-    {
-        url: "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/06/Chico-Buarque-por-Francisco-Proner-.jpg",
-        name: "Chico Buarque"
-    }
-        ,
-    {
-        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrH3Aw3FhbxhpgvA9q_gJRst7bHa29r6sYyg&usqp=CAU",
-        name: "Roger Waters"
-    }
-    ]
+    const artistsUrls = artistasData.map(artista => ({
+        url: artista.artistaImg,
+        name: artista.artistaNome
+    }));
 
-    const communitiesUrls = [
-        "https://clipart-library.com/images_k/transparent-bass-guitar/transparent-bass-guitar-23.png",
-        "https://images.emojiterra.com/google/android-12l/512px/1f3b8.png",
-        "https://www.clipartmax.com/png/middle/3-31605_size-guitar-icon-png.png",
-        "https://cdn-icons-png.flaticon.com/512/4472/4472584.png",
-        "https://t3.ftcdn.net/jpg/04/79/81/76/360_F_479817672_BpTyGX9qAl3rs9mHqvQUsyWXTJrkLUII.jpg"
-    ]
+    const communitiesUrls = comunidadesData.map(comunidade => comunidade.comunidadeImg);
 
     return (
         <main className="home-container">
@@ -93,7 +70,7 @@ const Home = () => {
             <div className="menu-hamburger" onClick={openFilter}>
                 <img src={MenuHamburger} alt="" />
             </div>
-            <FiltersResponsivo exibirGenero={true}  showHeaderCommunity={false} showMenuFiltro={showFilter} closeMenuFiltro={closeFilter} />
+            <FiltersResponsivo exibirGenero={true} showHeaderCommunity={false} showMenuFiltro={showFilter} closeMenuFiltro={closeFilter} />
             <div className="content content-escuro">
                 <div className="title-header">
                     <h2>Músicas mais acessadas</h2>
@@ -128,8 +105,8 @@ const Home = () => {
                         <motion.div className='inner'
                             drag="x"
                             dragConstraints={{ right: 0, left: -width }}>
-                            {communitiesUrls.map((artista, index) => (
-                                <Avatar key={index} avatarUrl={artista} />
+                            {comunidadesData.map((comunidade, index) => (
+                                <Avatar key={index} avatarUrl={comunidade.comunidadeImg} name={comunidade.comunidadeNome} />
                             ))}
                         </motion.div>
                     </motion.div>

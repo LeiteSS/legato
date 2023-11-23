@@ -1,0 +1,23 @@
+[
+    {
+        "artistaNome": "Beatles",
+        "artistaImg": "https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433"
+    },
+    {
+        "artistaNome": "Metallica",
+        "artistaImg": "https://s2.glbimg.com/dM9cq_LH67iIUqE6cRlTfz5sJ3g=/620x465/s2.glbimg.com/iPMxmXl_eZo8-q6IudQW_A4RGT4=/620x465/s.glbimg.com/jo/g1/f/original/2016/08/18/metallica_foto.jpg"
+    },
+    {
+        "artistaNome": "Polyphia",
+        "artistaImg": "https://i.scdn.co/image/ab6761610000e5ebdd353edbce04267bff979de6"
+    },
+    {
+        "artistaNome": "Chico Buarque",
+        "artistaImg": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/06/Chico-Buarque-por-Francisco-Proner-.jpg"
+    },
+    {
+        "artistaNome": "Roger Waters",
+        "artistaImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrH3Aw3FhbxhpgvA9q_gJRst7bHa29r6sYyg&usqp=CAU"
+    }
+
+]

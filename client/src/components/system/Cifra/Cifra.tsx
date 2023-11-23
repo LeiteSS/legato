@@ -1,4 +1,6 @@
-import './Cifra.css'
+import './Cifra.css';
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import SideMenuMobile from '../SideMenu/SideMenuMobile/SideMenuMobile';
 import BtnVersao from './BtnVersao/BtnVersao';
@@ -28,6 +30,7 @@ const Cifra = ({ artista, nome, conteudo }: any) => {
     }
 
     const renderConteudo = () => {
+        
         return linhas.map((linha: string, index: number) => (
             <span key={index}>
                 {linha.startsWith("[") && linha.endsWith("]") ? (
