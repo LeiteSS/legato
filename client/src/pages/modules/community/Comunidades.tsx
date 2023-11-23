@@ -34,7 +34,7 @@ const Comunidades = () => {
         }
     }
 
-    
+
 
     const communitiesUrls = [
         "https://clipart-library.com/images_k/transparent-bass-guitar/transparent-bass-guitar-23.png",

@@ -1,0 +1,37 @@
+.box-postagem-discussao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+}
+
+.img-discussao{
+    height: 20px;
+    border-radius: 50%;
+}
+
+.titulos-box-discussao{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.titulo-box-discussao{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+.subtitulo-discussao {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    color: #646566;
+}
+
+.point{
+    display: flex;
+    align-self: center;
+    position: relative;
+    bottom: 3px;
+}

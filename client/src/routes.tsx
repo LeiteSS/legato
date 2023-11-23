@@ -14,6 +14,7 @@ import Perfil_Artista from "./pages/modules/user/PerfilArtista"
 import Transcricao from "./pages/modules/transcription/Transcricao/Transcricao"
 import UploadTab from "./pages/modules/transcription/UploadTab/UploadTab"
 import Comunidades from "./pages/modules/community/Comunidades"
+import Discussao from "./components/system/Discussao/Discussao"
 import UploadTranscricao from "./pages/modules/transcription/UploadTranscricao/UploadTranscricao"
 import Comunidade from "./pages/modules/community/Comunidade"
 import Editar_Perfil from "./pages/modules/user/PerfilUsuario/EditarPerfil/Editar_Perfil"
@@ -37,6 +38,7 @@ export function AppRoutes() {
       <Route path="/UploadTranscricao" element={<UploadTranscricao/>}/>
       <Route path="/Comunidades" element={<Comunidades />} />
       <Route path="/Comunidade" element={<Comunidade />} />
+      <Route path="/Discussao" element={<Discussao />} />
       <Route path="/users" element={<ListUserPage />} />
       <Route path="/users/new" element={<CreateUserPage />} />
       <Route path="/users/:id" element={<EditUserPage />} />

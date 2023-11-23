@@ -4,6 +4,12 @@
     border-radius: 17px;
     text-align: left;
     margin: 0 0 34px 0;
+    transition: 200ms;
+}
+
+.container-postagem:hover{
+    cursor: pointer;
+    border: 1px solid #000000;
 }
 
 .box-Postagem{
