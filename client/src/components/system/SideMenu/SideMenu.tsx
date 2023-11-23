@@ -11,13 +11,13 @@ import AppsIcon from '@mui/icons-material/Apps';
 import Afinacao from '../../../assets/afinacao.png';
 
 
-const SideMenu = ({scrollToComments}: {scrollToComments: () => void
-}) => {
+const SideMenu = ( {scrollToComments, imgArtista}: {scrollToComments: () => void
+, imgArtista:any} ) => {
     return (
         <aside>
 
             <div className="side-menu">
-                <Avatar avatarUrl={"https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433"} />
+                <Avatar avatarUrl={imgArtista} />
 
                 <ul className="actions-buttons">
                     <li className="btn-li"><span onClick={scrollToComments} className="btn-side rolagem"><UnfoldMoreIcon className="icons"/> Rolagem</span></li>

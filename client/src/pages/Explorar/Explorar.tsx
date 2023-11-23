@@ -59,7 +59,7 @@ const Explorar = () => {
                 
                 {musicas.length > 0 ? (
                     <>
-                        <TableMusics musicas={currentMusicas} currentType={filtroTipo} setTodos={filtroTodas} setPartitura={filtroPartituras} setTab={filtroTablaturas} setCifra={filtroCifras} />
+                        <TableMusics musicas={currentMusicas} currentType={filtroTipo} setTodos={filtroTodas} setPartitura={filtroPartituras} setTab={filtroTablaturas} setCifra={filtroCifras} basePath="/Transcricao" />
                         {totalPages > 1 && (
                             <Paginacao
                                 currentPage={currentPage}

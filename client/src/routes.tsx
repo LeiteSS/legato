@@ -30,8 +30,8 @@ export function AppRoutes() {
       <Route path="/Perfil/Listas" element={<Perfil_Listas />} />
       <Route path="/Perfil/Contribuicoes" element={<Perfil_Contribuicoes />} />
       <Route path="/Perfil/EditarPerfil" element={<Editar_Perfil/>} />
-      <Route path="/PerfilArtista" element={<Perfil_Artista/>} />
-      <Route path={`/Transcricao`} element={<Transcricao />} />
+      <Route path="/PerfilArtista/:artista" element={<Perfil_Artista />} />
+      <Route path="/Transcricao/:artista/:musica" element={<Transcricao />} />
       <Route path="/Cadastro" element={<Cadastro />} />
       <Route path="/UploadTabExplorar" element={<UploadTab />} />
       <Route path="/UploadTranscricao" element={<UploadTranscricao/>}/>

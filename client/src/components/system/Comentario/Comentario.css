@@ -1,0 +1,24 @@
+.container-comentario{
+    display: flex;
+}
+
+.header-comment{
+    display: flex;
+    align-items: center;
+}
+
+.box-comment{
+    margin-left: 8px;
+}
+
+.img-comment{
+    position: relative;
+    bottom: 1px;
+    height:34px;
+    border-radius: 50%;
+}
+
+.comment-action{
+    display: flex;
+    gap: 1.5vw;
+}

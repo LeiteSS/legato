@@ -1,76 +1,123 @@
 [
     {
+        "id": 1,
         "artista": "The Beatles",
         "musica": "Let it be",
         "tipo": "Cifras",
-        "avaliacao": "5 estrelas"
+        "avaliacao": "5 estrelas",
+        "imgArtista": "https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/QDYfEBY9NM4?si=5JXMBwTg_p1I5rFM",
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 2,
         "artista": "Led Zeppelin",
         "musica": "Stairway to Heaven",
         "tipo": "Tablaturas",
-        "avaliacao": "3 estrelas"
+        "avaliacao": "3 estrelas",
+        "imgArtista": "https://roadie-metal.com/wp-content/uploads/2022/02/Led-Zeppelin-Banda.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/FP388cnCXEA?si=bZaQ27_gacSCZe6Y",
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
+    
 
     {
+        "id": 3,
         "artista": "Guns N' Roses",
         "musica": "Sweet Child O' Mine",
         "tipo": "Tablaturas",
-        "avaliacao": "4 estrelas"
+        "avaliacao": "4 estrelas",
+        "imgArtista": "https://akamai.sscdn.co/letras/150x150/fotos/5/4/1/6/5416d9ee2db3cf86b60997a55820c41a.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/D2gWc5Sw75w?si=_7deZp20YDx2grKu",
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 4,
         "artista": "The Eagles",
-        "musica": "Hotel California Solo",
+        "musica": "Hotel California",
         "tipo": "Tablaturas",
-        "avaliacao": "5 estrelas"
+        "avaliacao": "5 estrelas",
+        "imgArtista": "https://akamai.sscdn.co/letras/115x115/fotos/f/1/0/9/f1094c935bb1bf58cd281e4326293160.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/4akxVUmFu14?si=hcpHkMsrCl86YpJ2" ,
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 5,
         "artista": "Foo Fighters",
         "musica": "Everlong",
         "tipo": "Cifras",
-        "avaliacao": "4.5 estrelas"
+        "avaliacao": "4.5 estrelas",
+        "imgArtista": "https://akamai.sscdn.co/letras/150x150/fotos/3/7/f/9/37f92ba6cfc19c3116292411f246025f.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/hq0rZ3IiyWw?si=0x9sdTx3g1032ngA" ,
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 6,
         "artista": "Radiohead",
         "musica": "Creep",
         "tipo": "Cifras",
-        "avaliacao": "4.3 estrelas"
+        "avaliacao": "4.3 estrelas",
+        "imgArtista": "https://akamai.sscdn.co/letras/150x150/fotos/d/d/1/8/dd18bfeff6b98337a37deaf320a1e59a.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/fAuT8_dboWo?si=Px7QHfAyFFC7hWA4",
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 7,
         "artista": "Legião Urbana",
         "musica": "Será",
         "tipo": "Cifras",
-        "avaliacao": "4 estrelas"
+        "avaliacao": "4 estrelas",
+        "imgArtista": "https://akamai.sscdn.co/letras/150x150/fotos/8/d/f/c/8dfc6f49453dc5f678ae7d633f0eb4da.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/2CnxonDrhdE?si=RJrgmfKeVF9OPp9q" ,
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 8,
         "artista": "Weezer",
         "musica": "Buddy Holly",
         "tipo": "Tablaturas",
-        "avaliacao": "4 estrelas"
+        "avaliacao": "4 estrelas",
+        "imgArtista": "https://akamai.sscdn.co/letras/150x150/fotos/7/d/4/6/7d46a4dfe73b5d52a2d2600b6a8cf9cb.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/Kjr7US2Z9aY?si=yAIJyFlbsY__3IEF",
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 9,
         "artista": "Francisco Tarrega",
-        "musica": "Capricho Árabe",
+        "musica": "Adelita",
         "tipo": "Partituras",
-        "avaliacao": "5 estrelas"
+        "avaliacao": "5 estrelas",
+        "imgArtista": "https://violaomandriao.mus.br/wp-content/uploads/2021/06/tarrega2.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/Nz7k0DWSGL0?si=RzbcR8lvh3iL39in" ,
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     },
 
     {
+        "id": 10,
         "artista": "Django Reinhardt",
         "musica": "Minor Swing",
         "tipo": "Partituras",
-        "avaliacao": "4 estrelas"
+        "avaliacao": "4 estrelas",
+        "imgArtista": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Django_Reinhardt_%28Gottlieb_07301%29.jpg",
+        "imgArtistaBackground": "https://www.rockbizz.com.br/wp-content/uploads/2016/03/Beatles.jpg",
+        "musicaVideo": "https://www.youtube.com/embed/gcE1avXFJb4?si=gA0tOg3Z3eglVWDD" ,
+        "cifra": "[Tom: C]\n\n[Intro]\n\n C  G  Am  F \n C  G  F  Em/F  F6  C\n\nC       G     Am        F   F6  C\nE|---------------------------------0---0----|\nB|-1---1---0---0---1---1---1---3---1---1----|\nG|-0---0---0---0---2---2---2---2-----0---0--|\nD|---2---2---0---0---2-------3---3----------|\nA|-3---3-----------0---0-----------3---3----|\nE|---------3---3---------3-1---1------------|\n\nG       F   Em/F F6   C\nE|---------1---0----------------------------|\nB|-3---3---1---0----3----1---1--------------|\nG|-4---4---2---0----2----0---0--------------|\nD|---5---5----------3----2-2---2------------|\nA|-----------------------3---3--------------|\nE|-3---3---1-1------------------------------|\n\n[Primeira Parte]\n\nC              G\nWhen I find myself in times of trouble\nAm          F           F6\nMother Mary comes to me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\nC              G\nAnd in my hour of darkness\nAm                F           F6\nShe is standing right in front of me\nC                G              F Em/F F6 C\nSpeaking words of wisdom, let it be\n\n[Refrão]\n\nAm      Am/G    F       C\nE|----------------------------------------------------|\nB|-1---1---1---1---1---1---1---1----------------------|\nG|-2---2---2---2---2---2---0---0----------------------|\nD|---2---2---2---2---3---3---2---2--------------------|\nA|-0---0-------------------3---3----------------------|\nE|---------3---3---1---1------------------------------|\n\nC       G       F    Em/F F6     C\nE|-----------------1----0-----------------------------|\nB|-1---1---0---0---1----0----3------1---1-------------|\nG|-0---0---0---0---2----0----2------0---0-------------|\nD|---2---2---0---0-----------3------2-2---2-----------|\nA|-3---3----------------------------3---3-------------|\nE|---------3---3---1--1-------------------------------|"
     }
-
-
-
-
 
 ]

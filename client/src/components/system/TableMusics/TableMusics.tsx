@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 
 
-const TableMusics = ({ musicas, currentType, setTodos, setPartitura, setTab, setCifra }: { musicas: any, currentType: any, setTodos: () => void, setPartitura: () => void, setTab: () => void, setCifra: () => void }) => {
+const TableMusics = ({ musicas, currentType, setTodos, setPartitura, setTab, setCifra, basePath }: { musicas: any, currentType: any, setTodos: () => void, setPartitura: () => void, setTab: () => void, setCifra: () => void, basePath: string }) => {
+
     return (
         <main>
             <div className='table-box'>
@@ -62,11 +63,15 @@ const TableMusics = ({ musicas, currentType, setTodos, setPartitura, setTab, set
                                 })
                                 .map((musica: any, index: number) => (
                                     <tr key={index}>
-                                        <td><Link className='link-transcricao' to='/Transcricao'>{musica.artista}</Link></td>
-                                        <td> <Link className='link-transcricao' to='/Transcricao'>{musica.musica}</Link></td>
+                                        <td>
+                                            <Link className='link-transcricao' to={`/PerfilArtista/${musica.artista}`}>{musica.artista}</Link>
+                                        </td>
+                                        <td>
+                                            <Link className='link-transcricao' to={`${basePath}/${musica.artista}/${musica.musica}`}>{musica.musica}</Link>
+                                        </td>
                                         <td>{musica.tipo}</td>
                                         <td>
-                                            <StarRating/>
+                                            <StarRating />
                                         </td>
                                     </tr>
                                 ))

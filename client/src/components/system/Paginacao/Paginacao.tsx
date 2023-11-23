@@ -1,5 +1,7 @@
 import './Paginacao.css';
 
+import React from 'react'
+
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBackIcon from '@mui/icons-material/NavigateBefore';
 

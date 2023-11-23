@@ -19,7 +19,11 @@ const Home = () => {
     const carousel = React.useRef(HTMLElement.arguments);
     const [width, setWidth] = useState(0)
     const [showFilter, setShowFilter] = useState(false);
-    const [musicas, setMusicas] = useState<{ artista: string; musica: string; tipo: string; avaliacao: string; }[]>([]);
+    const [musicas, setMusicas] = useState<any[]>([]);
+
+    useEffect(() => {
+        setMusicas(musicasData);
+    }, []);
 
 
     useEffect(() => {
@@ -77,7 +81,7 @@ const Home = () => {
                     <a href="/Explorar"><h5>Ver top</h5></a>
                 </div>
                 <div className="container-home">
-                    <TableMusics musicas={musicas} currentType={filtroTipo} setTodos={filtroTodas} setPartitura={filtroPartituras} setTab={filtroTablaturas} setCifra={filtroCifras}></TableMusics>
+                    <TableMusics musicas={musicas} currentType={filtroTipo} setTodos={filtroTodas} setPartitura={filtroPartituras} setTab={filtroTablaturas} setCifra={filtroCifras} basePath="/Transcricao"></TableMusics>
                 </div>
 
                 <div className="container-home">

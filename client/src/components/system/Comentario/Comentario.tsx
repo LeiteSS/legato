@@ -12,25 +12,32 @@ const Comentario = ({ User, userImg, Content, dataPubli }: any) => {
 
                 <img src={userImg} className='img-comment'></img>
 
-                <div className='comment-con'>
+                <div className='box-comment'>
 
-                    <div className='header-comment'>
 
-                        <h3 className='user-name'>{User} </h3>
-                        <span className='data-publi'>. {dataPubli}</span>
+                    <div className='comment-con'>
+
+                        <div className='header-comment'>
+
+                            <h3 className='user-name'>{User} </h3>
+                            <span className='data-publi'>. {dataPubli}</span>
+
+                        </div>
+
+                        <div className='content-box'>
+                            <p>{Content}</p>
+                        </div>
+
+                        <div className='comment-action'>
+                            <span className='like-box'><ThumbUpOffAltIcon /></span>
+
+                            <span className='comentario-box'><i><MessageOutlinedIcon /></i><span> Responder</span></span>
+                        </div>
 
                     </div>
 
-                    <div className='content-box'>
-                        <p>{Content}</p>
-                    </div>
-
-                    <div className='comment-action'>
-                        <span className='like-box'><ThumbUpOffAltIcon /></span>
-
-                        <span className='comentario-box'><i><MessageOutlinedIcon /></i><span> Responder</span></span>
-                    </div>
                 </div>
+
             </div>
         </>
     )

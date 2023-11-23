@@ -1,26 +1,31 @@
 import React, { useRef } from "react";
+import { useParams } from "react-router-dom";
 
 import "./Transcricao.css";
 import SideMenu from "../../../../components/system/SideMenu/SideMenu";
 import Cifra from "../../../../components/system/Cifra/Cifra";
 import Comentario from "../../../../components/system/Comentario/Comentario";
 
-
-import musicaData from './musicas.json';
+import musicaData from '../../../Home/musicas.json';
 import comentariosData from './comentarios.json';
 
-
-
 const Transcricao = () => {
-    const musicaId = 1;
+    const { artista, musica } = useParams();
 
-    const musica = musicaData.find(musica => musica.id === musicaId);
-
-    if (!musica) {
+    if (musica === undefined) {
         return <div>Música não encontrada</div>;
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const musicaAtual = musicaData.find(
+        (musicaData) => 
+        musicaData.artista === artista && 
+        musicaData.musica.toLowerCase() === musica.toLowerCase()
+    );
+
+    if (!musicaAtual) {
+        return <div>Música não encontrada</div>;
+    }
+
     const commentsSectionRef = useRef<HTMLDivElement | null>(null);
 
     const scrollToComments = () => {
@@ -33,11 +38,11 @@ const Transcricao = () => {
         <main className="container-transcricao">
             <div className="box-cifra">
                 <div className="side-menu" >
-                    <SideMenu scrollToComments={scrollToComments} />
+                    <SideMenu imgArtista={musicaAtual.imgArtista} scrollToComments={scrollToComments} />
                 </div>
 
                 <div>
-                    <Cifra nome={musica.nome} artista={musica.artista} conteudo={musica.cifra} />
+                    <Cifra nome={musicaAtual.musica} artista={musicaAtual.artista} conteudo={musicaAtual.cifra} video={musicaAtual.musicaVideo} />
                 </div>
             </div>
 

@@ -3,10 +3,10 @@ import './Cifra.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SideMenuMobile from '../SideMenu/SideMenuMobile/SideMenuMobile';
-import BtnVersao from './BtnVersao/BtnVersao';
+import BtnVersao from './BtnVersao/BtnVersao'; 
 
 
-const Cifra = ({ artista, nome, conteudo }: any) => {
+const Cifra = ({ artista, nome, conteudo, video }: any) => {
     const conteudoFormatado = conteudo.replace(/\t/g, '    ');
     const linhas = conteudoFormatado.split('\n');
 
@@ -27,9 +27,14 @@ const Cifra = ({ artista, nome, conteudo }: any) => {
         });
 
         return linhaComAcordes;
+
     }
 
     const renderConteudo = () => {
+
+        {        console.log('Nome:', nome);
+        console.log('Artista:', artista);
+        console.log('Conteúdo:', conteudo);}
         
         return linhas.map((linha: string, index: number) => (
             <span key={index}>
@@ -84,7 +89,7 @@ const Cifra = ({ artista, nome, conteudo }: any) => {
                         <iframe
                             height="200px"
                             width="350px"
-                            src="https://www.youtube.com/embed/QDYfEBY9NM4?si=5JXMBwTg_p1I5rFM"
+                            src={video}
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
