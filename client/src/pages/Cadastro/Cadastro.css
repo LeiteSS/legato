@@ -50,7 +50,6 @@
 .PaginaCadastro .Cadastro .form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     width: 50%;
 }
 
@@ -58,6 +57,7 @@
 .PaginaCadastro .form div {
     gap: 0.5rem;
     text-align: left;
+    justify-content: center;
 }
 
 .PaginaCadastro .Senha {
@@ -86,17 +86,14 @@
     cursor: pointer;
 }
 
-.PaginaCadastro input[type=submit] {
-    width: 20%;
-    align-self: center;
+.PaginaCadastro button {
     text-align: center;
     background-color: #09857E;
-    border-radius: 5px;
-    height: 3vw;
-    font-size: 1vw;
-    border: none;
-    cursor: pointer;
-    color: #ffffff;
+    margin-top: 2rem;
+}
+
+.PaginaCadastro button:hover {
+    background-color: #066d67;
 }
 
 .PaginaCadastro a {

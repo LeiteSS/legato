@@ -61,6 +61,7 @@ const Cadastro = () => {
 
 					<Box
 						component="form"
+						className="form"
 						noValidate
 						onSubmit={handleSubmit(onSubmit)}
 						sx={{ p: 2 }}
@@ -70,7 +71,6 @@ const Cadastro = () => {
 							direction="row"
 							alignItems="center"
 							spacing={1}
-							sx={{ marginBottom: 2, width: 250 }}
 						>
 							<Controller
 								control={control}
@@ -78,8 +78,9 @@ const Cadastro = () => {
 								defaultValue=""
 								render={({ field: { ...field } }) => (
 									<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+										<label>Nome</label>
 										<TextField
-											label="name"
+											className="textField"
 											error={!!errors.name}
 											helperText={errors.name?.message}
 											{...field}
@@ -92,7 +93,7 @@ const Cadastro = () => {
 							direction="row"
 							alignItems="center"
 							spacing={1}
-							sx={{ marginBottom: 2, width: 250 }}
+
 						>
 							<Controller
 								control={control}
@@ -100,8 +101,10 @@ const Cadastro = () => {
 								defaultValue=""
 								render={({ field: { ...field } }) => (
 									<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+										<label>Email</label>
 										<TextField
-											label="email"
+											type={"email"}
+											className="textField"
 											error={!!errors.email}
 											helperText={errors.email?.message}
 											{...field}
@@ -114,7 +117,7 @@ const Cadastro = () => {
 							direction="row"
 							alignItems="center"
 							spacing={1}
-							sx={{ marginBottom: 2, width: 250 }}
+
 						>
 							<Controller
 								control={control}
@@ -122,8 +125,10 @@ const Cadastro = () => {
 								defaultValue=""
 								render={({ field: { ...field } }) => (
 									<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+										<label>Senha</label>
 										<TextField
-											label="password"
+											type="password"
+											className="textField"
 											error={!!errors.password}
 											helperText={errors.password?.message}
 											{...field}
@@ -136,7 +141,7 @@ const Cadastro = () => {
 							direction="row"
 							alignItems="center"
 							spacing={1}
-							sx={{ marginBottom: 2, width: 250 }}
+
 						>
 							<Controller
 								control={control}
@@ -144,8 +149,9 @@ const Cadastro = () => {
 								defaultValue=""
 								render={({ field: { ...field } }) => (
 									<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
+										<label>Tipo da conta</label>
 										<TextField
-											label="accountType"
+											className="textField"
 											error={!!errors.accountType}
 											helperText={errors.accountType?.message}
 											{...field}
@@ -154,14 +160,14 @@ const Cadastro = () => {
 								)}
 							/>
 						</Stack>
-						<Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+						<Stack direction={{ xs: "column", sm: "row" }} sx={{ marginBottom: 2 }}>
 							<Button type="submit" variant="contained" size="large">
 								Salvar User
 							</Button>
-							<Button component={RouterLink} to="/user">
-								Cancelar
-							</Button>
 						</Stack>
+						<div className='redirecionamento'>
+							<p>Já tem conta?</p> <a href="">Entre</a>
+						</div>
 					</Box>
 				</div>
 			</main>
