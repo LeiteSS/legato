@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import EditUserPage from "./pages/modules/user/editUserPage"
 import ListUserPage from "./pages/modules/user/listUserPage"
@@ -19,29 +19,56 @@ import UploadTranscricao from "./pages/modules/transcription/UploadTranscricao/U
 import Comunidade from "./pages/modules/community/Comunidade"
 import Editar_Perfil from "./pages/modules/user/PerfilUsuario/EditarPerfil/Editar_Perfil"
 import Cadastro from "./pages/Cadastro/Cadastro"
+import Login from "./components/system/Login/Login"
+import ResetaSenha from "./components/system/ResetaSenha/ResetaSenha"
 
 export function AppRoutes() {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  const openLoginModal = () => {
+    setShowLoginModal(true);
+  }
+
+  const closeLoginModal = () => {
+    setShowLoginModal(false);
+  }
+
+  const [showResetaSenha, setShowResetaSenha] = useState(false);
+
+  const openResetaSenha = () => {
+    setShowLoginModal(false);
+    setShowResetaSenha(true)
+  }
+
+  const closeResetarSenha = () => {
+    setShowResetaSenha(false);
+  }
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Acessibilidade" element={<Acessibilidade_Pagina/>}/>
-      <Route path="/Explorar" element={<Explorar />} />
-      <Route path="/Perfil" element={<Perfil_Usuario />} />
-      <Route path="/Perfil/Favoritos" element={<Perfil_Favoritos />} />
-      <Route path="/Perfil/Listas" element={<Perfil_Listas />} />
-      <Route path="/Perfil/Contribuicoes" element={<Perfil_Contribuicoes />} />
-      <Route path="/Perfil/EditarPerfil" element={<Editar_Perfil/>} />
-      <Route path="/PerfilArtista/:artista" element={<Perfil_Artista />} />
-      <Route path="/Transcricao/:artista/:musica" element={<Transcricao />} />
-      <Route path="/Cadastro" element={<Cadastro />} />
-      <Route path="/UploadTabExplorar" element={<UploadTab />} />
-      <Route path="/UploadTranscricao" element={<UploadTranscricao/>}/>
-      <Route path="/Comunidades" element={<Comunidades />} />
-      <Route path="/Comunidade" element={<Comunidade />} />
-      <Route path="/Discussao" element={<Discussao />} />
-      <Route path="/users" element={<ListUserPage />} />
-      <Route path="/users/new" element={<CreateUserPage />} />
-      <Route path="/users/:id" element={<EditUserPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Acessibilidade" element={<Acessibilidade_Pagina />} />
+        <Route path="/Explorar" element={<Explorar />} />
+        <Route path="/Perfil" element={<Perfil_Usuario />} />
+        <Route path="/Perfil/Favoritos" element={<Perfil_Favoritos />} />
+        <Route path="/Perfil/Listas" element={<Perfil_Listas />} />
+        <Route path="/Perfil/Contribuicoes" element={<Perfil_Contribuicoes />} />
+        <Route path="/Perfil/EditarPerfil" element={<Editar_Perfil />} />
+        <Route path="/PerfilArtista/:artista" element={<Perfil_Artista />} />
+        <Route path="/Transcricao/:artista/:musica" element={<Transcricao />} />
+        <Route path="/Cadastro" element={<Cadastro openLoginModal={openLoginModal} />} />
+        <Route path="/UploadTabExplorar" element={<UploadTab />} />
+        <Route path="/UploadTranscricao" element={<UploadTranscricao />} />
+        <Route path="/Comunidades" element={<Comunidades />} />
+        <Route path="/Comunidade" element={<Comunidade />} />
+        <Route path="/Discussao" element={<Discussao />} />
+        <Route path="/users" element={<ListUserPage />} />
+        <Route path="/users/new" element={<CreateUserPage />} />
+        <Route path="/users/:id" element={<EditUserPage />} />
+      </Routes>
+      <Login showLoginModal={showLoginModal} closeLoginModal={closeLoginModal} openResetaSenha={openResetaSenha} />
+      <ResetaSenha showResetarSenha={showResetaSenha} closeResetarSenha={closeResetarSenha} />
+    </>
   )
 }

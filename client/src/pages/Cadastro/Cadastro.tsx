@@ -20,8 +20,9 @@ import UserSchema from "../../hooks/modules/user/schemas/userSchema";
 import { User } from "../../models/modules/user/User";
 import React, { useState } from "react";
 import createUser from "../../hooks/modules/user/create/createUserHook";
+import { Link } from 'react-router-dom';
 
-const Cadastro = () => {
+const Cadastro = ({ openLoginModal }: { openLoginModal: () => void }) => {
 	const [user, setUser] = useState<User>();
 	const navigate = useNavigate()
 
@@ -166,7 +167,7 @@ const Cadastro = () => {
 							</Button>
 						</Stack>
 						<div className='redirecionamento'>
-							<p>Já tem conta?</p> <a href="">Entre</a>
+							<p>Já tem conta?</p>  <a className="link" onClick={openLoginModal} >Entre</a>
 						</div>
 					</Box>
 				</div>

@@ -110,6 +110,11 @@
     resize: vertical;
 }
 
+.link{
+    cursor: pointer;
+    color: #09857E;
+}
+
 @media only screen and (max-width: 720px){
     .PaginaCadastro .Side-Background{
             display: none;     
