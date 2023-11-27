@@ -13,10 +13,25 @@
     flex-direction: column;
 }
 
-aside .imagem-perfil {
+.imagem-perfil{
+    display: flex;
+    align-items: center;
+    gap:5px;
     position: relative;
-    top: -78px;
+    left: 35px;
+    bottom: 103px;
+}
+
+aside .imagem-perfil img {
     color: #fff;
+    width: 94px; 
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.imagem-perfil p{
+    color: #FFFFFF;
 }
 
 aside .span-perfil {
@@ -49,10 +64,6 @@ aside .span-perfil {
 .selected {
     font-weight: bolder;
 
-}
-
-.imagem-perfil-position{
-  
 }
 
 

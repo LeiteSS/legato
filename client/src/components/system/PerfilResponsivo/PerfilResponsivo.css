@@ -26,20 +26,34 @@
     color: var(--text-primary);
 }
 
+.imagem-perfil img {
+    color: #fff;
+    width: 94px; 
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
 .avatar-perfil{
     height: 60px;
     border-radius: 50%;
 }
 
-.imagem-perfil{
+.imagem-perfil-responsivo{
     padding-top: 100px;
 }
 
+.close-icon-li{
+    display: flex;
+    justify-content: space-between;
+}
+
 .close-icon{
-    position: absolute;
-    right: 242px;
-    bottom: 10px;
     cursor: pointer;
+    color: #ffff;
+    position: relative;
+    top: 1px;
+    left: 5px;
 }
 
 

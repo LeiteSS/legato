@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './Home.css';
 
@@ -93,8 +94,10 @@ const Home = () => {
                         <motion.div className='inner'
                             drag="x"
                             dragConstraints={{ right: 0, left: -width }}>
-                            {artistsUrls.map((artista, index) => (
-                                <Avatar key={index} avatarUrl={artista.url} name={artista.name} />
+                            {musicasData.slice(0, 5).map((artista, index) => (
+                                <Link className='link-home' to={`/PerfilArtista/${artista.artista}`} key={index}>
+                                    <Avatar avatarUrl={artista.imgArtista} name={artista.artista} />
+                                </Link>
                             ))}
                         </motion.div>
                     </motion.div>
@@ -110,8 +113,12 @@ const Home = () => {
                             drag="x"
                             dragConstraints={{ right: 0, left: -width }}>
                             {comunidadesData.map((comunidade, index) => (
-                                <Avatar key={index} avatarUrl={comunidade.comunidadeImg} name={comunidade.comunidadeNome} />
+                                <Link className='link-home' to={`/Comunidades`}>
+                                    <Avatar key={index} avatarUrl={comunidade.comunidadeImg} name={comunidade.comunidadeNome} />
+                                </Link>
                             ))}
+
+
                         </motion.div>
                     </motion.div>
                 </div>

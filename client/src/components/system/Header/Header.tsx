@@ -29,6 +29,46 @@ const Header = ({ openLoginModal }: { openLoginModal: () => void }) => {
                         </a>
                     </div>
                     <BarraPesquisa />
+
+
+                    <div className="perfil-pessoal-responsivo">
+                        {user ? (
+                            <div>
+
+                                <img className='avatar-header' src={user.urlIMG} alt="Foto do usuário" onClick={showMenuProfile} />
+
+                                <div className={dropMenuProfile ? 'dropdown-menu-profile' : 'dropdown-menu-profile-none'}>
+                                    <ul className=''>
+                                        <Link to="/Explorar" className='link'>
+                                            <li>Explorar</li>
+                                        </Link>
+                                        <Link to="/Comunidades" className='link'>
+                                            <li>Comunidades</li>
+                                        </Link>
+                                        <Link to="/UploadTab" className='link'>
+                                            <li>Upload</li>
+                                        </Link>
+
+                                        <Link to="/perfil" className='link'>
+                                            <li>Meu Perfil</li>
+                                        </Link>
+
+                                        <Link to="/Perfil/EditarPerfil" className='link'>
+                                            <li>Configurações</li>
+                                        </Link>
+                                        <li>Sair</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        ) : (
+                            <span className={!user ? "active-header" : "none-header"} onClick={openLoginModal}>
+                                <img src={UserIcon} alt="Ícone de usuário" />
+                            </span>
+                        )}
+                    </div>
+
+
+
                 </div>
 
                 <div className="menu-perfil">
@@ -78,9 +118,15 @@ const Header = ({ openLoginModal }: { openLoginModal: () => void }) => {
 
             <nav className="menu-responsivo">
                 <ul className="menu">
-                    <li><a href="/Explorar">Explorar</a></li>
-                    <li><a href="/">Comunidades</a></li>
-                    <li>Upload</li>
+                    <Link to="/Explorar" className='link'>
+                        <li>Explorar</li>
+                    </Link>
+                    <Link to="/Comunidades" className='link'>
+                        <li>Comunidades</li>
+                    </Link>
+                    <Link to="/UploadTabExplorar" className='link'>
+                        <li>Upload</li>
+                    </Link>
                 </ul>
             </nav>
         </>

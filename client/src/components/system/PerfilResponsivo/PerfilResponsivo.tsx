@@ -21,15 +21,16 @@ const PerfilResponsivo = ({ showMenuFiltro, closeMenuFiltro, onSelectItem }: { s
     return (
         <>
             <div className={showMenuFiltro ? 'perfil-filter' : 'perfil-filter-none'}>
+                <div className='imagem-perfil imagem-perfil-position'>
+                    <img src={user ? user.urlIMG : "https://effigy.im/a/brantly.eth.svg"} />
+                    <p>{user ? user.name : "Usuário"}</p>
+                </div>
                 <aside className='fundo'>
                     <span>
-                        <div className='imagem-perfil'>
-                            <ClearIcon className='close-icon' onClick={closeMenuFiltro} />
-                            <img src={user ? user.urlIMG : "https://effigy.im/a/brantly.eth.svg"}  className='avatar-perfil avatar-perfil-sidemenu' />
-                            <p>{user ? user.name : "Usuário"}</p>
-                        </div>
+
+
                         <ul className='nav-perfil'>
-                            <li>
+                            <li className='close-icon-li'>
                                 <a
 
                                     onClick={() => handleSelectItem('Perfil')}
@@ -37,6 +38,7 @@ const PerfilResponsivo = ({ showMenuFiltro, closeMenuFiltro, onSelectItem }: { s
                                 >
                                     Perfil
                                 </a>
+                                <ClearIcon className='close-icon' onClick={closeMenuFiltro} />
                             </li>
                             <li>
                                 <a

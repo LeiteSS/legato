@@ -20,7 +20,8 @@ const Perfil = ({ onSelectItem }: { onSelectItem: any }) => {
             <img className="background" src={Wallpaper} alt="" />
             <aside>
                 <div className='imagem-perfil imagem-perfil-position'>
-                    <Avatar avatarUrl={user ? user.urlIMG : "https://effigy.im/a/brantly.eth.svg"} name={user ? user.name : "Usuário"} />
+                    <img src={user ? user.urlIMG : "https://effigy.im/a/brantly.eth.svg"} />
+                    <p>{user ? user.name : "Usuário"}</p>
                 </div>
                 <span className='span-perfil'> 
                     <ul>
