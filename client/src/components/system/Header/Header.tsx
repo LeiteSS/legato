@@ -5,6 +5,7 @@ import Logo from '../../../assets/logo.png';
 import UserIcon from '../../../assets/user.svg';
 import Acessibilidade from '../Acessibilidade/Acessibilidade';
 import BarraPesquisa from '../BarraPesquisa/BarraPesquisa';
+import ButtonArduino from '../btnArduino/btnArduino';
 
 import './Header.css';
 
@@ -76,6 +77,7 @@ const Header = ({ openLoginModal }: { openLoginModal: () => void }) => {
                         <li><a href="/Explorar">Explorar</a></li>
                         <li><a href="/Comunidades">Comunidades</a></li>
                         <li><a href="/UploadTabExplorar">Upload</a></li>
+                        <li><ButtonArduino/></li>
                     </ul>
 
                     <div className="perfil-pessoal">
