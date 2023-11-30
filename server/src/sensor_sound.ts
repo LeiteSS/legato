@@ -1,7 +1,7 @@
-import * as five from 'johnny-five';
+import { Board, LCD, Led, Sensor } from 'johnny-five';
 
 // Initialize the board
-const board = new five.Board();
+const board = new Board();
 
 // Define pin constants
 const soundSensorPin = 'A0';
@@ -10,15 +10,15 @@ const ledPins = [13, 10, 9];
 // Wait for the board to be ready
 board.on('ready', () => {
   // Initialize components
-  const lcd = new five.LCD({ pins: [12, 11, 5, 4, 3, 2] });
-  const soundSensor = new five.Sensor(soundSensorPin);
+  const lcd = new LCD({ pins: [12, 11, 5, 4, 3, 2] });
+  const soundSensor = new Sensor(soundSensorPin);
   
   // Create an array to store Led instances
-  const leds: five.Led[] = [];
+  const leds: Led[] = [];
 
   // Initialize LEDs
   ledPins.forEach(pin => {
-    leds.push(new five.Led(pin));
+    leds.push(new Led(pin));
   });
 
   // Event handler for sensor readings
@@ -45,7 +45,7 @@ board.on('ready', () => {
 });
 
 // Function to update display and serial output
-function updateDisplayAndSerial(message: string, leds: five.Led[], lcd: five.LCD, ledIndex?: number) {
+function updateDisplayAndSerial(message: string, leds: Led[], lcd: LCD, ledIndex?: number) {
   leds.forEach(led => led.off()); // Turn off all LEDs
 
   if (ledIndex !== undefined) {
