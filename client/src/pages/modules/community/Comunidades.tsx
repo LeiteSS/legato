@@ -1,19 +1,31 @@
-import React from "react";
+import "./Comunidades.css";
 
-import "./Comunidades.css"
+import React from "react";
+import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 import Avatar from "../../../components/system/Avatar/Avatar";
 import Filters from "../../../components/system/Filters/Filters";
 import Postagem from "../../../components/system/Postagem/Postagem";
 import FiltersResponsivo from "../../../components/system/FiltersResponsivo/FiltersResponsivo";
 import MenuHamburger from '../../../assets/Hamburger_menu.png';
+import comunidadesData from "../../Home/comunidades.json";
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { useState } from "react";
+
 
 const Comunidades = () => {
+
+    const carousel = React.useRef(HTMLElement.arguments);
+    const [width, setWidth] = useState(0)
     const [showFilter, setShowFilter] = useState(false);
+
+    useEffect(() => {
+        setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 500)
+        
+    }, []);
 
     const openFilter = () => {
         setShowFilter(true);
@@ -35,16 +47,6 @@ const Comunidades = () => {
     }
 
 
-
-    const communitiesUrls = [
-        "https://clipart-library.com/images_k/transparent-bass-guitar/transparent-bass-guitar-23.png",
-        "https://images.emojiterra.com/google/android-12l/512px/1f3b8.png",
-        "https://www.clipartmax.com/png/middle/3-31605_size-guitar-icon-png.png",
-        "https://cdn-icons-png.flaticon.com/512/4472/4472584.png",
-        "https://t3.ftcdn.net/jpg/04/79/81/76/360_F_479817672_BpTyGX9qAl3rs9mHqvQUsyWXTJrkLUII.jpg"
-    ]
-
-
     return (
         <menu>
             <div className="container-comunidades">
@@ -59,17 +61,19 @@ const Comunidades = () => {
 
                 <div className="content-comunidades">
 
-                    <div className="comunidades-box">
-                        <div className="title-header">
-                            <h2>Conheça nossas comunidades</h2>
-                            <a href=""><h5>Visualizar mais</h5></a>
-                        </div>
-                        <div className="list-imgs">
-                            {communitiesUrls.map((artista, index) => (
-                                <Avatar key={index} avatarUrl={artista} />
+                    <motion.div ref={carousel} className="list-imgs" whileTap={{ cursor: "grabbing" }}>
+                        <motion.div className='inner'
+                            drag="x"
+                            dragConstraints={{ right: 0, left: -width }}>
+                            {comunidadesData.map((comunidade, index) => (
+                                <Link className='link-home' to={`/Comunidade`}>
+                                    <Avatar key={index} avatarUrl={comunidade.comunidadeImg} name={comunidade.comunidadeNome} />
+                                </Link>
                             ))}
-                        </div>
-                    </div>
+
+
+                        </motion.div>
+                    </motion.div>
 
                     <div className="comunidades-box">
                         <div className="title-header">

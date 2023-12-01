@@ -67,6 +67,7 @@
 
 .header-comunidades li:hover{
     cursor: pointer;
+    opacity: 0.9;
 }
  
 .btn-comunidades button:hover{

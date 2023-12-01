@@ -2,6 +2,7 @@ import './FiltesResponsivo.css'
 import React, { useState } from 'react';
 import ClearIcon from "@mui/icons-material/Clear";
 import CriarComunidade from '../CriarComunidade/CriarComunidade';
+import CriarDiscussao from '../CriarDiscussao/CriarDiscussao';
 import GridViewIcon from '@mui/icons-material/GridView';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import UserIcon from '../../../assets/user.svg';
@@ -17,6 +18,17 @@ const FiltersResponsivo = ({ showHeaderCommunity, showMenuFiltro, exibirGenero, 
     const closeCriarComunidade = () => {
         setshowCriarComunidade(false);
     }
+
+    const [showCriarDiscussao, setshowCriarDiscussao] = useState(false);
+
+
+    const openCriarDiscussao = () => {
+        setshowCriarDiscussao(true);
+    }
+
+    const closeCriarDiscussao = () => {
+        setshowCriarDiscussao(false);
+    }
     return (
         <main className={showMenuFiltro ? 'filter-background' : 'filter-background-none'}>
             <div className='menu-filtro' >
@@ -27,8 +39,9 @@ const FiltersResponsivo = ({ showHeaderCommunity, showMenuFiltro, exibirGenero, 
                         <li><div className="icons-communities"><GridViewIcon /></div><p>Todas as Comunidades</p></li>
                         <li><img src={UserIcon} className="icons-communities" /><p>Minhas Comunidades</p></li>
                         <li onClick={openCriarComunidade}><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar Comunidade</button></span></li>
-                        <li><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar discussão</button></span></li>
+                        <li onClick={openCriarDiscussao}><span className='btn-comunidades'><ChatBubbleOutlineIcon /><button>Criar discussão</button></span></li>
                         <CriarComunidade showCriarComunidade={showCriarComunidade} closeCriarComunidade={closeCriarComunidade} />
+                        <CriarDiscussao showCriarDiscussao={showCriarDiscussao} closeCriarDiscussao={closeCriarDiscussao}/>
                     </div>
 
                     <h3 className="titulos">Filtros <ClearIcon className="close-filter" onClick={closeMenuFiltro} /></h3>

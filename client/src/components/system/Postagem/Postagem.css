@@ -7,20 +7,30 @@
     transition: 200ms;
 }
 
-.container-postagem:hover{
+.container-postagem:hover {
     cursor: pointer;
     border: 1px solid #000000;
 }
 
-.box-Postagem{
+.link-postagem {
+    color: #000000;
+    text-decoration: none;
+}
+
+.link-postagem:hover {
+    text-decoration: underline;
+}
+
+.box-Postagem {
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 100%;
     padding: 25px;
+    color: #000000;
 }
 
-.titulos-box{
+.titulos-box {
     display: flex;
     flex-direction: column;
 }
@@ -45,7 +55,7 @@
 
 }
 
-.subtitulo .comunidades:hover{
+.subtitulo .comunidades:hover {
     cursor: pointer;
 }
 
@@ -53,65 +63,69 @@
     cursor: pointer;
 }
 
-.acoes-box{
+.acoes-box {
     display: flex;
     align-items: center;
     gap: 1.5vw;
 }
 
-.like-box{
+.like-box {
     display: flex;
     align-items: center;
 }
 
-.like-box:hover{
+.like-box:hover {
     cursor: pointer;
     color: #28A49C;
 }
 
-.comentario-box{
+.comentario-box {
     display: flex;
     align-items: center;
     gap: 0.5vw;
 }
 
-.comentario-box i{
+.comentario-box i {
     display: flex;
     align-items: center;
 }
 
-.comentario-box:hover{
+.comentario-box:hover {
     cursor: pointer;
     opacity: 0.8;
 }
 
-.comentario-box i:hover{
+.comentario-box i:hover {
     cursor: pointer;
     opacity: 0.9;
 }
 
-.compartilhar-box{
+.compartilhar-box {
     display: flex;
     align-items: center;
     gap: 0.5vw;
 }
 
-.compartilhar-box:hover{
+.compartilhar-box:hover {
     cursor: pointer;
     opacity: 0.8;
 }
 
-.link-comunidade{
+.link-comunidade {
     text-decoration: none;
 }
 
-.acoes-box{
+.link-comunidade:hover {
+    text-decoration: underline;
+}
+
+.acoes-box {
     padding-bottom: 10%;
 }
 
 
-.content-box{
-    margin-top: 3px ;
+.content-box {
+    margin-top: 3px;
     --max-lines: 3;
     --line-height: 1.4;
 
@@ -122,7 +136,7 @@
     position: relative;
 }
 
-.content-box:has(+ .expandir-texto:not(:checked))::before{
+.content-box:has(+ .expandir-texto:not(:checked))::before {
     content: "";
     position: absolute;
     height: calc(1em*var(--line-height));
@@ -133,7 +147,7 @@
     background: linear-gradient(to bottom, transparent, white);
 }
 
-.expandir-texto{
+.expandir-texto {
     appearance: none;
     text-decoration: underline;
     padding: .5em;
@@ -142,24 +156,28 @@
     margin-top: 1rem;
 }
 
-.expandir-texto::before{
+.expandir-texto:hover {
+    font-weight: 700;
+}
+
+.expandir-texto::before {
     cursor: pointer;
 }
 
-.expandir-texto::before{
+.expandir-texto::before {
     content: "Ler Mais";
 }
 
-.expandir-texto:checked:before{
+.expandir-texto:checked:before {
     content: "Voltar";
 }
 
-.content-box:has(+ .expandir-texto:checked){
+.content-box:has(+ .expandir-texto:checked) {
     overflow: visible;
     max-height: 100%;
 }
 
-@media only screen and (max-width: 650px) { 
+@media only screen and (max-width: 650px) {
 
     .container-postagem {
         width: 100%;

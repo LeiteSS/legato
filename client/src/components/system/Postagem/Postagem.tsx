@@ -10,12 +10,16 @@ import React from 'react';
 const Postagem = () => {
     return (
         <>
+
             <section className="container-postagem">
+
 
                 <div className="box-Postagem">
 
+
+
                     <div className="titulos-box">
-                        <h3>Titulo da discussão</h3>
+                        <Link className='link-postagem'  to="/Discussao"><h3>Titulo da discussão</h3></Link>
                         <span className="subtitulo"> em <Link className='link-comunidade' to='/Comunidade'><span className="comunidades"> Comunidades</span></Link> enviado por <span className="autor"> User2123</span>
                         </span>
                     </div>
@@ -28,16 +32,19 @@ const Postagem = () => {
 
                     <div className='acoes-box'>
 
-                        <span className='like-box'><ThumbUpOffAltIcon/></span>
-                        
-                        <span className='comentario-box'><i><MessageOutlinedIcon/></i><span>1 comentário</span></span>
+                        <span className='like-box'><ThumbUpOffAltIcon /></span>
 
-                        <span className='compartilhar-box'><ShareOutlinedIcon/>Compartilhar</span>
+                        <span className='comentario-box'><i><MessageOutlinedIcon /></i><span>1 comentário</span></span>
+
+                        <span className='compartilhar-box'><ShareOutlinedIcon />Compartilhar</span>
                     </div>
 
                 </div>
 
+
+
             </section>
+
         </>
     )
 }
