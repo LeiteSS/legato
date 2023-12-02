@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import DeleteInstrumentService from '../../../../../domain/modules/Instrument/services/delete/DeleteInstrumentService';
+import DeleteInstrumentService from '../../../../../domain/modules/instrument/services/delete/DeleteInstrumentService';
 
 export default class DeleteInstrumentController {
   private service: DeleteInstrumentService;

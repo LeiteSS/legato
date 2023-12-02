@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import getByIdMusicService from "../../../../../domain/modules/music/services/get_by_id";
+import GetByIdMusicController from "./GetByIdMusicController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
 
-export default %controllerName%;
+const getByIdMusicController = new GetByIdMusicController(getByIdMusicService);
+
+export default getByIdMusicController;

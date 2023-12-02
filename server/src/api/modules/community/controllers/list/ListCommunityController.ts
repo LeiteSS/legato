@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListCommunityService from '../../../../../domain/modules/Community/services/list/ListCommunityService';
+import ListCommunityService from '../../../../../domain/modules/community/services/list/ListCommunityService';
 
 export default class ListCommunityController {
   private service: ListCommunityService;
@@ -10,14 +10,14 @@ export default class ListCommunityController {
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { page, pageSize } = request.query as { page: number, pageSize: number };
-    const foundedCommunitys = await this.service.execute(
+    const foundedCommunities = await this.service.execute(
       [{ $match: {} }],
       page,
       pageSize,
     );
 
-    if (foundedCommunitys) {
-      return reply.code(200).send(foundedCommunitys);
+    if (foundedCommunities) {
+      return reply.code(200).send(foundedCommunities);
     }
 
     return reply.badRequest('Invalid _id');

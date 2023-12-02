@@ -4,5 +4,5 @@ import Music from './Music';
 
 export const MusicModel = getModelForClass(Music);
 
-export const MusicRepository = new Repository<Music>(MusicModel);
+export const musicRepository = new Repository<Music>(MusicModel);
 

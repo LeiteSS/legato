@@ -1,6 +1,8 @@
-const InstrumentSchema = {
+import Joi from "joi";
 
-	instrumentType: string,
+const instrumentSchema = {
+	instrumentType: Joi.string(),
+	instrumentName: Joi.string(),
 }
 
-export default InstrumentSchema;
+export default instrumentSchema;

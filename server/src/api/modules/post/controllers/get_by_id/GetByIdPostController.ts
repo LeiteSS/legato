@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import GetByIdPostService from '../../../../../domain/modules/Post/services/get_by_id/GetByIdPostService';
+import GetByIdPostService from '../../../../../domain/modules/post/services/get_by_id/GetByIdPostService';
 
 export default class GetByIdPostController {
   private service: GetByIdPostService;
@@ -11,10 +11,10 @@ export default class GetByIdPostController {
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
 
-    const Post = await this.service.execute(id);
+    const post = await this.service.execute(id);
 
-    if (Post) {
-      return reply.code(200).send(Post);
+    if (post) {
+      return reply.code(200).send(post);
     }
 
     return reply.badRequest('Invalid _id!');

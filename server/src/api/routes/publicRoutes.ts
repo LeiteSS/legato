@@ -1,12 +1,10 @@
 import { FastifyInstance, FastifyPluginOptions } from 'fastify';
-import userRoutes from '../modules/user/routes';
-import artistRoute from '../modules/artist/routes';
+import { publicUserRoutes } from '../modules/user/routes';
 
 const publicRoutes = (server: FastifyInstance, opts: FastifyPluginOptions, done: () => void) => {
   //server.addHook('onSend', ensureLog);
 
-  server.register(userRoutes, { prefix: '/users' });
-  server.register(artistRoute, { prefix: '/artist'})
+  server.register(publicUserRoutes, { prefix: '/users' });
 
   done();
 };

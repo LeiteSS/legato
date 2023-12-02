@@ -10,7 +10,7 @@ import getByIdCommentController from '../controllers/get_by_id';
 import listCommentController from '../controllers/list';
 import updateCommentController from '../controllers/update';
 
-export default (server: FastifyInstance, opts: FastifyPluginOptions, done: () => void) => {
+const commentRoutes = (server: FastifyInstance, opts: FastifyPluginOptions, done: () => void) => {
     server.post('/', createCommentSchema, async (request, reply) => {
         await createCommentController.handle(request, reply);
     });
@@ -33,3 +33,5 @@ export default (server: FastifyInstance, opts: FastifyPluginOptions, done: () =>
 
     done();
 }
+
+export default commentRoutes;

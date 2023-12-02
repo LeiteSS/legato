@@ -11,10 +11,10 @@ export default class GetByIdCommentController {
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
 
-    const Comment = await this.service.execute(id);
+    const comment = await this.service.execute(id);
 
-    if (Comment) {
-      return reply.code(200).send(Comment);
+    if (comment) {
+      return reply.code(200).send(comment);
     }
 
     return reply.badRequest('Invalid _id!');

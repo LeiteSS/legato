@@ -1,7 +1,7 @@
 import { PipelineStage } from 'mongoose';
-import Repository from '../../../../shared/repository/repository/repositiory';
 import Post from '../../Post';
-import { Service } from '../../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Repository from '../../../../shared/repository/repository';
 
 export default class ListPostService implements Service<Post[]> {
   private repository: Repository<Post>;

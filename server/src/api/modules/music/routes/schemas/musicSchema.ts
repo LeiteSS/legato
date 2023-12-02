@@ -1,6 +1,11 @@
+import Joi from "joi";
+
 const MusicSchema = {
 
-	isActive: boolean,
+	title: Joi.string(),
+	artist: Joi.string(),
+	date: Joi.string(),
+	album: Joi.string(),
 }
 
 export default MusicSchema;

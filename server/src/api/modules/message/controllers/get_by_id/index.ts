@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import getByIdMessageService from "../../../../../domain/modules/message/services/get_by_id";
+import GetByIdMessageController from "./GetByIdMessageController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const getByIdMessageController = new GetByIdMessageController(getByIdMessageService);
 
-export default %controllerName%;
+export default getByIdMessageController;

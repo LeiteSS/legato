@@ -1,7 +1,7 @@
 import { PipelineStage } from 'mongoose';
-import Repository from '../../../../shared/repository/repository/repositiory';
 import Transcription from '../../Transcription';
-import { Service } from '../../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Repository from '../../../../shared/repository/repository';
 
 export default class ListTranscriptionService implements Service<Transcription[]> {
   private repository: Repository<Transcription>;

@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import CreatePostService from '../../../../../domain/modules/Post/services/create/CreatePostService';
-import Post from '../../../../../domain/modules/Post/Post';
+import CreatePostService from '../../../../../domain/modules/post/services/create/CreatePostService';
+import Post from '../../../../../domain/modules/post/Post';
 
 export default class CreatePostController {
   private service: CreatePostService;
@@ -10,14 +10,10 @@ export default class CreatePostController {
   }
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
-    const Post = request.body as Post;
-    const createdPost = await this.service.execute(Post);
+    const post = request.body as Post;
+    const createdPost = await this.service.execute(post);
 
-    if (createdPost) {
-      return reply.code(202).send(createdPost);
-    }
-
-    return reply.badRequest('Invalid _id!');
+    return reply.code(202).send(createdPost);
   }
 }
 

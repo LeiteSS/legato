@@ -1,7 +1,7 @@
 import { RouteShorthandOptions } from 'fastify';
-import baseSchema from '../../base';
+import baseSchema from '../../../../../shared/base/baseSchema';
 
-const getByIdTranscriptionSchema: RouteShorthandOptions = {
+const deleteTranscriptionSchema: RouteShorthandOptions = {
   schema: {
     params: {
       id: baseSchema.id,
@@ -9,4 +9,4 @@ const getByIdTranscriptionSchema: RouteShorthandOptions = {
   }
 }
 
-export default getByIdTranscriptionSchema; 
+export default deleteTranscriptionSchema; 

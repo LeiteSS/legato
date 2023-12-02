@@ -1,8 +1,10 @@
 import { RouteShorthandOptions } from 'fastify';
+import Joi from 'joi';
+import transcriptionSchema from '../transcriptionSchema';
 
 const createTranscriptionSchema: RouteShorthandOptions = {
   schema: {
-    body: TranscriptionSchema,
+    body: Joi.object(transcriptionSchema),
   }
 }
 

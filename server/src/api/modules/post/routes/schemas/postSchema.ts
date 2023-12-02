@@ -1,8 +1,12 @@
-const PostSchema = {
+import Joi from "joi";
 
-	caption: string,
+const postSchema = {
 
-	file: File,
+	caption: Joi.string(),
+	file: Joi.any(),
+	comment: Joi.array(),
+	likes: Joi.number(),
+	reaction: Joi.array().items(Joi.string())
 }
 
-export default PostSchema;
+export default postSchema;

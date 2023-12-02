@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import listPostService from "../../../../../domain/modules/post/services/list";
+import ListPostController from "./ListPostController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const listPostController = new ListPostController(listPostService);
 
-export default %controllerName%;
+export default listPostController;

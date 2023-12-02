@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import deleteTranscriptionService from "../../../../../domain/modules/transcription/services/delete";
+import DeleteTranscriptionController from "./DeleteTranscriptionController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const deleteTranscriptionController = new DeleteTranscriptionController(deleteTranscriptionService);
 
-export default %controllerName%;
+export default deleteTranscriptionController;

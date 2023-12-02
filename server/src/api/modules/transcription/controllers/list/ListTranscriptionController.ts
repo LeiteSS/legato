@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListTranscriptionService from '../../../../../domain/modules/Transcription/services/list/ListTranscriptionService';
+import ListTranscriptionService from '../../../../../domain/modules/transcription/services/list/ListTranscriptionService';
 
 export default class ListTranscriptionController {
   private service: ListTranscriptionService;

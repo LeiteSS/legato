@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListMusicService from '../../../../../domain/modules/Music/services/list/ListMusicService';
+import ListMusicService from '../../../../../domain/modules/music/services/list/ListMusicService';
 
 export default class ListMusicController {
   private service: ListMusicService;

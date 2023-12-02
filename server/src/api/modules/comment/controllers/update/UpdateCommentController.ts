@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import Comment from '../../../../../domain/modules/Comment/Comment';
+import Comment from '../../../../../domain/modules/comment/Comment';
 import UpdateCommentService from '../../../../../domain/modules/comment/services/update/UpdateCommentService';
 
 export default class UpdateCommentController {

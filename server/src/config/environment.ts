@@ -13,13 +13,13 @@ const database = {
 };
 
 const encrypt = {
-  secretKey: process.env.SECRET_KEY?.split(',').map(Number),
-  segmentSize: Number(process.env.SEGMENT_SIZE),
+  secretKey: process.env.SECRET_KEY?.split(',').map(Number) || "174,232,91,140,9,183,59,132,55,129,90,140,250,28,38,147",
+  segmentSize: Number(process.env.SEGMENT_SIZE) || 1,
 };
 
 const jwt = {
-  encryption: process.env.JWT_ENCRYPTION,
-  expireIn: Number(process.env.JWT_EXPIRE_IN),
+  encryption: process.env.JWT_ENCRYPTION || 'HS256',
+  expireIn: Number(process.env.JWT_EXPIRE_IN) || 1554787516031,
 };
 
 const log = {

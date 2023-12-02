@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { messageRepository } from "../..";
+import ListMessageService from "./ListMessageService";
 
-const ListMessageService = new %Service%(%domain%Repository);
+const listMessageService = new ListMessageService(messageRepository);
 
-export default ListMessageService;
+export default listMessageService;

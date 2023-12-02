@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListInstrumentService from '../../../../../domain/modules/Instrument/services/list/ListInstrumentService';
+import ListInstrumentService from '../../../../../domain/modules/instrument/services/list/ListInstrumentService';
 
 export default class ListInstrumentController {
   private service: ListInstrumentService;

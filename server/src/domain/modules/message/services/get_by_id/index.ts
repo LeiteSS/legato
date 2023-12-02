@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import { messageRepository } from "../..";
+import GetByIdMessageService from "./GetByIdMessageService";
 
-const GetByIdMessageService = new %Service%(%domain%Repository);
 
-export default GetByIdMessageService;
+const getByIdMessageService = new GetByIdMessageService(messageRepository);
+
+export default getByIdMessageService;

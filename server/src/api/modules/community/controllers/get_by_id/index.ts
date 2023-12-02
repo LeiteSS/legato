@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import getByIdCommunityService from "../../../../../domain/modules/community/services/get_by_id";
+import GetByIdCommunityController from "./GetByIdCommunityController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const getByIdCommunityController = new GetByIdCommunityController(getByIdCommunityService);
 
-export default %controllerName%;
+export default getByIdCommunityController;

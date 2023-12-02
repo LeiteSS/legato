@@ -1,10 +1,9 @@
-const CommunitySchema = {
+import Joi from "joi";
 
-	name: string,
-
-	description: string,
-
-	rules: string,
+const communitySchema = {
+	name: Joi.string(),
+	description: Joi.string(),
+	rules: Joi.string(),
 }
 
-export default CommunitySchema;
+export default communitySchema;

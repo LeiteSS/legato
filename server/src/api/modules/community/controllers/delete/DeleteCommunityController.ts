@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import DeleteCommunityService from '../../../../../domain/modules/Community/services/delete/DeleteCommunityService';
+import DeleteCommunityService from '../../../../../domain/modules/community/services/delete/DeleteCommunityService';
 
 export default class DeleteCommunityController {
   private service: DeleteCommunityService;

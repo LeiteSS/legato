@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import getByIdPostService from "../../../../../domain/modules/post/services/get_by_id";
+import GetByIdPostController from "./GetByIdPostController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
 
-export default %controllerName%;
+const getByIdPostController = new GetByIdPostController(getByIdPostService);
+
+export default getByIdPostController;

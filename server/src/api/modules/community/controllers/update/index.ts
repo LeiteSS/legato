@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import updateCommunityService from "../../../../../domain/modules/community/services/update";
+import UpdateCommunityController from "./UpdateCommunityController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const updateCommunityController = new UpdateCommunityController(updateCommunityService);
 
-export default %controllerName%;
+export default updateCommunityController;

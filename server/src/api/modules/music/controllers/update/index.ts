@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import updateMusicService from "../../../../../domain/modules/music/services/update";
+import UpdateMusicController from "./UpdateMusicController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const updateMusicController = new UpdateMusicController(updateMusicService);
 
-export default %controllerName%;
+export default updateMusicController;

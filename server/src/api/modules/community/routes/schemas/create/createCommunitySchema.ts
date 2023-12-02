@@ -1,8 +1,10 @@
 import { RouteShorthandOptions } from 'fastify';
+import Joi from 'joi';
+import communitySchema from '../communitySchema';
 
 const createCommunitySchema: RouteShorthandOptions = {
   schema: {
-    body: CommunitySchema,
+    body: Joi.object(communitySchema),
   }
 }
 

@@ -2,7 +2,7 @@ import Service from '../../../../shared/interfaces/Service';
 import Repository from '../../../../shared/repository/repository';
 import Transcription from '../../Transcription';
 
-export default class CreateTranscriptionService implements Service<,Transcription> {
+export default class CreateTranscriptionService implements Service<Transcription> {
     private repository: Repository<Transcription>;
 
     constructor(repository: Repository<Transcription>) {

@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import GetByIdCommunityService from '../../../../../domain/modules/Community/services/get_by_id/GetByIdCommunityService';
+import GetByIdCommunityService from '../../../../../domain/modules/community/services/get_by_id/GetByIdCommunityService';
 
 export default class GetByIdCommunityController {
   private service: GetByIdCommunityService;
@@ -11,10 +11,10 @@ export default class GetByIdCommunityController {
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
 
-    const Community = await this.service.execute(id);
+    const community = await this.service.execute(id);
 
-    if (Community) {
-      return reply.code(200).send(Community);
+    if (community) {
+      return reply.code(200).send(community);
     }
 
     return reply.badRequest('Invalid _id!');

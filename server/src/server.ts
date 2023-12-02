@@ -11,6 +11,7 @@ import { loggerError } from './config/logger';
 import fastifyBoom from './exceptions';
 import swaggerDocs from './config/swaggerDocs';
 import publicRoutes from './api/routes/publicRoutes';
+import privateRoutes from './api/routes/privateRoutes';
 const SerialPort = require('serialport');
 
 async function serverBuild(): Promise<FastifyInstance> {
@@ -64,7 +65,7 @@ async function serverBuild(): Promise<FastifyInstance> {
 
   server.register(swaggerDocs);
   server.register(publicRoutes, { prefix: '/api/v1/' });
-  // server.register(privateRoutes, { prefix: '/api/v1/' });
+  server.register(privateRoutes, { prefix: '/api/v1/' });
 
   // Endpoint to execute Arduino code
   server.get('/api/arduino/execute', async (request, reply) => {

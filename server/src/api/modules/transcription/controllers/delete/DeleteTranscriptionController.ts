@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import DeleteTranscriptionService from '../../../../../domain/modules/Transcription/services/delete/DeleteTranscriptionService';
+import DeleteTranscriptionService from '../../../../../domain/modules/transcription/services/delete/DeleteTranscriptionService';
 
 export default class DeleteTranscriptionController {
   private service: DeleteTranscriptionService;

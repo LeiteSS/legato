@@ -1,18 +1,18 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import UpdateTranscriptionService from '../../../../../domain/modules/Transcription/services/update/UpdateTranscriptionService';
-import Transcription from '../../../../../domain/modules/Transcription/Transcription';
+import UpdateTranscriptionService from '../../../../../domain/modules/transcription/services/update/UpdateTranscriptionService';
+import Transcription from '../../../../../domain/modules/transcription/Transcription';
 
-export default class UpdatePartialTranscriptionController {
-  private service: UpdatePartialTranscriptionService;
+export default class UpdateTranscriptionController {
+  private service: UpdateTranscriptionService;
 
-  constructor(service: UpdatePartialTranscriptionService) {
+  constructor(service: UpdateTranscriptionService) {
     this.service = service;
   }
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
-    const { Transcription } = request.body as Transcription;
-    const updatedTranscription = await this.service.execute(id, Transcription);
+    const transcription = request.body as Transcription;
+    const updatedTranscription = await this.service.execute(id, transcription);
 
     if (updatedTranscription) {
       return reply.code(200).send(updatedTranscription);

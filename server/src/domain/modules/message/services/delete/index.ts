@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { messageRepository } from "../..";
+import DeleteMessageService from "./DeleteMessageService";
 
-const DeleteMessageService = new %Service%(%domain%Repository);
+const deleteMessageService = new DeleteMessageService(messageRepository);
 
-export default DeleteMessageService;
+export default deleteMessageService;

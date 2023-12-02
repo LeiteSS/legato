@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import CreateInstrumentService from '../../../../../domain/modules/Instrument/services/create/CreateInstrumentService';
-import Instrument from '../../../../../domain/modules/Instrument/Instrument';
+import CreateInstrumentService from '../../../../../domain/modules/instrument/services/create/CreateInstrumentService';
+import Instrument from '../../../../../domain/modules/instrument/Instrument';
 
 export default class CreateInstrumentController {
   private service: CreateInstrumentService;
@@ -10,8 +10,8 @@ export default class CreateInstrumentController {
   }
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
-    const Instrument = request.body as Instrument;
-    const createdInstrument = await this.service.execute(Instrument);
+    const instrument = request.body as Instrument;
+    const createdInstrument = await this.service.execute(instrument);
 
     if (createdInstrument) {
       return reply.code(202).send(createdInstrument);

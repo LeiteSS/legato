@@ -1,16 +1,16 @@
 import { Types } from 'mongoose';
-import Repository from '../../../../repository/Repository';
 import Post from '../../Post';
-import { Service } from '../../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Repository from '../../../../shared/repository/repository';
 
-export default class DeletePostService implements Service<Post> {
+export default class DeletePostService implements Service<Post | null> {
   private repository: Repository<Post>;
 
   constructor(repository: Repository<Post>) {
     this.repository = repository;
   }
 
-  public async execute(id: string): Promise<Post> {
+  public async execute(id: string): Promise<Post | null> {
     const objectId = new Types.ObjectId(id);
     const deletedPost = await this.repository.delete(objectId);
 

@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import deleteMessageService from "../../../../../domain/modules/message/services/delete";
+import DeleteMessageController from "./DeleteMessageController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const deleteMessageController = new DeleteMessageController(deleteMessageService);
 
-export default %controllerName%;
+export default deleteMessageController;

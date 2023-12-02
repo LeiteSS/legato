@@ -1,8 +1,10 @@
 import { RouteShorthandOptions } from 'fastify';
+import Joi from 'joi';
+import messageSchema from '../messageSchema';
 
 const createMessageSchema: RouteShorthandOptions = {
   schema: {
-    body: MessageSchema,
+    body: Joi.object(messageSchema),
   }
 }
 

@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import GetByIdMusicService from '../../../../../domain/modules/Music/services/get_by_id/GetByIdMusicService';
+import GetByIdMusicService from '../../../../../domain/modules/music/services/get_by_id/GetByIdMusicService';
 
 export default class GetByIdMusicController {
   private service: GetByIdMusicService;
@@ -11,10 +11,10 @@ export default class GetByIdMusicController {
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
 
-    const Music = await this.service.execute(id);
+    const music = await this.service.execute(id);
 
-    if (Music) {
-      return reply.code(200).send(Music);
+    if (music) {
+      return reply.code(200).send(music);
     }
 
     return reply.badRequest('Invalid _id!');

@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { musicRepository } from "../..";
+import ListMusicService from "./ListMusicService";
 
-const ListMusicService = new %Service%(%domain%Repository);
+const listMusicService = new ListMusicService(musicRepository);
 
-export default ListMusicService;
+export default listMusicService;

@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import CreateMessageService from '../../../../../domain/modules/Message/services/create/CreateMessageService';
-import Message from '../../../../../domain/modules/Message/Message';
+import CreateMessageService from '../../../../../domain/modules/message/services/create/CreateMessageService';
+import Message from '../../../../../domain/modules/message/Message';
 
 export default class CreateMessageController {
   private service: CreateMessageService;
@@ -10,8 +10,8 @@ export default class CreateMessageController {
   }
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
-    const Message = request.body as Message;
-    const createdMessage = await this.service.execute(Message);
+    const message = request.body as Message;
+    const createdMessage = await this.service.execute(message);
 
     if (createdMessage) {
       return reply.code(202).send(createdMessage);

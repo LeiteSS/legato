@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import CreateCommunityService from '../../../../../domain/modules/Community/services/create/CreateCommunityService';
-import Community from '../../../../../domain/modules/Community/Community';
+import CreateCommunityService from '../../../../../domain/modules/community/services/create/CreateCommunityService';
+import Community from '../../../../../domain/modules/community/Community';
 
 export default class CreateCommunityController {
   private service: CreateCommunityService;
@@ -10,8 +10,8 @@ export default class CreateCommunityController {
   }
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
-    const Community = request.body as Community;
-    const createdCommunity = await this.service.execute(Community);
+    const community = request.body as Community;
+    const createdCommunity = await this.service.execute(community);
 
     if (createdCommunity) {
       return reply.code(202).send(createdCommunity);

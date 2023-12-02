@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import deletePostService from "../../../../../domain/modules/post/services/delete";
+import DeletePostController from "./DeletePostController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const deletePostController = new DeletePostController(deletePostService);
 
-export default %controllerName%;
+export default deletePostController;

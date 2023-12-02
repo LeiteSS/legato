@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListPostService from '../../../../../domain/modules/Post/services/list/ListPostService';
+import ListPostService from '../../../../../domain/modules/post/services/list/ListPostService';
 
 export default class ListPostController {
   private service: ListPostService;

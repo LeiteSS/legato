@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import updateTranscriptionService from "../../../../../domain/modules/transcription/services/update";
+import UpdateTranscriptionController from "./UpdateTranscriptionController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const updateTranscriptionController = new UpdateTranscriptionController(updateTranscriptionService);
 
-export default %controllerName%;
+export default updateTranscriptionController;

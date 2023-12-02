@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { postRepository } from "../..";
+import CreatePostService from "./CreatePostService";
 
-const CreatePostService = new %Service%(%domain%Repository);
+const createPostService = new CreatePostService(postRepository);
 
-export default CreatePostService;
+export default createPostService;

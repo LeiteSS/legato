@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import { postRepository } from "../..";
+import DeletePostService from "./DeletePostService";
 
-const DeletePostService = new %Service%(%domain%Repository);
 
-export default DeletePostService;
+const deletePostService = new DeletePostService(postRepository);
+
+export default deletePostService;

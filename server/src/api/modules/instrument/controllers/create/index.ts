@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import createInstrumentService from "../../../../../domain/modules/instrument/services/create";
+import CreateInstrumentController from "./CreateInstrumentController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const createInstrumentController = new CreateInstrumentController(createInstrumentService);
 
-export default %controllerName%;
+export default createInstrumentController;

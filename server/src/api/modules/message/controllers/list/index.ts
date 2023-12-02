@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import listMessageService from "../../../../../domain/modules/message/services/list";
+import ListMessageController from "./ListMessageController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const listMessageController = new ListMessageController(listMessageService);
 
-export default %controllerName%;
+export default listMessageController;

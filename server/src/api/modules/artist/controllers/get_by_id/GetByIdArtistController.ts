@@ -11,10 +11,10 @@ export default class GetByIdArtistController {
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
 
-    const Artist = await this.service.execute(id);
+    const artist = await this.service.execute(id);
 
-    if (Artist) {
-      return reply.code(200).send(Artist);
+    if (artist) {
+      return reply.code(200).send(artist);
     }
 
     return reply.badRequest('Invalid _id!');

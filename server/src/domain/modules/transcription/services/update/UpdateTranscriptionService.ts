@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
-import Repository from '../../repository/Repository';
-import Transcription from '../Transcription';
-import { Service } from '../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Transcription from '../../Transcription';
+import Repository from '../../../../shared/repository/repository';
 
 export default class UpdateTranscriptionService implements Service<Transcription | null> {
   private repository: Repository<Transcription>;
@@ -16,9 +16,9 @@ export default class UpdateTranscriptionService implements Service<Transcription
   ): Promise<Transcription | null> {
     const objectId = new Types.ObjectId(id);
     const requestTranscription = requestedTranscription;
-    delete Transcription._id;
+    delete requestTranscription._id;
 
-    const updatedTranscription = await this.repository.update(objectId, requestTranscription);
+    const updatedTranscription = await this.repository.updateOne(objectId, requestTranscription);
 
     if (updatedTranscription) {
       return updatedTranscription;

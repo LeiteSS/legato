@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import getByIdInstrumentService from "../../../../../domain/modules/instrument/services/get_by_id";
+import GetByIdInstrumentController from "./GetByIdInstrumentController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const getByIdInstrumentController = new GetByIdInstrumentController(getByIdInstrumentService);
 
-export default %controllerName%;
+export default getByIdInstrumentController;

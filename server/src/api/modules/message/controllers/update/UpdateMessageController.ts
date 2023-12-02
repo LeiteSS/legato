@@ -1,18 +1,18 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import UpdateMessageService from '../../../../../domain/modules/Message/services/update/UpdateMessageService';
-import Message from '../../../../../domain/modules/Message/Message';
+import UpdateMessageService from '../../../../../domain/modules/message/services/update/UpdateMessageService';
+import Message from '../../../../../domain/modules/message/Message';
 
-export default class UpdatePartialMessageController {
-  private service: UpdatePartialMessageService;
+export default class UpdateMessageController {
+  private service: UpdateMessageService;
 
-  constructor(service: UpdatePartialMessageService) {
+  constructor(service: UpdateMessageService) {
     this.service = service;
   }
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     const { id } = request.params as { id: string };
-    const { Message } = request.body as Message;
-    const updatedMessage = await this.service.execute(id, Message);
+    const message= request.body as Message;
+    const updatedMessage = await this.service.execute(id, message);
 
     if (updatedMessage) {
       return reply.code(200).send(updatedMessage);

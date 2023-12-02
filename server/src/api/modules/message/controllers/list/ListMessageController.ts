@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import ListMessageService from '../../../../../domain/modules/Message/services/list/ListMessageService';
+import ListMessageService from '../../../../../domain/modules/message/services/list/ListMessageService';
 
 export default class ListMessageController {
   private service: ListMessageService;

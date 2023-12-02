@@ -1,12 +1,14 @@
 import { RouteShorthandOptions } from 'fastify';
-import baseSchema from '../../base';
+import baseSchema from '../../../../../shared/base/baseSchema';
+import Joi from 'joi';
+import instrumentSchema from '../instrumentSchema';
 
 const updateInstrumentSchema: RouteShorthandOptions = {
   schema: {
     params: {
       id: baseSchema.id,
     },
-    body: InstrumentSchema,
+    body: Joi.object(instrumentSchema),
   }
 }
 

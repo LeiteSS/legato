@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import listTranscriptionService from "../../../../../domain/modules/transcription/services/list";
+import ListTranscriptionController from "./ListTranscriptionController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const listTranscriptionController = new ListTranscriptionController(listTranscriptionService);
 
-export default %controllerName%;
+export default listTranscriptionController;

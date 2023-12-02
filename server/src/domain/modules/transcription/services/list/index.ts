@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { transcriptionRepository } from "../..";
+import ListTranscriptionService from "./ListTranscriptionService";
 
-const ListTranscriptionService = new %Service%(%domain%Repository);
+const listTranscriptionService = new ListTranscriptionService(transcriptionRepository);
 
-export default ListTranscriptionService;
+export default listTranscriptionService;

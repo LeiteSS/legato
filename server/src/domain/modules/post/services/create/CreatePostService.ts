@@ -2,7 +2,7 @@ import Service from '../../../../shared/interfaces/Service';
 import Repository from '../../../../shared/repository/repository';
 import Post from '../../Post';
 
-export default class CreatePostService implements Service<,Post> {
+export default class CreatePostService implements Service<Post> {
     private repository: Repository<Post>;
 
     constructor(repository: Repository<Post>) {

@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import DeletePostService from '../../../../../domain/modules/Post/services/delete/DeletePostService';
+import DeletePostService from '../../../../../domain/modules/post/services/delete/DeletePostService';
 
 export default class DeletePostController {
   private service: DeletePostService;

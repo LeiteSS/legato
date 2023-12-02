@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import CreateTranscriptionService from '../../../../../domain/modules/Transcription/services/create/CreateTranscriptionService';
-import Transcription from '../../../../../domain/modules/Transcription/Transcription';
+import CreateTranscriptionService from '../../../../../domain/modules/transcription/services/create/CreateTranscriptionService';
+import Transcription from '../../../../../domain/modules/transcription/Transcription';
 
 export default class CreateTranscriptionController {
   private service: CreateTranscriptionService;
@@ -10,14 +10,10 @@ export default class CreateTranscriptionController {
   }
 
   public async handle(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
-    const Transcription = request.body as Transcription;
-    const createdTranscription = await this.service.execute(Transcription);
+    const transcription = request.body as Transcription;
+    const createdTranscription = await this.service.execute(transcription);
 
-    if (createdTranscription) {
-      return reply.code(202).send(createdTranscription);
-    }
-
-    return reply.badRequest('Invalid _id!');
+    return reply.code(202).send(createdTranscription);
   }
 }
 

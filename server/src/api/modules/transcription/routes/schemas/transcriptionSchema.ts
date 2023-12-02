@@ -1,6 +1,11 @@
-const TranscriptionSchema = {
+import Joi from "joi";
 
-	difficult: string,
+const transcriptionSchema = {
+	titleMusic: Joi.string(),
+	file: Joi.any(),
+	genre: Joi.string(),
+	difficult: Joi.string(),
+	instrument: Joi.string(),
 }
 
-export default TranscriptionSchema;
+export default transcriptionSchema;

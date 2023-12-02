@@ -4,7 +4,7 @@ import Base from '../../shared/base/base';
 export default class Transcription extends Base {
 
 	@prop()
-	public title_music?: genre;
+	public titleMusic?: string;
 
 	@prop()
 	public file?: File;

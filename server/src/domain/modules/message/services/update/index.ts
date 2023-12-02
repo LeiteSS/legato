@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import { messageRepository } from "../..";
+import UpdateMessageService from "./UpdateMessageService";
 
-const UpdateMessageService = new %Service%(%domain%Repository);
+const updateMessageService = new UpdateMessageService(messageRepository);
 
-export default UpdateMessageService;
+export default updateMessageService;

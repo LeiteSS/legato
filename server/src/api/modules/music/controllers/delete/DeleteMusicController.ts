@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import DeleteMusicService from '../../../../../domain/modules/Music/services/delete/DeleteMusicService';
+import DeleteMusicService from '../../../../../domain/modules/music/services/delete/DeleteMusicService';
 
 export default class DeleteMusicController {
   private service: DeleteMusicService;

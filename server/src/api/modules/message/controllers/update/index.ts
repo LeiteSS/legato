@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import updateMessageService from "../../../../../domain/modules/message/services/update";
+import UpdateMessageController from "./UpdateMessageController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
 
-export default %controllerName%;
+const updateMessageController = new UpdateMessageController(updateMessageService);
+
+export default updateMessageController;

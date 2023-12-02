@@ -1,6 +1,9 @@
-const MessageSchema = {
+import Joi from "joi";
 
-	content: string,
+const messageSchema = {
+	destination: Joi.string(),
+	source: Joi.string(),
+	content: Joi.string(),
 }
 
-export default MessageSchema;
+export default messageSchema;

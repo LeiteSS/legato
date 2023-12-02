@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import listInstrumentService from "../../../../../domain/modules/instrument/services/list";
+import ListInstrumentController from "./ListInstrumentController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const listInstrumentController = new ListInstrumentController(listInstrumentService);
 
-export default %controllerName%;
+export default listInstrumentController;

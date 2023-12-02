@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import deleteInstrumentService from "../../../../../domain/modules/instrument/services/delete";
+import DeleteInstrumentController from "./DeleteInstrumentController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const deleteInstrumentController = new DeleteInstrumentController(deleteInstrumentService);
 
-export default %controllerName%;
+export default deleteInstrumentController;

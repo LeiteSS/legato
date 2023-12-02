@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
-import Repository from '../../repository/Repository';
-import Message from '../Message';
-import { Service } from '../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Message from '../../Message';
+import Repository from '../../../../shared/repository/repository';
 
 export default class UpdateMessageService implements Service<Message | null> {
   private repository: Repository<Message>;
@@ -16,9 +16,9 @@ export default class UpdateMessageService implements Service<Message | null> {
   ): Promise<Message | null> {
     const objectId = new Types.ObjectId(id);
     const requestMessage = requestedMessage;
-    delete Message._id;
+    delete requestMessage._id;
 
-    const updatedMessage = await this.repository.update(objectId, requestMessage);
+    const updatedMessage = await this.repository.updateOne(objectId, requestMessage);
 
     if (updatedMessage) {
       return updatedMessage;

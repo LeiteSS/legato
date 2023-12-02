@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import updatePostService from "../../../../../domain/modules/post/services/update";
+import UpdatePostController from "./UpdatePostController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const updatePostController = new UpdatePostController(updatePostService);
 
-export default %controllerName%;
+export default updatePostController;

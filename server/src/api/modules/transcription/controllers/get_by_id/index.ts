@@ -1,5 +1,7 @@
-import %domain%Repository from '../../';
+import getByIdTranscriptionService from "../../../../../domain/modules/transcription/services/get_by_id";
+import GetByIdTranscriptionController from "./GetByIdTranscriptionController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
 
-export default %controllerName%;
+const getByIdTranscriptionController = new GetByIdTranscriptionController(getByIdTranscriptionService);
+
+export default getByIdTranscriptionController;

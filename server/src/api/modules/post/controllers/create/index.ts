@@ -1,5 +1,6 @@
-import %domain%Repository from '../../';
+import createPostService from "../../../../../domain/modules/post/services/create";
+import CreatePostController from "./CreatePostController";
 
-const %controllerName% = new %controllerName%(%domain%Repository);
+const createPostController = new CreatePostController(createPostService);
 
-export default %controllerName%;
+export default createPostController;

@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
-import Repository from '../../repository/Repository';
-import Music from '../Music';
-import { Service } from '../../../shared/interfaces/Service';
+import Service from '../../../../shared/interfaces/Service';
+import Music from '../../Music';
+import Repository from '../../../../shared/repository/repository';
 
 export default class UpdateMusicService implements Service<Music | null> {
   private repository: Repository<Music>;
@@ -16,9 +16,9 @@ export default class UpdateMusicService implements Service<Music | null> {
   ): Promise<Music | null> {
     const objectId = new Types.ObjectId(id);
     const requestMusic = requestedMusic;
-    delete Music._id;
+    delete requestMusic._id;
 
-    const updatedMusic = await this.repository.update(objectId, requestMusic);
+    const updatedMusic = await this.repository.updateOne(objectId, requestMusic);
 
     if (updatedMusic) {
       return updatedMusic;
