@@ -1,4 +1,4 @@
-import { jwtKey } from './environments';
+import { jwtKey } from './environment';
 
 export const getToken = (): string => localStorage.getItem(jwtKey)!;
 

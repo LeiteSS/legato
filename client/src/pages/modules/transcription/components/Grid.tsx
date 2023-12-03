@@ -4,27 +4,27 @@ import { IconButton, Stack } from "@mui/material"
 import {
   GridColDef,
   GridRenderCellParams,
-  GridValueGetterParams,
 } from "@mui/x-data-grid"
 import { useNavigate } from "react-router-dom"
 import { useLocalStorage } from "usehooks-ts"
 
 import DataTable from "../../../../components/advanced/DataTable/DataTable"
 
-import { Transcription } from "../../../../models/modules/Transcription/Transcription";
+import { Transcription } from "../../../../models/modules/transcription/Transcription";
+import React from "react"
 
 const Grid = () => {
-  const [Transcriptions, setTranscriptions] = useLocalStorage<Transcription[]>("Transcription", [])
+  const [transcriptions, setTranscriptions] = useLocalStorage<Transcription[]>("Transcription", [])
   const navigate = useNavigate()
 
   const onEdit = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    navigate(`/Transcription/${params.row.id}`);
+    navigate(`/transcription/${params.row.id}`);
   }
 
   const onDelete = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    setTranscriptions(users.filter((Transcription) => Transcription.id !== params.row.id));
+    setTranscriptions(transcriptions.filter((transcription) => transcription.id !== params.row.id));
   }
 
   const columns: GridColDef<Transcription>[] = [
@@ -53,7 +53,7 @@ const Grid = () => {
     },
   ]
 
-  return <DataTable columns={columns} rows={Transcriptions as Transcription[]} />
+  return <DataTable columns={columns} rows={transcriptions as Transcription[]} />
 }
 
 export default Grid;

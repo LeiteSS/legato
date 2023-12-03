@@ -15,12 +15,13 @@ import { useLocalStorage } from "usehooks-ts";
 
 import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 
-import { MessageSchema } from "../../../../hooks/modules/Message/schemas/userSchema";
+import MessageSchema from "../../../../hooks/modules/message/schemas/messageSchema";
 
-import { Message } from "../../../../models/modules/Message/Message";
+import { Message } from "../../../../models/modules/message/Message";
+import React from "react";
 
 const Form = () => {
-  const [Messages, setMessages] = useLocalStorage<Message[]>("Message", [])
+  const [messages, setMessages] = useLocalStorage<Message[]>("Message", [])
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -31,7 +32,7 @@ const Form = () => {
     formState: { errors },
     setFocus,
     setValue,
-  } = useForm<User>({
+  } = useForm<Message>({
     resolver: yupResolver(MessageSchema),
   })
 
@@ -50,16 +51,16 @@ const Form = () => {
 
   const onSubmit = (data: Message) => {
     if (!id) {
-      setMessages([...Messages, { ...data, id: `${Messages.length + 1}` }]);
+      setMessages([...messages, { ...data, id: `${messages.length + 1}` }]);
     } else {
-      const newMessages = [...Messages]
-      const MessageIndex = Messages.findIndex((Message) => Message.id === id);
-      newUsers[MessageIndex] = { ...data, id }
+      const newMessages = [...messages]
+      const messageIndex = messages.findIndex((Message) => Message.id === id);
+      newMessages[messageIndex] = { ...data, id }
 
-      setUsers(newMessages);
+      setMessages(newMessages);
     }
 
-    navigate("/Messages/")
+    navigate("/messages/")
   }
 
   return (
@@ -85,9 +86,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="destination
-									 error={!!errors.destination}
-									helperText={errors.destination.message}
+									label="destination"
+									error={!!errors.destination}
+									helperText={errors.destination!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -107,9 +108,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="source
-									 error={!!errors.source}
-									helperText={errors.source.message}
+									label="source"
+									error={!!errors.source}
+									helperText={errors.source!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -129,9 +130,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="content
-									 error={!!errors.content}
-									helperText={errors.content.message}
+									label="content"
+									error={!!errors.content}
+									helperText={errors.content!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -141,7 +142,7 @@ const Form = () => {
         <Button type="submit" variant="contained" size="large">
           Salvar Message
         </Button>
-        <Button component={RouterLink} to="/Message">
+        <Button component={RouterLink} to="/message">
           Cancelar
         </Button>
       </Stack>

@@ -11,20 +11,21 @@ import { useLocalStorage } from "usehooks-ts"
 
 import DataTable from "../../../../components/advanced/DataTable/DataTable"
 
-import { Message } from "../../../../models/modules/Message/Message";
+import { Message } from "../../../../models/modules/message/Message";
+import React from "react"
 
 const Grid = () => {
-  const [Messages, setMessages] = useLocalStorage<Message[]>("Message", [])
+  const [messages, setMessages] = useLocalStorage<Message[]>("Message", [])
   const navigate = useNavigate()
 
   const onEdit = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    navigate(`/Message/${params.row.id}`);
+    navigate(`/message/${params.row.id}`);
   }
 
   const onDelete = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    setMessages(users.filter((Message) => Message.id !== params.row.id));
+    setMessages(messages.filter((Message) => Message.id !== params.row.id));
   }
 
   const columns: GridColDef<Message>[] = [
@@ -53,7 +54,7 @@ const Grid = () => {
     },
   ]
 
-  return <DataTable columns={columns} rows={Messages as Message[]} />
+  return <DataTable columns={columns} rows={messages as Message[]} />
 }
 
 export default Grid;

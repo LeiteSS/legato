@@ -1,24 +1,17 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
-import api from '../../lib/api';
-import exception from '../../lib/errors/axiosError';
-import { AlertContextType } from '../../components/advanced/Alert/AlertContext';
-import { Message } from './Message';
+import { Message } from "../../../../models/modules/message/Message";
+import api from "../../../../service/api";
 
 async function listMessage(
   page: number,
   pageSize: number,
-  navigate?: NavigateFunction,
-  alertContext?: AlertContextType,
+
 ): Promise<Message[]> {
   try {
-    const response = await api.get(`/Message?page=${page}&pageSize=${pageSize}`);
+    const response = await api.get(`/api/v1/message?page=${page}&pageSize=${pageSize}`);
 
     return response.data as Message[];
   } catch (error) {
-    if (navigate && alertContext) {
-      exception(error as any, navigate!, alertContext!);
-    }
+
     return [];
   }
 }

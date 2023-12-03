@@ -10,6 +10,7 @@ import { useLocalStorage } from "usehooks-ts"
 
 import DataTable from "../../../../components/advanced/DataTable/DataTable"
 import { Artist } from "../../../../models/modules/artist/Artist"
+import React from "react"
 
 
 const Grid = () => {

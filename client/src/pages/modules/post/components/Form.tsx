@@ -15,12 +15,13 @@ import { useLocalStorage } from "usehooks-ts";
 
 import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 
-import { PostSchema } from "../../../../hooks/modules/Post/schemas/userSchema";
+import PostSchema from "../../../../hooks/modules/post/schemas/postSchema";
 
-import { Post } from "../../../../models/modules/Post/Post";
+import { Post } from "../../../../models/modules/post/Post";
+import React from "react";
 
 const Form = () => {
-  const [Posts, setPosts] = useLocalStorage<Post[]>("Post", [])
+  const [posts, setPosts] = useLocalStorage<Post[]>("Post", [])
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -31,7 +32,7 @@ const Form = () => {
     formState: { errors },
     setFocus,
     setValue,
-  } = useForm<User>({
+  } = useForm<Post>({
     resolver: yupResolver(PostSchema),
   })
 
@@ -50,16 +51,16 @@ const Form = () => {
 
   const onSubmit = (data: Post) => {
     if (!id) {
-      setPosts([...Posts, { ...data, id: `${Posts.length + 1}` }]);
+      setPosts([...posts, { ...data, id: `${posts.length + 1}` }]);
     } else {
-      const newPosts = [...Posts]
-      const PostIndex = Posts.findIndex((Post) => Post.id === id);
-      newUsers[PostIndex] = { ...data, id }
+      const newPosts = [...posts]
+      const postIndex = posts.findIndex((post) => post.id === id);
+      newPosts[postIndex] = { ...data, id }
 
-      setUsers(newPosts);
+      setPosts(newPosts);
     }
 
-    navigate("/Posts/")
+    navigate("/posts/")
   }
 
   return (
@@ -85,9 +86,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="user
-									 error={!!errors.user}
-									helperText={errors.user.message}
+									label="user"
+									error={!!errors.user}
+									helperText={errors.user!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -107,9 +108,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="caption
-									 error={!!errors.caption}
-									helperText={errors.caption.message}
+									label="caption"
+									error={!!errors.caption}
+									helperText={errors.caption!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -129,9 +130,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="file
-									 error={!!errors.file}
-									helperText={errors.file.message}
+									label="file"
+									error={!!errors.file}
+									helperText={errors.file!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -151,9 +152,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="comments
-									 error={!!errors.comments}
-									helperText={errors.comments.message}
+									label="comments"
+									error={!!errors.comments}
+									helperText={errors.comments!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -173,9 +174,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="likes
-									 error={!!errors.likes}
-									helperText={errors.likes.message}
+									label="likes"
+									error={!!errors.likes}
+									helperText={errors.likes!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -195,9 +196,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="reactions
-									 error={!!errors.reactions}
-									helperText={errors.reactions.message}
+									label="reactions"
+									error={!!errors.reactions}
+									helperText={errors.reactions!.message}
 									{...field}
 								/>
 							</FormControl>

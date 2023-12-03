@@ -6,7 +6,7 @@ export async function updateUser(
   user: User,
 ): Promise<User | null> {
   try {
-    const response = await api.put(`/User/${id}`, user);
+    const response = await api.put(`/api/v1/user/${id}`, user);
 
     return response.data as User;
   } catch (error) {

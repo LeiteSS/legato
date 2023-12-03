@@ -1,13 +1,13 @@
 import * as yup from "yup"
 
-import { Transcription } from "../../../../models/modules/Transcription/Transcription"
+import { Transcription } from "../../../../models/modules/transcription/Transcription"
 
 const TranscriptionSchema = yup
   .object<Transcription>({
     
-titleMusic: yup.genre().required('Este campo é obrigatorio'),
+titleMusic: yup.string().required('Este campo é obrigatorio'),
     
-file: yup.File().required('Este campo é obrigatorio'),
+file: yup.object().required('Este campo é obrigatorio'),
     
 genre: yup.string().required('Este campo é obrigatorio'),
     

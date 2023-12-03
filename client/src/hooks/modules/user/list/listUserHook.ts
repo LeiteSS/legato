@@ -6,7 +6,7 @@ async function listUser(
   pageSize: number,
 ): Promise<User[]> {
   try {
-    const response = await api.get(`/api/v1/users/all`);
+    const response = await api.get(`/api/v1/user/all`);
     return response.data as User[];
   } catch (error) {
     return [];

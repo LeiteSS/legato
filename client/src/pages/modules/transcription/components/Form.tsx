@@ -15,13 +15,13 @@ import { useLocalStorage } from "usehooks-ts";
 
 import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 
-import { TranscriptionSchema } from "../../../../hooks/modules/Transcription/schemas/userSchema";
+import TranscriptionSchema from "../../../../hooks/modules/transcription/schemas/transcriptionSchema";
 
-import { Transcription } from "../../../../models/modules/Transcription/Transcription";
+import { Transcription } from "../../../../models/modules/transcription/Transcription";
 import React from "react";
 
 const Form = () => {
-  const [Transcriptions, setTranscriptions] = useLocalStorage<Transcription[]>("Transcription", [])
+  const [transcriptions, setTranscriptions] = useLocalStorage<Transcription[]>("Transcription", [])
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -32,7 +32,7 @@ const Form = () => {
     formState: { errors },
     setFocus,
     setValue,
-  } = useForm<User>({
+  } = useForm<Transcription>({
     resolver: yupResolver(TranscriptionSchema),
   })
 
@@ -51,16 +51,16 @@ const Form = () => {
 
   const onSubmit = (data: Transcription) => {
     if (!id) {
-      setTranscriptions([...Transcriptions, { ...data, id: `${Transcriptions.length + 1}` }]);
+      setTranscriptions([...transcriptions, { ...data, id: `${transcriptions.length + 1}` }]);
     } else {
-      const newTranscriptions = [...Transcriptions]
-      const TranscriptionIndex = Transcriptions.findIndex((Transcription) => Transcription.id === id);
-      newUsers[TranscriptionIndex] = { ...data, id }
+      const newTranscriptions = [...transcriptions]
+      const transcriptionIndex = transcriptions.findIndex((transcription) => transcription.id === id);
+      newTranscriptions[transcriptionIndex] = { ...data, id }
 
-      setUsers(newTranscriptions);
+      setTranscriptions(newTranscriptions);
     }
 
-    navigate("/Transcriptions/")
+    navigate("/transcriptions/")
   }
 
   return (
@@ -87,8 +87,8 @@ const Form = () => {
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="titleMusic"
-									 error={!!errors.titleMusic}
-									helperText={errors.titleMusic.message}
+									error={!!errors.titleMusic!}
+									helperText={errors.titleMusic!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -109,8 +109,8 @@ const Form = () => {
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="file"
-									 error={!!errors.file}
-									helperText={errors.file.message}
+									error={!!errors.file!}
+									helperText={errors.file!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -131,8 +131,8 @@ const Form = () => {
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="genre"
-									 error={!!errors.genre}
-									helperText={errors.genre.message}
+									error={!!errors.genre}
+									helperText={errors.genre!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -153,8 +153,8 @@ const Form = () => {
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="difficult"
-									 error={!!errors.difficult}
-									helperText={errors.difficult.message}
+									error={!!errors.difficult}
+									helperText={errors.difficult!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -175,8 +175,8 @@ const Form = () => {
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="instrument"
-									 error={!!errors.instrument}
-									helperText={errors.instrument.message}
+									error={!!errors.instrument}
+									helperText={errors.instrument!.message}
 									{...field}
 								/>
 							</FormControl>

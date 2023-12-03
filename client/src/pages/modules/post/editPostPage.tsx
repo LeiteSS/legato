@@ -4,6 +4,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Form from "./components/Form";
+import React from "react";
 
 const EditPostPage = () => {
   return (
@@ -11,7 +12,7 @@ const EditPostPage = () => {
       <Stack sx={{ marginBottom: 2 }}>
         <PageTitle title="Editar Post" />
         <Breadcrumbs
-          path={[{ label: "Posts", to: "/Post/" }, { label: "Editar" }]}
+          path={[{ label: "Posts", to: "/post/" }, { label: "Editar" }]}
         />
       </Stack>
       <Paper>

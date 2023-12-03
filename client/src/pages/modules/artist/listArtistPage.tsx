@@ -6,6 +6,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Grid from "./components/Grid"
+import React from 'react';
 
 const ListArtistPage = () => {
   return (

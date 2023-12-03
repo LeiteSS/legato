@@ -11,20 +11,21 @@ import { useLocalStorage } from "usehooks-ts"
 
 import DataTable from "../../../../components/advanced/DataTable/DataTable"
 
-import { Instrument } from "../../../../models/modules/Instrument/Instrument";
+import { Instrument } from "../../../../models/modules/instrument/Instrument";
+import React from "react"
 
 const Grid = () => {
-  const [Instruments, setInstruments] = useLocalStorage<Instrument[]>("Instrument", [])
+  const [instruments, setInstruments] = useLocalStorage<Instrument[]>("Instrument", [])
   const navigate = useNavigate()
 
   const onEdit = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    navigate(`/Instrument/${params.row.id}`);
+    navigate(`/instrument/${params.row.id}`);
   }
 
   const onDelete = (params: GridRenderCellParams) => {
     if (!params.row.id) return
-    setInstruments(users.filter((Instrument) => Instrument.id !== params.row.id));
+    setInstruments(instruments.filter((instrument) => instrument.id !== params.row.id));
   }
 
   const columns: GridColDef<Instrument>[] = [
@@ -53,7 +54,7 @@ const Grid = () => {
     },
   ]
 
-  return <DataTable columns={columns} rows={Instruments as Instrument[]} />
+  return <DataTable columns={columns} rows={instruments as Instrument[]} />
 }
 
 export default Grid;

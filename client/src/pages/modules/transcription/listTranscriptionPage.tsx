@@ -6,6 +6,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Grid from "./components/Grid"
+import React from 'react';
 
 const ListTranscriptionPage = () => {
   return (
@@ -14,13 +15,13 @@ const ListTranscriptionPage = () => {
         <Box sx={{ flexGrow: 1 }}>
           <PageTitle title="Lista" />
           <Breadcrumbs
-            path={[{ label: "Transcription", to: "/Transcriptions" }, { label: "Lista" }]}
+            path={[{ label: "Transcription", to: "/transcriptions" }, { label: "Lista" }]}
           />
         </Box>
         <Box sx={{ alignSelf: "center" }}>
           <Button
             component={RouterLink}
-            to="/Transcriptions/new"
+            to="/transcriptions/new"
             variant="contained"
             startIcon={<AddIcon />}
           >

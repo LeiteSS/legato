@@ -1,30 +1,16 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
-import api from '../../lib/api';
-import exception from '../../lib/errors/axiosError';
-import { AlertContextType } from '../../components/advanced/Alert/AlertContext';
-import updatePostSchema from './schema/update';
-import { Post } from './Post';
-import validate from '@/lib/validate';
+import { Post } from "../../../../models/modules/post/Post"
+import api from "../../../../service/api";
 
 export async function updatePost(
   id: string,
-  Post: Post,
-  navigate?: NavigateFunction,
-  alertContext?: AlertContextType,
+  post: Post,
 ): Promise<Post | null> {
   try {
-    if (!validate(Post, alertContext, updatePostSchema)) {
-      return null;
-    }
-
-    const response = await api.put(`/Post/${id}`, Post);
+    const response = await api.put(`/api/v1/post/${id}`, post);
 
     return response.data as Post;
   } catch (error) {
-    if (navigate && alertContext) {
-      exception(error as any, navigate!, alertContext!);
-    }
+
     return null;
   }
 }

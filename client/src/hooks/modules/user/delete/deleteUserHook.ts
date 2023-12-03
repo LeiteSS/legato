@@ -5,7 +5,7 @@ export async function deleteUser(
   id: string,
 ) {
   try {
-    const response = await api.delete(`/api/v1/users/${id}`);
+    const response = await api.delete(`/api/v1/user/${id}`);
 
     return response.data as User;
   } catch (error) {

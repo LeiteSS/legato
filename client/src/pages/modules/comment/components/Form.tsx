@@ -17,6 +17,7 @@ import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 
 import CommentSchema from "../../../../hooks/modules/comment/schemas/commentSchema";
 import { Comment } from "../../../../models/modules/comment/Comment";
+import React from "react";
 
 const Form = () => {
   const [comments, setComments] = useLocalStorage<Comment[]>("Comments", [])

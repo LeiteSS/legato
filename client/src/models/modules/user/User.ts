@@ -5,4 +5,5 @@ export type User = {
 	password: string;
 	accountType: string;
 	datebirth: Date;
+	token?: string;
 }

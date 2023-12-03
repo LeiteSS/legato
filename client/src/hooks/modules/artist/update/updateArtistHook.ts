@@ -1,30 +1,15 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
-import api from '../../lib/api';
-import exception from '../../lib/errors/axiosError';
-import { AlertContextType } from '../../components/advanced/Alert/AlertContext';
-import updateArtistSchema from './schema/update';
-import { Artist } from './Artist';
-import validate from '@/lib/validate';
+import { Artist } from "../../../../models/modules/artist/Artist";
+import api from "../../../../service/api";
 
 export async function updateArtist(
   id: string,
-  Artist: Artist,
-  navigate?: NavigateFunction,
-  alertContext?: AlertContextType,
+  artist: Artist,
 ): Promise<Artist | null> {
   try {
-    if (!validate(Artist, alertContext, updateArtistSchema)) {
-      return null;
-    }
-
-    const response = await api.put(`/Artist/${id}`, Artist);
+    const response = await api.put(`/api/v1/artist/${id}`, artist);
 
     return response.data as Artist;
   } catch (error) {
-    if (navigate && alertContext) {
-      exception(error as any, navigate!, alertContext!);
-    }
     return null;
   }
 }

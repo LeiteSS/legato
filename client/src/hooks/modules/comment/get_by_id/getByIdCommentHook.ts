@@ -1,23 +1,15 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
-import api from '@/service/api';
-import exception from '@/lib/errors/axiosError';
-import { AlertContextType } from '@/components/advanced/Alert/AlertContext';
-import { Comment } from './Comment';
+import { Comment } from "../../../../models/modules/comment/Comment";
+import api from "../../../../service/api";
+
 
 async function getByIdComment(
   id: string,
-  navigate?: NavigateFunction,
-  alertContext?: AlertContextType,
-): Promise<User | null> {
+): Promise<Comment | null> {
   try {
-    const response = await api.get(`/Comment/${id}`);
+    const response = await api.get(`/api/v1/comment/${id}`);
 
     return response.data as Comment;
   } catch (error) {
-    if (navigate && alertContext) {
-      exception(error as any, navigate!, alertContext!);
-    }
     return null;
   }
 }

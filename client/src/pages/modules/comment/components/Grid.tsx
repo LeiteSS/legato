@@ -12,6 +12,7 @@ import { useLocalStorage } from "usehooks-ts"
 import DataTable from "../../../../components/advanced/DataTable/DataTable"
 
 import { Comment } from "../../../../models/modules/comment/Comment"
+import React from "react"
 
 const Grid = () => {
   const [comments, setComments] = useLocalStorage<Comment[]>("Comments", [])

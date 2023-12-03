@@ -15,12 +15,13 @@ import { useLocalStorage } from "usehooks-ts";
 
 import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 
-import { MusicSchema } from "../../../../hooks/modules/Music/schemas/userSchema";
+import MusicSchema from "../../../../hooks/modules/music/schemas/musicSchema";
 
-import { Music } from "../../../../models/modules/Music/Music";
+import { Music } from "../../../../models/modules/music/Music";
+import React from "react";
 
 const Form = () => {
-  const [Musics, setMusics] = useLocalStorage<Music[]>("Music", [])
+  const [musics, setMusics] = useLocalStorage<Music[]>("Music", [])
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -31,7 +32,7 @@ const Form = () => {
     formState: { errors },
     setFocus,
     setValue,
-  } = useForm<User>({
+  } = useForm<Music>({
     resolver: yupResolver(MusicSchema),
   })
 
@@ -50,16 +51,16 @@ const Form = () => {
 
   const onSubmit = (data: Music) => {
     if (!id) {
-      setMusics([...Musics, { ...data, id: `${Musics.length + 1}` }]);
+      setMusics([...musics, { ...data, id: `${musics.length + 1}` }]);
     } else {
-      const newMusics = [...Musics]
-      const MusicIndex = Musics.findIndex((Music) => Music.id === id);
-      newUsers[MusicIndex] = { ...data, id }
+      const newMusics = [...musics]
+      const musicIndex = musics.findIndex((music) => music.id === id);
+      newMusics[musicIndex] = { ...data, id }
 
-      setUsers(newMusics);
+      setMusics(newMusics);
     }
 
-    navigate("/Musics/")
+    navigate("/musics/")
   }
 
   return (
@@ -85,9 +86,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="title
-									 error={!!errors.title}
-									helperText={errors.title.message}
+									label="title"
+									error={!!errors.title}
+									helperText={errors.title!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -107,9 +108,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="artist
-									 error={!!errors.artist}
-									helperText={errors.artist.message}
+									label="artist"
+									error={!!errors.artist}
+									helperText={errors.artist!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -129,9 +130,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="date
-									 error={!!errors.date}
-									helperText={errors.date.message}
+									label="date"
+									error={!!errors.date}
+									helperText={errors.date!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -151,9 +152,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="album
-									 error={!!errors.album}
-									helperText={errors.album.message}
+									label="album"
+									error={!!errors.album}
+									helperText={errors.album!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -163,7 +164,7 @@ const Form = () => {
         <Button type="submit" variant="contained" size="large">
           Salvar Music
         </Button>
-        <Button component={RouterLink} to="/Music">
+        <Button component={RouterLink} to="/music">
           Cancelar
         </Button>
       </Stack>

@@ -15,12 +15,13 @@ import { useLocalStorage } from "usehooks-ts";
 
 import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 
-import { InstrumentSchema } from "../../../../hooks/modules/Instrument/schemas/userSchema";
+import InstrumentSchema from "../../../../hooks/modules/instrument/schemas/instrumentSchema";
 
-import { Instrument } from "../../../../models/modules/Instrument/Instrument";
+import { Instrument } from "../../../../models/modules/instrument/Instrument";
+import React from "react";
 
 const Form = () => {
-  const [Instruments, setInstruments] = useLocalStorage<Instrument[]>("Instrument", [])
+  const [instruments, setInstruments] = useLocalStorage<Instrument[]>("Instrument", [])
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -31,7 +32,7 @@ const Form = () => {
     formState: { errors },
     setFocus,
     setValue,
-  } = useForm<User>({
+  } = useForm<Instrument>({
     resolver: yupResolver(InstrumentSchema),
   })
 
@@ -50,16 +51,16 @@ const Form = () => {
 
   const onSubmit = (data: Instrument) => {
     if (!id) {
-      setInstruments([...Instruments, { ...data, id: `${Instruments.length + 1}` }]);
+      setInstruments([...instruments, { ...data, id: `${instruments.length + 1}` }]);
     } else {
-      const newInstruments = [...Instruments]
-      const InstrumentIndex = Instruments.findIndex((Instrument) => Instrument.id === id);
-      newUsers[InstrumentIndex] = { ...data, id }
+      const newInstruments = [...instruments]
+      const instrumentIndex = instruments.findIndex((instrument) => instrument.id === id);
+      newInstruments[instrumentIndex] = { ...data, id }
 
-      setUsers(newInstruments);
+      setInstruments(newInstruments);
     }
 
-    navigate("/Instruments/")
+    navigate("/instruments/")
   }
 
   return (
@@ -85,9 +86,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="instrumentName
-									 error={!!errors.instrumentName}
-									helperText={errors.instrumentName.message}
+									label="instrumentName"
+									error={!!errors.instrumentName}
+									helperText={errors.instrumentName!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -107,9 +108,9 @@ const Form = () => {
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
-									label="instrumentType
-									 error={!!errors.instrumentType}
-									helperText={errors.instrumentType.message}
+									label="instrumentType"
+									error={!!errors.instrumentType}
+									helperText={errors.instrumentType!.message}
 									{...field}
 								/>
 							</FormControl>
@@ -119,7 +120,7 @@ const Form = () => {
         <Button type="submit" variant="contained" size="large">
           Salvar Instrument
         </Button>
-        <Button component={RouterLink} to="/Instrument">
+        <Button component={RouterLink} to="/instrument">
           Cancelar
         </Button>
       </Stack>

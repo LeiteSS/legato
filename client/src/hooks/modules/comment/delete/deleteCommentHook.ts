@@ -1,23 +1,15 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
-import api from '@/service/api';
-import exception from '@/lib/errors/axiosError';
-import { AlertContextType } from '@/components/advanced/Alert/AlertContext';
-import { Comment } from './Comment';
+import { Comment } from "../../../../models/modules/comment/Comment";
+import api from "../../../../service/api";
 
 export async function deleteComment(
   id: string,
-  navigate?: NavigateFunction,
-  alertContext?: AlertContextType,
 ) {
   try {
-    const response = await api.delete(`/Comment/${id}`);
+    const response = await api.delete(`/api/v1/comment/${id}`);
 
     return response.data as Comment;
   } catch (error) {
-    if (navigate && alertContext) {
-      exception(error as any, navigate!, alertContext!);
-    }
+
     return null;
   }
 }

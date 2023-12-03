@@ -4,6 +4,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Form from "./components/Form";
+import React from "react";
 
 const EditCommentPage = () => {
   return (

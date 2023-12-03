@@ -16,6 +16,7 @@ import { useLocalStorage } from "usehooks-ts";
 import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 import { Artist } from "../../../../models/modules/artist/Artist";
 import ArtistSchema from "../../../../hooks/modules/artist/schemas/artistSchema";
+import React from "react";
 
 
 

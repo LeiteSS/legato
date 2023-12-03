@@ -1,30 +1,16 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
-import api from '../../lib/api';
-import exception from '../../lib/errors/axiosError';
-import { AlertContextType } from '../../components/advanced/Alert/AlertContext';
-import updateMessageSchema from './schema/update';
-import { Message } from './Message';
-import validate from '@/lib/validate';
+import { Message } from "../../../../models/modules/message/Message";
+import api from "../../../../service/api";
 
 export async function updateMessage(
   id: string,
-  Message: Message,
-  navigate?: NavigateFunction,
-  alertContext?: AlertContextType,
+  message: Message,
 ): Promise<Message | null> {
   try {
-    if (!validate(Message, alertContext, updateMessageSchema)) {
-      return null;
-    }
-
-    const response = await api.put(`/Message/${id}`, Message);
+    const response = await api.put(`/api/v1/message/${id}`, message);
 
     return response.data as Message;
   } catch (error) {
-    if (navigate && alertContext) {
-      exception(error as any, navigate!, alertContext!);
-    }
+
     return null;
   }
 }

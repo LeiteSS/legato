@@ -4,6 +4,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Form from "./components/Form"
+import React from "react";
 
 const CreateCommentPage = () => {
   return (
@@ -11,7 +12,7 @@ const CreateCommentPage = () => {
       <Stack sx={{ marginBottom: 2 }}>
         <PageTitle title="Criar Novo Comment" />
         <Breadcrumbs
-          path={[{ label: "Comments", to: "/comments/" }, { label: "Novo" }]}
+          path={[{ label: "Comments", to: "/comment/" }, { label: "Novo" }]}
         />
       </Stack>
       <Paper>

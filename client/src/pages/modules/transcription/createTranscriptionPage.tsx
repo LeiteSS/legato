@@ -12,7 +12,7 @@ const CreateTranscriptionPage = () => {
       <Stack sx={{ marginBottom: 2 }}>
         <PageTitle title="Criar Novo Transcription" />
         <Breadcrumbs
-          path={[{ label: "Transcriptions", to: "/Transcriptions/" }, { label: "Novo" }]}
+          path={[{ label: "Transcriptions", to: "/transcriptions/" }, { label: "Novo" }]}
         />
       </Stack>
       <Paper>

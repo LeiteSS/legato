@@ -4,7 +4,7 @@ import api from '../../../../service/api';
 async function getByIdUser(
   id: string,
 ): Promise<User> {
-  const response = await api.get(`/api/v1/users/${id}`);
+  const response = await api.get(`/api/v1/user/${id}`);
 
   return response.data as User;
 }

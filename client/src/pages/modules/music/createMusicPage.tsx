@@ -4,6 +4,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Form from "./components/Form"
+import React from "react";
 
 const CreateMusicPage = () => {
   return (
@@ -11,7 +12,7 @@ const CreateMusicPage = () => {
       <Stack sx={{ marginBottom: 2 }}>
         <PageTitle title="Criar Novo Music" />
         <Breadcrumbs
-          path={[{ label: "Musics", to: "/Musics/" }, { label: "Novo" }]}
+          path={[{ label: "Musics", to: "/musics/" }, { label: "Novo" }]}
         />
       </Stack>
       <Paper>

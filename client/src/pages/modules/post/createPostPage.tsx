@@ -4,6 +4,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Form from "./components/Form"
+import React from "react";
 
 const CreatePostPage = () => {
   return (
@@ -11,7 +12,7 @@ const CreatePostPage = () => {
       <Stack sx={{ marginBottom: 2 }}>
         <PageTitle title="Criar Novo Post" />
         <Breadcrumbs
-          path={[{ label: "Posts", to: "/Posts/" }, { label: "Novo" }]}
+          path={[{ label: "Posts", to: "/posts/" }, { label: "Novo" }]}
         />
       </Stack>
       <Paper>

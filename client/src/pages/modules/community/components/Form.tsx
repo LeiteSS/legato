@@ -18,6 +18,7 @@ import FormTitle from "../../../../components/advanced/FormTitle/FormTitle";
 import CommunitySchema from "../../../../hooks/modules/community/schemas/communitySchema";
 
 import { Community } from "../../../../models/modules/community/Community";
+import React from "react";
 
 const Form = () => {
   const [communities, setCommunities] = useLocalStorage<Community[]>("Communities", [])

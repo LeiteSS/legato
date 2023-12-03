@@ -1,28 +1,16 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
-import api from '@/service/api';
-import exception from '@/lib/errors/axiosError';
-import { AlertContextType } from '@/components/advanced/Alert/AlertContext';
-import { Transcription } from './Transcription';
-import validate from '@/lib/validate';
+import { Transcription } from "../../../../models/modules/transcription/Transcription"
+import api from "../../../../service/api";
 
 async function createTranscription(
-  Transcription: Transcription,
-  navigate?: NavigateFunction,
-  alertContext?: AlertContextType,
+  transcription: Transcription,
+
 ): Promise<Transcription | null> {
   try {
-    if (!validate(Transcription, alertContext)) {
-      return null;
-    }
-
-    const response = await api.post('/Transcription', Transcription);
+    const response = await api.post('/Transcription', transcription);
 
     return response.data as Transcription;
   } catch (error) {
-    if (navigate && alertContext) {
-      exception(error as any, navigate!, alertContext!);
-    }
+
     return null;
   }
 }

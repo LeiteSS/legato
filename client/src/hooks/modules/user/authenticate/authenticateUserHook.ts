@@ -1,13 +1,12 @@
-import { NavigateFunction } from 'react-router-dom';
-import Joi from 'joi';
 import { User } from '../../../../models/modules/user/User';
-import api from '../../../../service/api';
+import publicApi from '../../../../service/publicApi';
 
 async function authenticateUser(
-  user: User,
+  email: string,
+  password: string,
 ): Promise<User | null> {
   try {
-    const response = await api.post('/api/v1/users/login', user);
+    const response = await publicApi.post('/api/v1/users/login', { email, password });
 
     return response.data as User;
   } catch (error) {

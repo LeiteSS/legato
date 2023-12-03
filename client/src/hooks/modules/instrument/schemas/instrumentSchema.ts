@@ -1,6 +1,6 @@
 import * as yup from "yup"
 
-import { Instrument } from "../../../../models/modules/Instrument/Instrument"
+import { Instrument } from "../../../../models/modules/instrument/Instrument"
 
 const InstrumentSchema = yup
   .object<Instrument>({

@@ -4,6 +4,7 @@ import Breadcrumbs from "../../../components/advanced/Breadcrumbs/Breadcrumbs";
 import PageTitle from "../../../components/advanced/PageTitle/PageTitle";
 
 import Form from "./components/Form"
+import React from "react";
 
 const CreateCommunityPage = () => {
   return (
@@ -11,7 +12,7 @@ const CreateCommunityPage = () => {
       <Stack sx={{ marginBottom: 2 }}>
         <PageTitle title="Criar Novo Community" />
         <Breadcrumbs
-          path={[{ label: "Communities", to: "/communities/" }, { label: "Novo" }]}
+          path={[{ label: "Communities", to: "/community/" }, { label: "Novo" }]}
         />
       </Stack>
       <Paper>
