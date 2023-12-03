@@ -38,10 +38,11 @@ const Cadastro = ({ openLoginModal }: { openLoginModal: () => void }) => {
 	})
 
 	const onSubmit = (data: User) => {
+		data.accountType = 'user';
 		console.log(data)
 		newUser(data);
 
-		navigate("/users/")
+		navigate("/login/")
 	}
 
 	const newUser = async (data: User) => {
