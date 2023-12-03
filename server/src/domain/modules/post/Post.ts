@@ -10,7 +10,7 @@ export default class Post extends Base {
 	public caption?: string;
 
 	@prop()
-	public file?: File;
+	public file?: any;
 
 	@prop()
 	public comments?: Comment[];

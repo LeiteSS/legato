@@ -7,7 +7,7 @@ export default class Transcription extends Base {
 	public titleMusic?: string;
 
 	@prop()
-	public file?: File;
+	public file?: any;
 
 	@prop()
 	public genre?: string;
