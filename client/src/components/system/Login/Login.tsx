@@ -1,33 +1,35 @@
-import React, { useState } from 'react';
-import { useUser } from '../../../middlewares/UserContext';
-import usersData from './users.json';
-
+import React from 'react';
 import './Login.css';
 import ClearIcon from "@mui/icons-material/Clear";
+import { User } from '../../../models/modules/user/User';
+import { useNavigate } from 'react-router-dom';
+import getState from '../../../config/state';
+import authenticateUser from '../../../hooks/modules/user/authenticate/authenticateUserHook';
+import { setToken } from '../../../config/auth';
 
 const Login = ({ showLoginModal, closeLoginModal, openResetaSenha }: { showLoginModal: boolean, closeLoginModal: () => void, openResetaSenha: () => void}) => {
-    const { userDispatch } = useUser();
-
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-
-    const handleUsernameChange = (event: any) => {
-        setUsername(event.target.value);
+    const [user, setUser] = React.useState<User>();
+    const [passwordShown, setPasswordShown] = React.useState(false);
+  
+    const navigate = useNavigate();
+  
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      console.log(event.target.name)
+      setUser({ ...user!, [event.target.name]: event.target.value });
     };
+  
+    const handleSubmit = async () => {
+    
+      const userLogin = await getState(setUser);
+      // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
+      const userResponse = await authenticateUser(userLogin?.email!, userLogin?.password!);
 
-    const handlePasswordChange = (event: any) => {
-        setPassword(event.target.value);
-    };
-
-    const handleLogin = () => {
-        const user = usersData.find((user) => user.username === username && user.password === password);
-
-        if (user) {
-            userDispatch({ type: 'LOGIN', payload: user }); 
-            closeLoginModal();
-        } else {
-            alert('Usuário ou senha incorretos');
-        }
+      if (userResponse) {
+        setToken(userResponse!.token!);
+        
+        navigate('/users');
+        closeLoginModal()
+      }
     };
 
     return (
@@ -45,12 +47,12 @@ const Login = ({ showLoginModal, closeLoginModal, openResetaSenha }: { showLogin
                         </div>
                         <div className="Corpo">
                             <label htmlFor="">Email ou nome de usuário:</label>
-                            <input type="text" value={username} onChange={handleUsernameChange} />
+                            <input name="email" type="email" placeholder="E-mail" onChange={handleChange} />
                             <div className="redirecionamento">
                                 <label>Senha</label> <a className='esqueceu-senha' onClick={openResetaSenha}>Esqueceu a senha?</a>
                             </div>
-                            <input type="password" value={password} onChange={handlePasswordChange}/>
-                            <input type="button" value="Entrar" onClick={handleLogin} />
+                            <input name="password" type="password" placeholder="Senha" onChange={handleChange}/>
+                            <input type="button" value="Entrar" onClick={handleSubmit} />
                             <div className="redirecionamento">
                                 <p>Não tem conta?</p> <a href="/Cadastro">Cadastre-se</a>
                             </div>
