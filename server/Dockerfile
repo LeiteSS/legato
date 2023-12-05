@@ -3,4 +3,4 @@ WORKDIR /src
 COPY . .
 RUN npm ci
 EXPOSE 3003
-CMD ["npm", "start"]
+CMD ["npm", "dev"]
