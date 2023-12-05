@@ -60,7 +60,7 @@ const Form = () => {
       setMusics(newMusics);
     }
 
-    navigate("/musics/")
+    navigate("/music/")
   }
 
   return (
@@ -88,7 +88,7 @@ const Form = () => {
 									<TextField
 									label="title"
 									error={!!errors.title}
-									helperText={errors.title!.message}
+									helperText={errors.title?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -110,7 +110,7 @@ const Form = () => {
 									<TextField
 									label="artist"
 									error={!!errors.artist}
-									helperText={errors.artist!.message}
+									helperText={errors.artist?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -126,13 +126,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="date"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="date"
 									error={!!errors.date}
-									helperText={errors.date!.message}
+									helperText={errors.date?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -154,7 +153,7 @@ const Form = () => {
 									<TextField
 									label="album"
 									error={!!errors.album}
-									helperText={errors.album!.message}
+									helperText={errors.album?.message}
 									{...field}
 								/>
 							</FormControl>

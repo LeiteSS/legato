@@ -60,7 +60,7 @@ const Form = () => {
       setInstruments(newInstruments);
     }
 
-    navigate("/instruments/")
+    navigate("/instrument/")
   }
 
   return (
@@ -88,7 +88,7 @@ const Form = () => {
 									<TextField
 									label="instrumentName"
 									error={!!errors.instrumentName}
-									helperText={errors.instrumentName!.message}
+									helperText={errors.instrumentName?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -110,7 +110,7 @@ const Form = () => {
 									<TextField
 									label="instrumentType"
 									error={!!errors.instrumentType}
-									helperText={errors.instrumentType!.message}
+									helperText={errors.instrumentType?.message}
 									{...field}
 								/>
 							</FormControl>

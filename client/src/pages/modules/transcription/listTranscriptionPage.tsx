@@ -15,13 +15,13 @@ const ListTranscriptionPage = () => {
         <Box sx={{ flexGrow: 1 }}>
           <PageTitle title="Lista" />
           <Breadcrumbs
-            path={[{ label: "Transcription", to: "/transcriptions" }, { label: "Lista" }]}
+            path={[{ label: "Transcription", to: "/transcription" }, { label: "Lista" }]}
           />
         </Box>
         <Box sx={{ alignSelf: "center" }}>
           <Button
             component={RouterLink}
-            to="/transcriptions/new"
+            to="/transcription/new"
             variant="contained"
             startIcon={<AddIcon />}
           >

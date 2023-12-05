@@ -59,7 +59,7 @@ const Form = () => {
       setComments(newComments);
     }
 
-    navigate("/comments/")
+    navigate("/comment/")
   }
 
   return (
@@ -87,7 +87,7 @@ const Form = () => {
 									<TextField
 									label="user"
 									error={!!errors.user}
-									helperText={errors.user!.message}
+									helperText={errors.user?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -109,7 +109,7 @@ const Form = () => {
 									<TextField
 									label="content"
 									error={!!errors.content}
-									helperText={errors.content!.message}
+									helperText={errors.content?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -125,13 +125,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="replies"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="replies"
 									error={!!errors.replies}
-									helperText={errors.replies!.message}
+									helperText={errors.replies?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -141,7 +140,7 @@ const Form = () => {
         <Button type="submit" variant="contained" size="large">
           Salvar Comment
         </Button>
-        <Button component={RouterLink} to="/Comment">
+        <Button component={RouterLink} to="/comment">
           Cancelar
         </Button>
       </Stack>

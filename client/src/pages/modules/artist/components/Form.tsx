@@ -60,7 +60,7 @@ const Form = () => {
       setArtists(newArtists);
     }
 
-    navigate("/Artists/")
+    navigate("/artists/")
   }
 
   return (
@@ -88,7 +88,7 @@ const Form = () => {
 									<TextField
 									label="name"
 									error={!!errors.name}
-									helperText={errors.name!.message}
+									helperText={errors.name?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -110,7 +110,7 @@ const Form = () => {
 									<TextField
 									label="genre"
 									error={!!errors.genre}
-									helperText={errors.genre!.message}
+									helperText={errors.genre?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -132,7 +132,7 @@ const Form = () => {
 									<TextField
 									label="followers"
 									error={!!errors.followers}
-									helperText={errors.followers!.message}
+									helperText={errors.followers?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -154,7 +154,7 @@ const Form = () => {
 									<TextField
 									label="biography"
 									error={!!errors.biography}
-									helperText={errors.biography!.message}
+									helperText={errors.biography?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -164,7 +164,7 @@ const Form = () => {
         <Button type="submit" variant="contained" size="large">
           Salvar Artist
         </Button>
-        <Button component={RouterLink} to="/Artist">
+        <Button component={RouterLink} to="/artists">
           Cancelar
         </Button>
       </Stack>

@@ -60,7 +60,7 @@ const Form = () => {
       setTranscriptions(newTranscriptions);
     }
 
-    navigate("/transcriptions/")
+    navigate("/transcription/")
   }
 
   return (
@@ -88,7 +88,7 @@ const Form = () => {
 									<TextField
 									label="titleMusic"
 									error={!!errors.titleMusic!}
-									helperText={errors.titleMusic!.message}
+									helperText={errors.titleMusic?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -110,7 +110,7 @@ const Form = () => {
 									<TextField
 									label="file"
 									error={!!errors.file!}
-									helperText={errors.file!.message}
+									helperText={errors.file?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -132,7 +132,7 @@ const Form = () => {
 									<TextField
 									label="genre"
 									error={!!errors.genre}
-									helperText={errors.genre!.message}
+									helperText={errors.genre?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -154,7 +154,7 @@ const Form = () => {
 									<TextField
 									label="difficult"
 									error={!!errors.difficult}
-									helperText={errors.difficult!.message}
+									helperText={errors.difficult?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -176,7 +176,7 @@ const Form = () => {
 									<TextField
 									label="instrument"
 									error={!!errors.instrument}
-									helperText={errors.instrument!.message}
+									helperText={errors.instrument?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -186,7 +186,7 @@ const Form = () => {
         <Button type="submit" variant="contained" size="large">
           Salvar Transcription
         </Button>
-        <Button component={RouterLink} to="/Transcription">
+        <Button component={RouterLink} to="/transcription">
           Cancelar
         </Button>
       </Stack>

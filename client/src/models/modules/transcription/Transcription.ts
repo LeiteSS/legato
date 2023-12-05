@@ -1,5 +1,5 @@
 export type Transcription = {
-
+	id: string;
 	titleMusic: string;
 
 	file: File;

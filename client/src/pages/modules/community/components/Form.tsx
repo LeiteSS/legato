@@ -60,7 +60,7 @@ const Form = () => {
       setCommunities(newCommunities);
     }
 
-    navigate("/communities/")
+    navigate("/community/")
   }
 
   return (
@@ -88,7 +88,7 @@ const Form = () => {
 									<TextField
 									label="name"
 									error={!!errors.name}
-									helperText={errors.name!.message}
+									helperText={errors.name?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -110,7 +110,7 @@ const Form = () => {
 									<TextField
 									label="description"
 									error={!!errors.description}
-									helperText={errors.description!.message}
+									helperText={errors.description?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -132,7 +132,7 @@ const Form = () => {
 									<TextField
 									label="topic"
 									error={!!errors.topic}
-									helperText={errors.topic!.message}
+									helperText={errors.topic?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -148,13 +148,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="rules"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="rules"
 									error={!!errors.rules}
-									helperText={errors.rules!.message}
+									helperText={errors.rules?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -176,7 +175,7 @@ const Form = () => {
 									<TextField
 									label="users"
 									error={!!errors.users}
-									helperText={errors.users!.message}
+									helperText={errors.users?.message}
 									{...field}
 								/>
 							</FormControl>

@@ -60,7 +60,7 @@ const Form = () => {
       setPosts(newPosts);
     }
 
-    navigate("/posts/")
+    navigate("/post/")
   }
 
   return (
@@ -88,7 +88,7 @@ const Form = () => {
 									<TextField
 									label="user"
 									error={!!errors.user}
-									helperText={errors.user!.message}
+									helperText={errors.user?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -110,7 +110,7 @@ const Form = () => {
 									<TextField
 									label="caption"
 									error={!!errors.caption}
-									helperText={errors.caption!.message}
+									helperText={errors.caption?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -126,13 +126,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="file"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="file"
 									error={!!errors.file}
-									helperText={errors.file!.message}
+									helperText={errors.file?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -148,13 +147,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="comments"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="comments"
 									error={!!errors.comments}
-									helperText={errors.comments!.message}
+									helperText={errors.comments?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -170,13 +168,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="likes"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="likes"
 									error={!!errors.likes}
-									helperText={errors.likes!.message}
+									helperText={errors.likes?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -192,13 +189,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="reactions"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="reactions"
 									error={!!errors.reactions}
-									helperText={errors.reactions!.message}
+									helperText={errors.reactions?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -208,7 +204,7 @@ const Form = () => {
         <Button type="submit" variant="contained" size="large">
           Salvar Post
         </Button>
-        <Button component={RouterLink} to="/Post">
+        <Button component={RouterLink} to="/post">
           Cancelar
         </Button>
       </Stack>

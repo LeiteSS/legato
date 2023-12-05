@@ -60,7 +60,7 @@ const Form = () => {
       setMessages(newMessages);
     }
 
-    navigate("/messages/")
+    navigate("/message/")
   }
 
   return (
@@ -88,7 +88,7 @@ const Form = () => {
 									<TextField
 									label="destination"
 									error={!!errors.destination}
-									helperText={errors.destination!.message}
+									helperText={errors.destination?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -110,7 +110,7 @@ const Form = () => {
 									<TextField
 									label="source"
 									error={!!errors.source}
-									helperText={errors.source!.message}
+									helperText={errors.source?.message}
 									{...field}
 								/>
 							</FormControl>
@@ -126,13 +126,12 @@ const Form = () => {
 					<Controller
 							control={control}
 							name="content"
-							defaultValue=""
 							render={({ field: { ...field } }) => (
 								<FormControl fullWidth={true} sx={{ marginBottom: 2 }}>
 									<TextField
 									label="content"
 									error={!!errors.content}
-									helperText={errors.content!.message}
+									helperText={errors.content?.message}
 									{...field}
 								/>
 							</FormControl>
