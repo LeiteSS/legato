@@ -70,9 +70,7 @@ const ArduinoModal = ({ showArduinoModal, closeArduinoModal }) => {
           <div className="header-arduino-modal">
             <div className="box-header-arduino">
               <h2>Sensor de som</h2>
-              <div className="icone-voltar-comunidade" onClick={closeArduinoModal}>
-                <ClearIcon />
-              </div>
+ 
             </div>
           </div>
           <div className="Corpo">
@@ -86,8 +84,7 @@ const ArduinoModal = ({ showArduinoModal, closeArduinoModal }) => {
             </div>
 
             <div className='box-btn-criar-comunidade'>
-              <input onClick={closeArduinoModal} className='btn-criar-comunidade cancelar' type="button" value="Cancelar" />
-              <input className='btn-criar-comunidade' type="button" value="buscar" />
+              <input onClick={closeArduinoModal} className='btn-criar-comunidade' type="button" value="Sair" />
             </div>
           </div>
         </form>
