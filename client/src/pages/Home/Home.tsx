@@ -17,7 +17,7 @@ import comunidadesData from './comunidades.json';
 
 const Home = () => {
 
-    // const carousel = React.useRef(HTMLElement.arguments);
+    const carousel = React.useRef<HTMLDivElement>(null);
     const [width, setWidth] = useState(0)
     const [showFilter, setShowFilter] = useState(false);
     const [musicas, setMusicas] = useState<any[]>([]);
@@ -28,10 +28,10 @@ const Home = () => {
 
 
     useEffect(() => {
-        //setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 500)
-        return setMusicas(musicasData);
-    }, []);
-
+        if (carousel.current) {
+            setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth + 500);
+        }
+    }, [carousel]);
 
 
     const openFilter = () => {
@@ -90,7 +90,7 @@ const Home = () => {
                         <h2>Artistas mais acessados</h2>
                         <a href=""><h5>Ver top</h5></a>
                     </div>
-                    {/* <motion.div ref={carousel} className="list-imgs" whileTap={{ cursor: "grabbing" }}>
+                    <motion.div ref={carousel} className="list-imgs" whileTap={{ cursor: "grabbing" }}>
                         <motion.div className='inner'
                             drag="x"
                             dragConstraints={{ right: 0, left: -width }}>
@@ -100,7 +100,7 @@ const Home = () => {
                                 </Link>
                             ))}
                         </motion.div>
-                    </motion.div> */}
+                    </motion.div>
                 </div>
 
                 <div className="container-home">
@@ -108,7 +108,7 @@ const Home = () => {
                         <h2>Conheça às nossas comunidades</h2>
                         <a href="/Comunidades"><h5>Ir para comunidades</h5></a>
                     </div>
-                    {/* <motion.div ref={carousel} className="list-imgs" whileTap={{ cursor: "grabbing" }}>
+                    <motion.div ref={carousel} className="list-imgs" whileTap={{ cursor: "grabbing" }}>
                         <motion.div className='inner'
                             drag="x"
                             dragConstraints={{ right: 0, left: -width }}>
@@ -120,7 +120,7 @@ const Home = () => {
 
 
                         </motion.div>
-                    </motion.div> */}
+                    </motion.div>
                 </div>
 
             </div>

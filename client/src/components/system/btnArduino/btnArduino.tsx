@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+import { getDatabase, ref, push } from 'firebase/database';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+import GraphicEqIcon from '@mui/icons-material/GraphicEq';
+
+
 
 const ButtonArduino = () => {
     const [loading, setLoading] = React.useState(false);
+
 
     const handleClick = async () => {
         try {
@@ -21,9 +29,11 @@ const ButtonArduino = () => {
         }
     };
 
+
+
     return (
-        <button onClick={handleClick} disabled={loading}>
-            {loading ? 'Executing...' : 'Execute Arduino Code'}
+        <button disabled={loading}>
+            {loading ? 'Executing...' : <GraphicEqIcon/>}
         </button>
     );
 };

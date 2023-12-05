@@ -4,6 +4,7 @@ import Header from "./components/system/Header/Header"
 import Footer from "./components/system/Footer/Footer"
 import Login from "./components/system/Login/Login";
 import ResetaSenha from "./components/system/ResetaSenha/ResetaSenha";
+import ArduinoModal from "./components/system/arduinoModal/arduinoModal";
 import { CssBaseline } from "@mui/material";
 import VLibras from '@moreiraste/react-vlibras'
 
@@ -32,17 +33,27 @@ export default function App() {
     setShowResetaSenha(false);
   }
 
+  const [showArduinoModal, setArduinoModal] = useState(false);
+
+  const openArduinoModal = () => {
+      setArduinoModal(true);
+  }
+
+  const closeArduinoModal = () => {
+      setArduinoModal(false);
+  }
 
   return (
     <BrowserRouter>
       <UserProvider>
         <CssBaseline />
-        <Header openLoginModal={openLoginModal} />
+        <Header openLoginModal={openLoginModal} openArduinoModal={openArduinoModal} />
         <VLibras forceOnload={true} />
         <AppRoutes />
         <Footer />
         <Login showLoginModal={showLoginModal} closeLoginModal={closeLoginModal} openResetaSenha={openResetaSenha} />
         <ResetaSenha showResetarSenha={showResetaSenha} closeResetarSenha={closeResetarSenha} />
+        <ArduinoModal showArduinoModal={showArduinoModal} closeArduinoModal={closeArduinoModal}/>
       </UserProvider>
     </BrowserRouter>
   )

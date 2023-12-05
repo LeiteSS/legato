@@ -1,0 +1,218 @@
+.login-background {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+.login-background-none {
+    display: none;
+}
+
+.arduino-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    top: 50%;
+    margin-top: -250px;
+}
+
+.arduino-modal form {
+    border-radius: 40px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: #01887f;
+}
+
+
+.header-arduino-modal {
+    display: flex;
+    padding: 0 20px;
+}
+
+.box-header-arduino {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-voltar-comunidade {
+    display: inline;
+    color: #ffffff;
+}
+
+.icone-voltar-comunidade:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.arduino-modal h2 {
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.info {
+    color: #7c7c7c;
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+.info-question {
+    color: #7c7c7c;
+}
+
+.info-question:hover {
+    cursor: pointer;
+}
+
+
+.arduino-modal .Corpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background);
+    color: var(--text-primary);
+    padding: 8%;
+    border-radius: 0 0 40px 40px;
+    height: 300px;
+}
+
+.frequencia-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sensor-value {
+    font-size: 1.1rem;
+}
+
+.icone-som {
+    font-size: 60px !important;
+}
+
+.icone-verde-claro {
+    color: lightgreen;
+}
+
+.icone-verde-escuro {
+    color: darkgreen;
+}
+
+.icone-amarelo {
+    color: yellow;
+}
+
+.icone-laranja {
+    color: orange;
+}
+
+.icone-vermelho {
+    color: red;
+}
+
+.arduino-modal .Corpo a {
+    text-decoration: none;
+    color: #01887f;
+}
+
+
+.arduino-modal .redirecionamento {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.arduino-modal label {
+    display: flex;
+    position: relative;
+}
+
+.arduino-modal input {
+    height: 2.2rem;
+    border: 1px solid #D9D9D9;
+    margin: 3% 0;
+}
+
+.radio-criar-comunidade {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.box-btn-criar-comunidade {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-criar-comunidade {
+    width: 23%;
+    align-self: center;
+    text-align: center;
+    background-color: #01887f;
+    padding: 5px;
+    margin: 10% 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.cancelar {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/*RESPONSIVIDADE*/
+
+
+@media only screen and (max-width: 1000px) {
+
+    .arduino-modal form {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .arduino-modal h2 {
+        font-size: 1.4rem;
+    }
+
+    .arduino-modal form {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .arduino-modal form {
+        width: 280px;
+    }
+
+    .arduino-modal label {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .arduino-modal form {
+        width: 240px;
+    }
+
+    .arduino-modal label {
+        font-size: 0.6rem;
+    }
+}

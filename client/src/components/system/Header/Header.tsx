@@ -9,7 +9,7 @@ import ButtonArduino from '../btnArduino/btnArduino';
 
 import './Header.css';
 
-const Header = ({ openLoginModal }: { openLoginModal: () => void }) => {
+const Header = ({ openLoginModal, openArduinoModal }: { openLoginModal: () => void, openArduinoModal: () => void }) => {
     const { userState, userDispatch } = useUser();
     const { user } = userState;
 
@@ -77,7 +77,7 @@ const Header = ({ openLoginModal }: { openLoginModal: () => void }) => {
                         <li><a href="/Explorar">Explorar</a></li>
                         <li><a href="/Comunidades">Comunidades</a></li>
                         <li><a href="/UploadTabExplorar">Upload</a></li>
-                        <li><ButtonArduino/></li>
+                        <li onClick={openArduinoModal}><ButtonArduino/></li>
                     </ul>
 
                     <div className="perfil-pessoal">
